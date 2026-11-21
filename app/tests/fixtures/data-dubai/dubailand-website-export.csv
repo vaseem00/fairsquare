@@ -1,0 +1,3 @@
+Transaction Number,Transaction Date,Property ID,Transaction Type,Transaction sub type,Registration type,Is Free Hold?,Usage,Area,Property Type,Property Sub Type,Amount,Transaction Size (sq.m),Property Size (sq.m),Room(s),Parking,Nearest Metro,Nearest Mall,Nearest Landmark,No. of Buyer,No. of Seller,Master Project,Project
+TEST-0001,01-06-2026,1001,Sales,Sell,Existing Properties,Free Hold,Residential,TEST AREA NORTH,Unit,Flat,2200000,110.5,110.5,2 B/R,1,,,,1,1,TEST MASTER ONE,TEST PROJECT A
+TEST-0002,02-06-2026,1002,Sales,Sell,Off-Plan Properties,Free Hold,Residential,TEST AREA NORTH,Unit,Flat,1300000,70,70,1 B/R,1,,,,1,1,TEST MASTER ONE,TEST PROJECT A

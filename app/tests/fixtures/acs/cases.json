@@ -1,0 +1,850 @@
+[
+ {
+  "name": "Seventh Heaven, ready 1-bed, 2,904 sq ft, AED 4,100,000",
+  "buildingKey": "seventh heaven|wadi al safa 3",
+  "bed": 1,
+  "basis": 0,
+  "size": 2904.0,
+  "askingPsf": 1411.8457300275481
+ },
+ {
+  "name": "known building, size x0.8",
+  "buildingKey": "al tamr|palm jumeirah",
+  "bed": 2,
+  "basis": 0,
+  "size": 1240.61,
+  "askingPsf": 2450.411411179035
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "skyscape altius|bukadra",
+  "bed": 1,
+  "basis": 1,
+  "size": 507.43,
+  "askingPsf": 2612.5
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "310 riverside crescent|bukadra",
+  "bed": 1,
+  "basis": 1,
+  "size": 689.86,
+  "askingPsf": 2208.750688545502
+ },
+ {
+  "name": "known building, size x0.8",
+  "buildingKey": "damac riverside views azure 2 e|dubai investment park second",
+  "bed": 1,
+  "basis": 1,
+  "size": 689.23,
+  "askingPsf": 1450.8902662673818
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "south square s1|madinat al mataar",
+  "bed": 1,
+  "basis": 1,
+  "size": 888.34,
+  "askingPsf": 2195.105477632438
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "lana on park|al yelayiss 2",
+  "bed": 2,
+  "basis": 1,
+  "size": 965.52,
+  "askingPsf": 1110.28254204988
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "mulberry at park heights building b1|hadaeq sheikh mohammed bin rashid",
+  "bed": 2,
+  "basis": 0,
+  "size": 1685.75,
+  "askingPsf": 2867.2121413092937
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "parkside views|hadaeq sheikh mohammed bin rashid",
+  "bed": 2,
+  "basis": 1,
+  "size": 1114.6,
+  "askingPsf": 1655.7602727435853
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "cyan|wadi al safa 5",
+  "bed": 1,
+  "basis": 1,
+  "size": 1000.61,
+  "askingPsf": 1857.0971707258573
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "polo residences a3|nad al shiba first",
+  "bed": 1,
+  "basis": 0,
+  "size": 1055.91,
+  "askingPsf": 1462.6218851570964
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "seagate building 2|madinat dubai almelaheyah",
+  "bed": 4,
+  "basis": 0,
+  "size": 4183.93,
+  "askingPsf": 3635.335460677788
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "damac lagoons valencia tower d|al hebiah fifth",
+  "bed": 0,
+  "basis": 1,
+  "size": 400.42,
+  "askingPsf": 2516.1080865091653
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "binghatti pinnacle|al jadaf",
+  "bed": 2,
+  "basis": 1,
+  "size": 1068.1,
+  "askingPsf": 2423.6953936897294
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "serenz by danube tower a|al barsha south fourth",
+  "bed": 1,
+  "basis": 1,
+  "size": 540.78,
+  "askingPsf": 2468.2569621657613
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "aurelia residences|al hebiah fourth",
+  "bed": 0,
+  "basis": 1,
+  "size": 284.23,
+  "askingPsf": 1606.380351262349
+ },
+ {
+  "name": "known building, size x0.8",
+  "buildingKey": "damac riverside views capri 2 d|dubai investment park second",
+  "bed": 1,
+  "basis": 1,
+  "size": 704.39,
+  "askingPsf": 1993.2083271814558
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "vista by vision|me aisem first",
+  "bed": 1,
+  "basis": 1,
+  "size": 533.14,
+  "askingPsf": 1397.1594489961287
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "damac riverside views capri 1 a|dubai investment park second",
+  "bed": 1,
+  "basis": 1,
+  "size": 907.45,
+  "askingPsf": 1554.5513151108821
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "damac lagoons valencia tower b|al hebiah fifth",
+  "bed": 1,
+  "basis": 1,
+  "size": 747.66,
+  "askingPsf": 1559.0642805553327
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "binghatti flare 01|al barsha south fifth",
+  "bed": 1,
+  "basis": 1,
+  "size": 820.53,
+  "askingPsf": 1508.5969434389967
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "gardens 2|al barshaa south third",
+  "bed": 0,
+  "basis": 1,
+  "size": 591.2,
+  "askingPsf": 1814.103832706643
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "altia 1|nadd hessa",
+  "bed": 1,
+  "basis": 0,
+  "size": 802.99,
+  "askingPsf": 1506.8680805489482
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "peninsula 5 tower 3|business bay",
+  "bed": 2,
+  "basis": 0,
+  "size": 1306.63,
+  "askingPsf": 2510.2745230095743
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "binghatti ghost|al jadaf",
+  "bed": 0,
+  "basis": 1,
+  "size": 268.02,
+  "askingPsf": 1754.533243787777
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "avenew888 loom c|madinat al mataar",
+  "bed": 1,
+  "basis": 1,
+  "size": 375.29,
+  "askingPsf": 1405.2982461749987
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "samana barari heights|wadi al safa 3",
+  "bed": 1,
+  "basis": 1,
+  "size": 750.67,
+  "askingPsf": 1798.1916154901623
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "golf hills 2|madinat al mataar",
+  "bed": 1,
+  "basis": 1,
+  "size": 676.08,
+  "askingPsf": 2280.283990060348
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "ellington house 3|hadaeq sheikh mohammed bin rashid",
+  "bed": 1,
+  "basis": 1,
+  "size": 866.71,
+  "askingPsf": 1799.9100044997751
+ },
+ {
+  "name": "known building, size x1.3",
+  "buildingKey": "damac lagoons valencia tower a|al hebiah fifth",
+  "bed": 0,
+  "basis": 1,
+  "size": 431.55,
+  "askingPsf": 1946.017592481022
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "mercedes benz places binghatti|burj khalifa",
+  "bed": 4,
+  "basis": 1,
+  "size": 5602.39,
+  "askingPsf": 8924.762467446928
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "damac riverside views indigo 2 a|dubai investment park second",
+  "bed": 2,
+  "basis": 1,
+  "size": 1155.4,
+  "askingPsf": 1265.0164445213777
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "samana resorts tower b|me aisem first",
+  "bed": 0,
+  "basis": 1,
+  "size": 433.79,
+  "askingPsf": 1624.1273427234378
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "nuvana by wadan|palm deira",
+  "bed": 2,
+  "basis": 1,
+  "size": 1495.0,
+  "askingPsf": 1960.1742474916389
+ },
+ {
+  "name": "known building, size x0.6",
+  "buildingKey": "creek waters 2|al khairan first",
+  "bed": 2,
+  "basis": 1,
+  "size": 672.25,
+  "askingPsf": 2007.7414517899695
+ },
+ {
+  "name": "known building, size x1.0",
+  "buildingKey": "azizi venice 12 building a|madinat al mataar",
+  "bed": 0,
+  "basis": 1,
+  "size": 362.64,
+  "askingPsf": 2476.3953231855285
+ },
+ {
+  "name": "known building, size x0.8",
+  "buildingKey": "azizi milan 20|wadi al safa 4",
+  "bed": 0,
+  "basis": 1,
+  "size": 275.64,
+  "askingPsf": 1593.6729066898852
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "sobha solis tower a|al hebiah first",
+  "bed": 1,
+  "basis": 1,
+  "size": 549.5,
+  "askingPsf": 1930.0
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "saria by beyond|madinat dubai almelaheyah",
+  "bed": 1,
+  "basis": 1,
+  "size": 766.07,
+  "askingPsf": 2399.2585533959036
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "sobha orbis tower a|al hebiah first",
+  "bed": 1,
+  "basis": 1,
+  "size": 546.27,
+  "askingPsf": 1829.999816940341
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "riva residences|madinat dubai almelaheyah",
+  "bed": 1,
+  "basis": 1,
+  "size": 902.66,
+  "askingPsf": 2215.6736755810607
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "damac hills carson c|al hebiah third",
+  "bed": 0,
+  "basis": 0,
+  "size": 407.09,
+  "askingPsf": 1400.1817779852122
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "orchid at creek beach building 1|al khairan first",
+  "bed": 1,
+  "basis": 1,
+  "size": 688.46,
+  "askingPsf": 1786.5961711646282
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "palace residences creek blue tower 1|al khairan first",
+  "bed": 1,
+  "basis": 1,
+  "size": 907.4,
+  "askingPsf": 2762.7154507383734
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "concept 7 residences|al barsha south fourth",
+  "bed": 1,
+  "basis": 1,
+  "size": 633.56,
+  "askingPsf": 1911.1812614432731
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "sunset at creek beach building 1|al khairan first",
+  "bed": 2,
+  "basis": 0,
+  "size": 1090.28,
+  "askingPsf": 2522.2878526617014
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "acacia at park heights building c|hadaeq sheikh mohammed bin rashid",
+  "bed": 1,
+  "basis": 0,
+  "size": 931.4,
+  "askingPsf": 2233.1973373416363
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "damac hills golf greens 1 tower b|al hebiah third",
+  "bed": 1,
+  "basis": 1,
+  "size": 746.26,
+  "askingPsf": 1715.2198965508
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "ahad residences|business bay",
+  "bed": 1,
+  "basis": 0,
+  "size": 679.2,
+  "askingPsf": 2061.248527679623
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "sobha 1 c|ras al khor industrial first",
+  "bed": 1,
+  "basis": 1,
+  "size": 733.99,
+  "askingPsf": 2274.9996593959045
+ },
+ {
+  "name": "known building, a type sold long ago",
+  "buildingKey": "bayz 101 by danube|business bay",
+  "bed": 0,
+  "basis": 1,
+  "size": 373.61,
+  "askingPsf": 3862.3163191563394
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "binghatti vintage|wadi al safa 3",
+  "bed": 1,
+  "basis": 1,
+  "size": 523.36,
+  "askingPsf": 1877.8562448171629
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "reef 1000|wadi al safa 5",
+  "bed": 1,
+  "basis": 1,
+  "size": 664.57,
+  "askingPsf": 1205.3424340095642
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "divine al barari|wadi al safa 3",
+  "bed": 2,
+  "basis": 1,
+  "size": 1443.5,
+  "askingPsf": 1065.8636174071596
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "samana hills south 3|saih shuaib 2",
+  "bed": 2,
+  "basis": 1,
+  "size": 819.92,
+  "askingPsf": 1719.4276542703958
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "solen residences by jamal living|nadd hessa",
+  "bed": 3,
+  "basis": 1,
+  "size": 1699.08,
+  "askingPsf": 1178.2833318227135
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "reef 996|me aisem first",
+  "bed": 1,
+  "basis": 1,
+  "size": 577.01,
+  "askingPsf": 1679.8786849448018
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "una apartments b|al yelayiss 2",
+  "bed": 1,
+  "basis": 0,
+  "size": 492.17,
+  "askingPsf": 1564.5000711136395
+ },
+ {
+  "name": "known building, other bedroom count",
+  "buildingKey": "damac district tower a|al hebiah third",
+  "bed": 3,
+  "basis": 1,
+  "size": 1424.36,
+  "askingPsf": 1967.4208767446432
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "regalia|business bay",
+  "bed": 0,
+  "basis": 0,
+  "size": 438.09,
+  "askingPsf": 1769.0428907302153
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "azizi noura|jabal ali industrial second",
+  "bed": 0,
+  "basis": 0,
+  "size": 339.82,
+  "askingPsf": 1759.6374551233007
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "barari palace|wadi al safa 3",
+  "bed": 2,
+  "basis": 0,
+  "size": 1155.07,
+  "askingPsf": 1374.9071484845076
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "burj royale|burj khalifa",
+  "bed": 2,
+  "basis": 1,
+  "size": 958.74,
+  "askingPsf": 3911.3836910945615
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "azizi venice 15 building b|madinat al mataar",
+  "bed": 1,
+  "basis": 0,
+  "size": 649.6,
+  "askingPsf": 1540.9482758620688
+ },
+ {
+  "name": "known building, other basis",
+  "buildingKey": "laya courtyard a|al hebiah second",
+  "bed": 1,
+  "basis": 0,
+  "size": 688.03,
+  "askingPsf": 1564.5320698225369
+ },
+ {
+  "name": "4+ bedrooms",
+  "buildingKey": "sierra by iman|al hebiah first",
+  "bed": 4,
+  "basis": 1,
+  "size": 3586.21,
+  "askingPsf": 1141.1640701464778
+ },
+ {
+  "name": "4+ bedrooms",
+  "buildingKey": "building b|palm jabal ali",
+  "bed": 4,
+  "basis": 1,
+  "size": 3784.69,
+  "askingPsf": 4064.79790947211
+ },
+ {
+  "name": "4+ bedrooms",
+  "buildingKey": "bluewaters residences 3|marsa dubai",
+  "bed": 4,
+  "basis": 0,
+  "size": 2458.91,
+  "askingPsf": 7910.00890638535
+ },
+ {
+  "name": "4+ bedrooms",
+  "buildingKey": "como residences|palm jumeirah",
+  "bed": 4,
+  "basis": 1,
+  "size": 11537.18,
+  "askingPsf": 5623.973969375532
+ },
+ {
+  "name": "no asking price",
+  "buildingKey": "seventh heaven|wadi al safa 3",
+  "bed": 2,
+  "basis": 0,
+  "size": 3000.0,
+  "askingPsf": null
+ },
+ {
+  "name": "known building, size x0.75, asking x1.0",
+  "buildingKey": "serenz by danube tower a|al barsha south fourth",
+  "bed": 1,
+  "basis": 1,
+  "size": 405.58,
+  "askingPsf": 2211.638744036392
+ },
+ {
+  "name": "known building, size x0.9, asking x1.04",
+  "buildingKey": "cinderella|wadi al safa 3",
+  "bed": 0,
+  "basis": 1,
+  "size": 432.55,
+  "askingPsf": 1499.587773870706
+ },
+ {
+  "name": "known building, size x1.0, asking x1.2",
+  "buildingKey": "serenz by danube tower a|al barsha south fourth",
+  "bed": 3,
+  "basis": 1,
+  "size": 1306.52,
+  "askingPsf": 2049.530049291247
+ },
+ {
+  "name": "known building, size x1.0, asking x1.04",
+  "buildingKey": "azizi venice 14 building a|madinat al mataar",
+  "bed": 0,
+  "basis": 1,
+  "size": 365.11,
+  "askingPsf": 1672.1010106543233
+ },
+ {
+  "name": "known building, size x0.9, asking x1.04",
+  "buildingKey": "binghatti wraith|al jadaf",
+  "bed": 1,
+  "basis": 1,
+  "size": 596.66,
+  "askingPsf": 1960.9321969982652
+ },
+ {
+  "name": "known building, size x0.9, asking x0.85",
+  "buildingKey": "mackerel tower|palm deira",
+  "bed": 2,
+  "basis": 1,
+  "size": 1103.12,
+  "askingPsf": 1490.9969078641418
+ },
+ {
+  "name": "known building, size x1.1, asking x0.97",
+  "buildingKey": "binghatti vintage|wadi al safa 3",
+  "bed": 2,
+  "basis": 1,
+  "size": 1368.03,
+  "askingPsf": 1185.5322435392309
+ },
+ {
+  "name": "known building, size x1.0, asking x0.85",
+  "buildingKey": "empire lake views|wadi al safa 2",
+  "bed": 0,
+  "basis": 1,
+  "size": 410.75,
+  "askingPsf": 1510.189774802191
+ },
+ {
+  "name": "known building, size x1.0, asking x1.04",
+  "buildingKey": "binghatti skyflame 2|wadi al safa 3",
+  "bed": 0,
+  "basis": 1,
+  "size": 407.31,
+  "askingPsf": 1501.3625985121898
+ },
+ {
+  "name": "known building, size x0.9, asking x0.85",
+  "buildingKey": "azizi lina|jabal ali industrial second",
+  "bed": 0,
+  "basis": 1,
+  "size": 293.24,
+  "askingPsf": 1500.061383586029
+ },
+ {
+  "name": "known building, size x1.35, asking x1.0",
+  "buildingKey": "binghatti flare 01|al barsha south fifth",
+  "bed": 0,
+  "basis": 1,
+  "size": 516.15,
+  "askingPsf": 2191.821201579787
+ },
+ {
+  "name": "known building, size x0.9, asking x1.04",
+  "buildingKey": "damac lagoons valencia tower b|al hebiah fifth",
+  "bed": 0,
+  "basis": 1,
+  "size": 298.76,
+  "askingPsf": 2045.7886492348478
+ },
+ {
+  "name": "known building, size x1.0, asking x1.0",
+  "buildingKey": "azizi riviera 44|al merkadh",
+  "bed": 1,
+  "basis": 0,
+  "size": 437.88,
+  "askingPsf": 2352.242623549831
+ },
+ {
+  "name": "known building, size x0.9, asking x0.97",
+  "buildingKey": "3 tower b 2|al barshaa south second",
+  "bed": 2,
+  "basis": 0,
+  "size": 1342.69,
+  "askingPsf": 1690.4844893691181
+ },
+ {
+  "name": "known building, size x1.1, asking x1.04",
+  "buildingKey": "sky hills astra tower a|al barshaa south second",
+  "bed": 1,
+  "basis": 1,
+  "size": 1046.33,
+  "askingPsf": 1619.5380620472872
+ },
+ {
+  "name": "known building, size x1.0, asking x1.04",
+  "buildingKey": "bennett house 1|al hebiah first",
+  "bed": 1,
+  "basis": 0,
+  "size": 906.97,
+  "askingPsf": 1089.3414335645061
+ },
+ {
+  "name": "known building, size x0.75, asking x1.04",
+  "buildingKey": "lago vista c|me aisem first",
+  "bed": 1,
+  "basis": 0,
+  "size": 744.0,
+  "askingPsf": 775.8064516129033
+ },
+ {
+  "name": "known building, size x1.1, asking x1.2",
+  "buildingKey": "damac district tower a|al hebiah third",
+  "bed": 2,
+  "basis": 1,
+  "size": 1246.78,
+  "askingPsf": 2135.4460756634667
+ },
+ {
+  "name": "known building, size x1.35, asking x1.0",
+  "buildingKey": "binghatti phantom|al barsha south fourth",
+  "bed": 1,
+  "basis": 0,
+  "size": 1229.35,
+  "askingPsf": 1427.583101808638
+ },
+ {
+  "name": "known building, size x1.1, asking x0.97",
+  "buildingKey": "raw district by imtiaz cr building c|jabal ali industrial second",
+  "bed": 1,
+  "basis": 1,
+  "size": 972.09,
+  "askingPsf": 1338.5949508894219
+ },
+ {
+  "name": "known building, size x0.9, asking x1.2",
+  "buildingKey": "distrikt 4|wadi al safa 4",
+  "bed": 1,
+  "basis": 1,
+  "size": 745.45,
+  "askingPsf": 2428.1643888540107
+ },
+ {
+  "name": "known building, size x1.0, asking x0.85",
+  "buildingKey": "azizi venice 6 building a|madinat al mataar",
+  "bed": 0,
+  "basis": 1,
+  "size": 356.93,
+  "askingPsf": 1738.4361079203204
+ },
+ {
+  "name": "known building, size x1.35, asking x0.85",
+  "buildingKey": "raw district 2 by imtiaz residential|jabal ali industrial second",
+  "bed": 1,
+  "basis": 1,
+  "size": 1038.69,
+  "askingPsf": 1483.898492331687
+ },
+ {
+  "name": "known building, size x1.35, asking x0.97",
+  "buildingKey": "jewelz residences|al barshaa south third",
+  "bed": 0,
+  "basis": 0,
+  "size": 570.64,
+  "askingPsf": 1399.8107404778802
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "golfville block a|hadaeq sheikh mohammed bin rashid",
+  "bed": 2,
+  "basis": 1,
+  "size": 765.42,
+  "askingPsf": 2257.584071490163
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "azizi milan 9|wadi al safa 4",
+  "bed": 0,
+  "basis": 1,
+  "size": 325.93,
+  "askingPsf": 1942.0317246034424
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "nb residences 1|jumeirah first",
+  "bed": 1,
+  "basis": 0,
+  "size": 1205.02,
+  "askingPsf": 4284.078272559792
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "montrose residences b|al barshaa south second",
+  "bed": 1,
+  "basis": 0,
+  "size": 764.99,
+  "askingPsf": 1129.4265284513524
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "distrikt 1|wadi al safa 4",
+  "bed": 2,
+  "basis": 1,
+  "size": 1463.57,
+  "askingPsf": 2235.164700014349
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "azizi riviera 10|al merkadh",
+  "bed": 0,
+  "basis": 0,
+  "size": 348.64,
+  "askingPsf": 1889.6282698485545
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "chelsea residences 2 by damac tower b|madinat dubai almelaheyah",
+  "bed": 1,
+  "basis": 1,
+  "size": 774.35,
+  "askingPsf": 3488.190094918319
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "sobha hartland crest tower a|al merkadh",
+  "bed": 2,
+  "basis": 1,
+  "size": 1365.72,
+  "askingPsf": 1954.259731130832
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "urbana 3 stacked house block 20|madinat al mataar",
+  "bed": 2,
+  "basis": 0,
+  "size": 1626.86,
+  "askingPsf": 1161.7471693938019
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "diamond views 1|al barsha south fourth",
+  "bed": 1,
+  "basis": 0,
+  "size": 644.97,
+  "askingPsf": 937.7180333969022
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "cove 2 building 7|al khairan first",
+  "bed": 3,
+  "basis": 1,
+  "size": 1867.75,
+  "askingPsf": 2925.8733770579574
+ },
+ {
+  "name": "known building with project siblings",
+  "buildingKey": "mag 970|hadaeq sheikh mohammed bin rashid",
+  "bed": 0,
+  "basis": 1,
+  "size": 416.89,
+  "askingPsf": 1179.5364724507665
+ }
+]

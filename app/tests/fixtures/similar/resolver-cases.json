@@ -1,0 +1,404 @@
+{
+ "about": "Area resolver: input text -> expected result with golden/area-aliases.json (null = not resolved, no second tier).",
+ "cases": [
+  {
+   "input": "JVC",
+   "expected": {
+    "areaDld": "Al Barsha South Fourth",
+    "masterProject": "Jumeirah Village Circle",
+    "matched": [
+     "jvc"
+    ]
+   }
+  },
+  {
+   "input": "Jumeirah Village Circle (JVC), Dubai",
+   "expected": {
+    "areaDld": "Al Barsha South Fourth",
+    "masterProject": "Jumeirah Village Circle",
+    "matched": [
+     "jumeirah village circle",
+     "jvc"
+    ]
+   }
+  },
+  {
+   "input": "JVC District 12, Jumeirah Village Circle",
+   "expected": {
+    "areaDld": "Al Barsha South Fourth",
+    "masterProject": "Jumeirah Village Circle",
+    "matched": [
+     "jumeirah village circle",
+     "jvc"
+    ]
+   }
+  },
+  {
+   "input": "Downtown",
+   "expected": {
+    "areaDld": "Burj Khalifa",
+    "masterProject": "DownTown Dubai",
+    "matched": [
+     "downtown"
+    ]
+   }
+  },
+  {
+   "input": "Downtown Dubai, Dubai",
+   "expected": {
+    "areaDld": "Burj Khalifa",
+    "masterProject": "DownTown Dubai",
+    "matched": [
+     "downtown dubai"
+    ]
+   }
+  },
+  {
+   "input": "Dubai Marina",
+   "expected": {
+    "areaDld": "Marsa Dubai",
+    "masterProject": "Dubai Marina",
+    "matched": [
+     "dubai marina"
+    ]
+   }
+  },
+  {
+   "input": "Marina",
+   "expected": {
+    "areaDld": "Marsa Dubai",
+    "masterProject": "Dubai Marina",
+    "matched": [
+     "marina"
+    ]
+   }
+  },
+  {
+   "input": "Business Bay, Dubai",
+   "expected": {
+    "areaDld": "Business Bay",
+    "masterProject": "Business Bay",
+    "matched": [
+     "business bay"
+    ]
+   }
+  },
+  {
+   "input": "Burj Khalifa",
+   "expected": {
+    "areaDld": "Burj Khalifa",
+    "masterProject": null,
+    "matched": [
+     "burj khalifa"
+    ]
+   }
+  },
+  {
+   "input": "Marsa Dubai",
+   "expected": {
+    "areaDld": "Marsa Dubai",
+    "masterProject": null,
+    "matched": [
+     "marsa dubai"
+    ]
+   }
+  },
+  {
+   "input": "JBR, Dubai Marina",
+   "expected": {
+    "areaDld": "Marsa Dubai",
+    "masterProject": null,
+    "matched": [
+     "dubai marina",
+     "jbr"
+    ]
+   }
+  },
+  {
+   "input": "Emaar Beachfront, Dubai Harbour",
+   "expected": {
+    "areaDld": "Marsa Dubai",
+    "masterProject": "Dubai Harbour",
+    "matched": [
+     "dubai harbour",
+     "emaar beachfront"
+    ]
+   }
+  },
+  {
+   "input": "JLT Cluster X",
+   "expected": {
+    "areaDld": "Al Thanyah Fifth",
+    "masterProject": "DMCC Master Community",
+    "matched": [
+     "jlt"
+    ]
+   }
+  },
+  {
+   "input": "Dubai Hills Estate",
+   "expected": {
+    "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "masterProject": "Dubai Hills Estate",
+    "matched": [
+     "dubai hills estate"
+    ]
+   }
+  },
+  {
+   "input": "Dubai Creek Harbour (The Lagoons)",
+   "expected": {
+    "areaDld": "Al Khairan First",
+    "masterProject": "Dubai Creek Harbour",
+    "matched": [
+     "dubai creek harbour",
+     "the lagoons"
+    ]
+   }
+  },
+  {
+   "input": "Dubai South",
+   "expected": {
+    "areaDld": "Madinat Al Mataar",
+    "masterProject": null,
+    "matched": [
+     "dubai south"
+    ]
+   }
+  },
+  {
+   "input": "Azizi Venice, Dubai South",
+   "expected": {
+    "areaDld": "Madinat Al Mataar",
+    "masterProject": null,
+    "matched": [
+     "dubai south"
+    ]
+   }
+  },
+  {
+   "input": "Expo City",
+   "expected": {
+    "areaDld": "Madinat Al Mataar",
+    "masterProject": "EXPO CITY",
+    "matched": [
+     "expo city"
+    ]
+   }
+  },
+  {
+   "input": "DSO",
+   "expected": {
+    "areaDld": "Nadd Hessa",
+    "masterProject": "Silicon Oasis",
+    "matched": [
+     "dso"
+    ]
+   }
+  },
+  {
+   "input": "Al Furjan",
+   "expected": {
+    "areaDld": "Jabal Ali First",
+    "masterProject": "Al Furjan",
+    "matched": [
+     "al furjan"
+    ]
+   }
+  },
+  {
+   "input": "Sobha Hartland, MBR City",
+   "expected": {
+    "areaDld": "Al Merkadh",
+    "masterProject": "SOBHA HARTLAND",
+    "matched": [
+     "sobha hartland"
+    ]
+   }
+  },
+  {
+   "input": "Sobha Hartland 2",
+   "expected": {
+    "areaDld": "Bukadra",
+    "masterProject": null,
+    "matched": [
+     "sobha hartland 2"
+    ]
+   }
+  },
+  {
+   "input": "Meydan",
+   "expected": null
+  },
+  {
+   "input": "Meydan One, Meydan",
+   "expected": {
+    "areaDld": "Al Merkadh",
+    "masterProject": "Meydan One Community",
+    "matched": [
+     "meydan one"
+    ]
+   }
+  },
+  {
+   "input": "MBR City",
+   "expected": null
+  },
+  {
+   "input": "Dubailand",
+   "expected": null
+  },
+  {
+   "input": "Dubai Land Residence Complex",
+   "expected": {
+    "areaDld": "Wadi Al Safa 5",
+    "masterProject": "Dubai Land Residence Complex",
+    "matched": [
+     "dubai land residence complex"
+    ]
+   }
+  },
+  {
+   "input": "International City",
+   "expected": {
+    "areaDld": "Al Warsan First",
+    "masterProject": "International City Phase 1",
+    "matched": [
+     "international city"
+    ]
+   }
+  },
+  {
+   "input": "International City Phase 3",
+   "expected": {
+    "areaDld": "Warsan Fourth",
+    "masterProject": "International City Phase 3",
+    "matched": [
+     "international city phase 3"
+    ]
+   }
+  },
+  {
+   "input": "Downtown Jebel Ali",
+   "expected": {
+    "areaDld": "Jabal Ali Industrial Second",
+    "masterProject": "Down Town Jabal Ali",
+    "matched": [
+     "downtown jebel ali"
+    ]
+   }
+  },
+  {
+   "input": "Jebel Ali",
+   "expected": null
+  },
+  {
+   "input": "Business Bay, Downtown Dubai",
+   "expected": null
+  },
+  {
+   "input": "Al Barsha South Fourth",
+   "expected": {
+    "areaDld": "Al Barsha South Fourth",
+    "masterProject": null,
+    "matched": [
+     "al barsha south fourth"
+    ]
+   }
+  },
+  {
+   "input": "Dubai Production City (IMPZ)",
+   "expected": {
+    "areaDld": "Me'Aisem First",
+    "masterProject": "International Media Production Zone",
+    "matched": [
+     "dubai production city",
+     "impz"
+    ]
+   }
+  },
+  {
+   "input": "Town Square",
+   "expected": {
+    "areaDld": "Al Yelayiss 2",
+    "masterProject": "TOWN SQUARE",
+    "matched": [
+     "town square"
+    ]
+   }
+  },
+  {
+   "input": "Dubai Islands",
+   "expected": {
+    "areaDld": "Palm Deira",
+    "masterProject": "Palm Deira",
+    "matched": [
+     "dubai islands"
+    ]
+   }
+  },
+  {
+   "input": "Palm Jumeirah",
+   "expected": {
+    "areaDld": "Palm Jumeirah",
+    "masterProject": "Palm Jumeirah",
+    "matched": [
+     "palm jumeirah"
+    ]
+   }
+  },
+  {
+   "input": "Arjan, Dubai",
+   "expected": {
+    "areaDld": "Al Barshaa South Third",
+    "masterProject": "Arjan",
+    "matched": [
+     "arjan"
+    ]
+   }
+  },
+  {
+   "input": "Majan, Dubailand",
+   "expected": {
+    "areaDld": "Wadi Al Safa 3",
+    "masterProject": "Majan",
+    "matched": [
+     "majan"
+    ]
+   }
+  },
+  {
+   "input": "Somewhere Else",
+   "expected": null
+  },
+  {
+   "input": "",
+   "expected": null
+  },
+  {
+   "input": "Dubai",
+   "expected": null
+  },
+  {
+   "input": "Culture Village, Al Jaddaf",
+   "expected": {
+    "areaDld": "Al Jadaf",
+    "masterProject": "Jaddaf Waterfront",
+    "matched": [
+     "al jaddaf",
+     "culture village"
+    ]
+   }
+  },
+  {
+   "input": "Motor City",
+   "expected": {
+    "areaDld": "Al Hebiah First",
+    "masterProject": "Motor City",
+    "matched": [
+     "motor city"
+    ]
+   }
+  }
+ ]
+}

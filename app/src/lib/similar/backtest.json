@@ -1,0 +1,202 @@
+{
+  "about": "Summary of the backtest of the similar-buildings comparison, written by scripts/model/backtest-summary.mjs from the output of scripts/model/backtest.py and served.mjs (never by hand). data:build copies it into manifest.json. Every figure is of the ranges the rule SHOWS (studios to 3 bedrooms). Percentages are of the building's true median AED per sq ft. Run the three scripts again whenever the constants, the rule or the snapshot they were fitted on change.",
+  "fittedOn": {
+    "dataThrough": "2026-11-16",
+    "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421"
+  },
+  "constantsVersion": 4,
+  "seed": 31337,
+  "testCombinations": 2689,
+  "leaveBuildingOut": {
+    "own": {
+      "cases": 10716,
+      "shownPct": 85,
+      "typicalErrorPct": 2.8,
+      "p80ErrorPct": 6.1,
+      "p90ErrorPct": 8.8,
+      "coveragePct": 89.2,
+      "typicalRangePct": [
+        -6.5,
+        9.3
+      ]
+    },
+    "indirect": {
+      "cases": 2679,
+      "shownPct": 74.8,
+      "typicalErrorPct": 4.4,
+      "p80ErrorPct": 10.5,
+      "p90ErrorPct": 15.1,
+      "coveragePct": 85.9,
+      "typicalRangePct": [
+        -8.9,
+        14.1
+      ]
+    }
+  },
+  "leaveProjectOut": {
+    "own": {
+      "cases": 10716,
+      "shownPct": 86.9,
+      "typicalErrorPct": 3,
+      "p80ErrorPct": 6.6,
+      "coveragePct": 88.6
+    },
+    "indirect": {
+      "cases": 2679,
+      "shownPct": 71.5,
+      "typicalErrorPct": 5.3,
+      "p80ErrorPct": 11.8,
+      "coveragePct": 86.5
+    }
+  },
+  "next183Days": {
+    "note": "Real too-few combinations at the start date, scored against the median of the following 183 days (5 or more sales there). Prices moved 3% to 4% in each half-year.",
+    "all": [
+      {
+        "from": "2026-05-17",
+        "cases": 226,
+        "shownPct": 85,
+        "typicalErrorPct": 4.6,
+        "p80ErrorPct": 9.3,
+        "coveragePct": 78.1,
+        "shownCases": 192
+      },
+      {
+        "from": "2025-11-16",
+        "cases": 324,
+        "shownPct": 84.6,
+        "typicalErrorPct": 5.1,
+        "p80ErrorPct": 10.3,
+        "coveragePct": 77.4,
+        "shownCases": 274
+      }
+    ],
+    "own": [
+      {
+        "from": "2026-05-17",
+        "cases": 188,
+        "shownPct": 85.6,
+        "typicalErrorPct": 4.5,
+        "p80ErrorPct": 8.6,
+        "coveragePct": 79.5,
+        "shownCases": 161
+      },
+      {
+        "from": "2025-11-16",
+        "cases": 251,
+        "shownPct": 84.9,
+        "typicalErrorPct": 4.3,
+        "p80ErrorPct": 9.2,
+        "coveragePct": 77.5,
+        "shownCases": 213
+      }
+    ],
+    "bedroomTypeNeverSold": [
+      {
+        "from": "2026-05-17",
+        "cases": 34,
+        "shownPct": 85.3,
+        "typicalErrorPct": 6.6,
+        "p80ErrorPct": 17,
+        "coveragePct": 69,
+        "shownCases": 29
+      },
+      {
+        "from": "2025-11-16",
+        "cases": 65,
+        "shownPct": 81.5,
+        "typicalErrorPct": 8.5,
+        "p80ErrorPct": 14.7,
+        "coveragePct": 75.5,
+        "shownCases": 53
+      }
+    ]
+  },
+  "thinBuildings": {
+    "note": "Really thin combinations on a like-for-like noisy target, so both real and simulated sit below the level of the first table.",
+    "small5to9OwnCoveragePct": 77.9,
+    "small5to9NoOwnCoveragePct": 81.5,
+    "thin2to4HeldOutSaleCoveragePct": 62.3,
+    "thin2to4HeldOutSaleSimulatedCoveragePct": 68.1,
+    "oneSaleNoOwnCoveragePct": 63.4,
+    "oneSaleNoOwnSimulatedCoveragePct": 72.5
+  },
+  "consistencyRules": {
+    "note": "What the rules of constants version 2 refuse, and how often a range would have held the median had it been shown (leave building out, 1 to 4 own sales, thinned).",
+    "refusedCases": {
+      "evidence_disagrees": 1514,
+      "own_sales_only": 89
+    },
+    "wouldHaveHeldPct": {
+      "evidence_disagrees": 61.2,
+      "own_sales_only": 87.6
+    }
+  },
+  "notInTheData": {
+    "note": "Buildings first seen after the start date, next 183 days. Area and community references are never shown.",
+    "area": [
+      {
+        "cases": 175,
+        "typicalErrorPct": 10,
+        "biasPct": -5.1,
+        "coveragePct": 81.8
+      },
+      {
+        "cases": 444,
+        "typicalErrorPct": 13.2,
+        "biasPct": -7.4,
+        "coveragePct": 69.5
+      }
+    ],
+    "community": [
+      {
+        "cases": 140,
+        "typicalErrorPct": 10.8,
+        "biasPct": -7.3,
+        "coveragePct": 67.9
+      },
+      {
+        "cases": 357,
+        "typicalErrorPct": 13.1,
+        "biasPct": -9.9,
+        "coveragePct": 65.3
+      }
+    ]
+  },
+  "againstSameBuildingRule": {
+    "note": "Listings priced like single registered sales, on shown ranges. Of the results that say above: what the same-building rule says.",
+    "abovePct": 13.8,
+    "withinPct": 68.1,
+    "belowPct": 18.1,
+    "aboveAgreesPct": 71.2,
+    "aboveInLinePct": 27.5,
+    "aboveOppositePct": 1.3
+  },
+  "served": {
+    "tooFewCombinations": 8825,
+    "shownPct": 67,
+    "closePct": 39.4,
+    "broadPct": 27.5,
+    "shownWeightedBySalesPct": 65.2,
+    "studioTo3ShownPct": 73.3,
+    "notShown": {
+      "evidence_disagrees": 1944,
+      "bedrooms_not_validated": 759,
+      "range_too_wide": 147,
+      "own_sales_only": 66
+    },
+    "shownThatReadOtherBuildings": 5699,
+    "otherBuildingsMediansOver2x": 2211,
+    "otherBuildingsMediansOver3x": 720,
+    "bedroomTypeNeverSold": {
+      "requests": 22008,
+      "shown": 3257,
+      "shownPct": 14.8
+    }
+  },
+  "statement": {
+    "about": "The two whole numbers the copy may state (similar.tested). heldOf10: the lower of the two leave-building-out shares (own, indirect), rounded down to tenths. heldLaterOf10: the lower of the two shares against the following 183 days (all shown real too-few combinations, two start dates), rounded down.",
+    "heldOf10": 8,
+    "heldLaterOf10": 7
+  }
+}

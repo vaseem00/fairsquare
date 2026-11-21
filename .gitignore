@@ -1,0 +1,44 @@
+# ---- Secrets: never commit these. Copy .env.example to .env / .env.local instead. ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/secrets/
+
+# ---- Data this repository does not redistribute (see docs/DATA_COLLECTION.md) ----
+# Raw Data.Dubai downloads live here, outside version control.
+raw-data/
+# The processed snapshot built by `npm run data:build`.
+app/data/open-data/
+# Frozen fixtures made from real sale rows (rebuild locally: app/scripts/model/README.md).
+app/tests/fixtures/acs/*.gz
+app/tests/fixtures/nearby/*.gz
+app/tests/fixtures/similar/*.gz
+
+# ---- Local databases and model work folders ----
+app/.data/
+bot/data/*.sqlite3
+bot/data/samples/
+
+# ---- Build output and dependencies (anchored: src/app/coverage/ is real source code) ----
+node_modules/
+/app/.next/
+/app/out/
+/app/build/
+/app/coverage/
+/app/test-results/
+/app/test-results-switch/
+/app/playwright-report/
+/app/blob-report/
+*.tsbuildinfo
+next-env.d.ts
+.venv/
+__pycache__/
+*.pyc
+
+# ---- OS and editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

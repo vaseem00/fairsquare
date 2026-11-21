@@ -1,0 +1,3465 @@
+{
+ "dataThrough": "2026-11-16",
+ "constantsVersion": 1,
+ "note": "expected values to 6 significant figures; inputs read the committed snapshot (data/open-data)",
+ "cases": [
+  {
+   "id": 1,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 795.0,
+    "master": "Jumeirah Village Circle",
+    "area": "Al Barsha South Fourth",
+    "askingPsf": 1258.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1145.03,
+    "buildings": 227,
+    "weight": 215.274,
+    "comparables": 4978,
+    "sizeDistance": 0.116794,
+    "lowPsf": 860.937,
+    "highPsf": 1612.31,
+    "halfWidth": 0.328103,
+    "rangeLowPsf": 860,
+    "rangeHighPsf": 1610,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-30818",
+      "building": "National Bonds Residence",
+      "date": "2026-10-08",
+      "sizeSqft": 808.69,
+      "registeredPsf": 1112.91,
+      "timeLn": 0.0126799,
+      "sizeLn": 0.00758888,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1135.7,
+      "weightShare": 0.00334605,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-30175",
+      "building": "OXFORD RESIDENCE",
+      "date": "2026-10-02",
+      "sizeSqft": 782.32,
+      "registeredPsf": 1253.96,
+      "timeLn": 0.0126799,
+      "sizeLn": -0.00714649,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1260.92,
+      "weightShare": 0.00319538,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-19845",
+      "building": "Park Corner",
+      "date": "2026-06-26",
+      "sizeSqft": 771.02,
+      "registeredPsf": 1082.98,
+      "timeLn": -0.0151025,
+      "sizeLn": -0.0136135,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1052.32,
+      "weightShare": 0.00267162,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Belgravia Heights II",
+      "weightShare": 0.00464524
+     },
+     {
+      "building": "Binghatti Apex",
+      "weightShare": 0.00464524
+     },
+     {
+      "building": "BLOOM TOWERS B",
+      "weightShare": 0.00464524
+     }
+    ]
+   }
+  },
+  {
+   "id": 2,
+   "input": {
+    "bedrooms": 2,
+    "basis": 1,
+    "sizeSqft": 977.0,
+    "master": "Jumeirah Village Circle",
+    "area": "Al Barsha South Fourth",
+    "askingPsf": 1355.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc1",
+    "centrePsf": 1569.04,
+    "buildings": 143,
+    "weight": 105.607,
+    "comparables": 2096,
+    "sizeDistance": 0.183458,
+    "lowPsf": 1190.81,
+    "highPsf": 1885.98,
+    "halfWidth": 0.221527,
+    "rangeLowPsf": 1190,
+    "rangeHighPsf": 1890,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-77600",
+      "building": "Binghatti Etherea",
+      "date": "2026-09-07",
+      "sizeSqft": 875.21,
+      "registeredPsf": 1828.13,
+      "timeLn": 0.014874,
+      "sizeLn": -0.0285665,
+      "vintageLn": -0.010013,
+      "adjustedPsf": 1785.31,
+      "weightShare": 0.00634776,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-75627",
+      "building": "SAMANA WAVES 2",
+      "date": "2026-08-31",
+      "sizeSqft": 1110.51,
+      "registeredPsf": 1800.97,
+      "timeLn": 0.014874,
+      "sizeLn": 0.0332569,
+      "vintageLn": 0.163932,
+      "adjustedPsf": 2226.41,
+      "weightShare": 0.00589337,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-82865",
+      "building": "J-Haus Residences",
+      "date": "2026-09-30",
+      "sizeSqft": 1155.94,
+      "registeredPsf": 1802.6,
+      "timeLn": 0.0154461,
+      "sizeLn": 0.0436671,
+      "vintageLn": 0.00346894,
+      "adjustedPsf": 1919.02,
+      "weightShare": 0.00578895,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "MAISON ELYSEE III BY PANTHEON",
+      "weightShare": 0.00946909
+     },
+     {
+      "building": "Olivo Park Residences by Evera",
+      "weightShare": 0.00946909
+     },
+     {
+      "building": "Serenz by Danube - TOWER A",
+      "weightShare": 0.00946909
+     }
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "input": {
+    "bedrooms": 0,
+    "basis": 1,
+    "sizeSqft": 579.0,
+    "master": "Business Bay",
+    "area": "Business Bay",
+    "askingPsf": 2681.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc2",
+    "centrePsf": 2636.82,
+    "buildings": 34,
+    "weight": 28.7369,
+    "comparables": 3784,
+    "sizeDistance": 0.21814,
+    "lowPsf": 1916.33,
+    "highPsf": 3293.99,
+    "halfWidth": 0.261237,
+    "rangeLowPsf": 1920,
+    "rangeHighPsf": 3290,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-7963",
+      "building": "The Crestmark",
+      "date": "2026-01-23",
+      "sizeSqft": 496.75,
+      "registeredPsf": 2598.55,
+      "timeLn": -0.0371324,
+      "sizeLn": -0.0825776,
+      "vintageLn": 0.118006,
+      "adjustedPsf": 2594.12,
+      "weightShare": 0.00868825,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-90268",
+      "building": "Canal Heights 2",
+      "date": "2026-11-02",
+      "sizeSqft": 491.59,
+      "registeredPsf": 2851.97,
+      "timeLn": 0.0,
+      "sizeLn": -0.0882054,
+      "vintageLn": 0.146836,
+      "adjustedPsf": 3024.18,
+      "weightShare": 0.0079038,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-68219",
+      "building": "One River Point",
+      "date": "2026-08-03",
+      "sizeSqft": 487.6,
+      "registeredPsf": 3211.3,
+      "timeLn": 0.00716883,
+      "sizeLn": -0.0925977,
+      "vintageLn": 0.111805,
+      "adjustedPsf": 3297.12,
+      "weightShare": 0.00734045,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Binghatti Skyrise - TOWER B",
+      "weightShare": 0.0347984
+     },
+     {
+      "building": "Rove Home Marasi Drive",
+      "weightShare": 0.0347984
+     },
+     {
+      "building": "Binghatti Skyrise - TOWER C",
+      "weightShare": 0.0347984
+     }
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "input": {
+    "bedrooms": 3,
+    "basis": 0,
+    "sizeSqft": 2027.0,
+    "master": "Business Bay",
+    "area": "Business Bay",
+    "askingPsf": 1263.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rb",
+    "centrePsf": 1614.1,
+    "buildings": 47,
+    "weight": 32.4023,
+    "comparables": 332,
+    "sizeDistance": 0.122794,
+    "lowPsf": 1259.93,
+    "highPsf": 2765.44,
+    "halfWidth": 0.466364,
+    "rangeLowPsf": 1260,
+    "rangeHighPsf": 2770,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-26884",
+      "building": "WINDSOR MANOR",
+      "date": "2026-09-01",
+      "sizeSqft": 2186.04,
+      "registeredPsf": 1372.34,
+      "timeLn": -0.00599023,
+      "sizeLn": 0.0236178,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1396.75,
+      "weightShare": 0.0217104,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-32873",
+      "building": "WEST HEIGHTS 2",
+      "date": "2026-10-30",
+      "sizeSqft": 2062.04,
+      "registeredPsf": 1576.11,
+      "timeLn": 0.0,
+      "sizeLn": 0.0053589,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1584.58,
+      "weightShare": 0.0214144,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-23285",
+      "building": "THE RESIDENCES AT BUSINESS CENTRAL",
+      "date": "2026-07-28",
+      "sizeSqft": 1781.21,
+      "registeredPsf": 1405.5,
+      "timeLn": -0.0109378,
+      "sizeLn": -0.0404175,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1335.14,
+      "weightShare": 0.0168259,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "EAST HEIGHTS 3",
+      "weightShare": 0.030862
+     },
+     {
+      "building": "Peninsula Five - Tower 1",
+      "weightShare": 0.030862
+     },
+     {
+      "building": "WEST HEIGHTS 6",
+      "weightShare": 0.030862
+     }
+    ]
+   }
+  },
+  {
+   "id": 5,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 627.0,
+    "master": "Dubai Science Park",
+    "area": "Al Barshaa South Second",
+    "askingPsf": 971.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1360.8,
+    "buildings": 9,
+    "weight": 8.15338,
+    "comparables": 146,
+    "sizeDistance": 0.18055,
+    "lowPsf": 1149.75,
+    "highPsf": 1830.53,
+    "halfWidth": 0.25014,
+    "rangeLowPsf": 1150,
+    "rangeHighPsf": 1830,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-33448",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-30",
+      "sizeSqft": 648.09,
+      "registeredPsf": 1543.0,
+      "timeLn": 0.0,
+      "sizeLn": 0.0147048,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1565.85,
+      "weightShare": 0.043034,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-33085",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-28",
+      "sizeSqft": 683.94,
+      "registeredPsf": 1622.95,
+      "timeLn": 0.0,
+      "sizeLn": 0.038636,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1686.88,
+      "weightShare": 0.0397553,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-14343",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-01",
+      "sizeSqft": 693.73,
+      "registeredPsf": 1405.45,
+      "timeLn": -0.00165206,
+      "sizeLn": 0.0449532,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1467.64,
+      "weightShare": 0.034835,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "ORCHID RESIDENCE",
+      "weightShare": 0.122648
+     },
+     {
+      "building": "Opalz By Danube - Tower 2",
+      "weightShare": 0.122648
+     },
+     {
+      "building": "MONTROSE RESIDENCE A",
+      "weightShare": 0.122648
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "input": {
+    "bedrooms": 2,
+    "basis": 1,
+    "sizeSqft": 2028.0,
+    "master": "Dubai Science Park",
+    "area": "Al Barshaa South Second",
+    "askingPsf": 1082.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc2",
+    "centrePsf": 1422.42,
+    "buildings": 10,
+    "weight": 7.06835,
+    "comparables": 635,
+    "sizeDistance": 0.247156,
+    "lowPsf": 1047.56,
+    "highPsf": 1891.28,
+    "halfWidth": 0.296579,
+    "rangeLowPsf": 1050,
+    "rangeHighPsf": 1890,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-34053",
+      "building": "Vincitore Aqua Flora",
+      "date": "2026-04-09",
+      "sizeSqft": 1584.23,
+      "registeredPsf": 1409.52,
+      "timeLn": -0.0391046,
+      "sizeLn": -0.0641188,
+      "vintageLn": 0.0677905,
+      "adjustedPsf": 1360.45,
+      "weightShare": 0.031093,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2025-39564",
+      "building": "Opalz By Danube - Tower 2",
+      "date": "2025-05-12",
+      "sizeSqft": 2014.46,
+      "registeredPsf": 1170.04,
+      "timeLn": 0.0392792,
+      "sizeLn": -0.00173931,
+      "vintageLn": 0.18371,
+      "adjustedPsf": 1459.78,
+      "weightShare": 0.0173352,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-59074",
+      "building": "Vincitore Aqua Dimore",
+      "date": "2026-07-06",
+      "sizeSqft": 1673.57,
+      "registeredPsf": 1395.82,
+      "timeLn": -0.00642559,
+      "sizeLn": -0.0498747,
+      "vintageLn": 0.0988144,
+      "adjustedPsf": 1456.44,
+      "weightShare": 0.0167383,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Binghatti Hills - 1",
+      "weightShare": 0.141476
+     },
+     {
+      "building": "Binghatti Hills - 2",
+      "weightShare": 0.141476
+     },
+     {
+      "building": "Vincitore Aqua Dimore",
+      "weightShare": 0.141476
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "input": {
+    "bedrooms": 0,
+    "basis": 1,
+    "sizeSqft": 410.0,
+    "master": "Dubai Maritime City",
+    "area": "Madinat Dubai Almelaheyah",
+    "askingPsf": 4549.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc0",
+    "centrePsf": 3306.62,
+    "buildings": 7,
+    "weight": 6.80929,
+    "comparables": 872,
+    "sizeDistance": 0.0769622,
+    "lowPsf": 2497.67,
+    "highPsf": 3831.96,
+    "halfWidth": 0.201761,
+    "rangeLowPsf": 2500,
+    "rangeHighPsf": 3830,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-89300",
+      "building": "MAR CASA",
+      "date": "2026-10-28",
+      "sizeSqft": 382.12,
+      "registeredPsf": 2224.43,
+      "timeLn": 0.0,
+      "sizeLn": -0.0379551,
+      "vintageLn": 0.142645,
+      "adjustedPsf": 2469.93,
+      "weightShare": 0.0445042,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-67163",
+      "building": "Oceanz 3 By Danube",
+      "date": "2026-07-30",
+      "sizeSqft": 568.23,
+      "registeredPsf": 2539.46,
+      "timeLn": 0.0148035,
+      "sizeLn": 0.175901,
+      "vintageLn": 0.114319,
+      "adjustedPsf": 3445.18,
+      "weightShare": 0.0297984,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-60901",
+      "building": "MAR CASA",
+      "date": "2026-07-10",
+      "sizeSqft": 383.3,
+      "registeredPsf": 2109.41,
+      "timeLn": 0.0105634,
+      "sizeLn": -0.0362934,
+      "vintageLn": 0.142645,
+      "adjustedPsf": 2371.02,
+      "weightShare": 0.0294529,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Aria By Beyond",
+      "weightShare": 0.146858
+     },
+     {
+      "building": "Breez by Danube",
+      "weightShare": 0.146858
+     },
+     {
+      "building": "MAR CASA",
+      "weightShare": 0.146858
+     }
+    ]
+   }
+  },
+  {
+   "id": 8,
+   "input": {
+    "bedrooms": 3,
+    "basis": 0,
+    "sizeSqft": 1515.0,
+    "master": "Dubai Maritime City",
+    "area": "Madinat Dubai Almelaheyah",
+    "askingPsf": 3221.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community_and_area",
+    "group": "Rt",
+    "centrePsf": 2497.81,
+    "buildings": 4,
+    "weight": 1.79467,
+    "comparables": 16,
+    "sizeDistance": 0.174677,
+    "lowPsf": 1899.73,
+    "highPsf": 3597.21,
+    "halfWidth": 0.339793,
+    "rangeLowPsf": 1900,
+    "rangeHighPsf": 3600,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-33219",
+      "building": "THE ANWA BY OMNIYAT",
+      "date": "2026-10-29",
+      "sizeSqft": 1893.15,
+      "registeredPsf": 2120.42,
+      "timeLn": 0.0,
+      "sizeLn": 0.0696722,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2273.42,
+      "weightShare": 0.296592,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-31401",
+      "building": "Seagate Building 2",
+      "date": "2026-10-14",
+      "sizeSqft": 1529.55,
+      "registeredPsf": 3661.21,
+      "timeLn": 0.00063154,
+      "sizeLn": 0.00298858,
+      "vintageLn": 0.0,
+      "adjustedPsf": 3674.49,
+      "weightShare": 0.147333,
+      "inCommunity": false
+     },
+     {
+      "ref": "dld:1-11-2025-48036",
+      "building": "THE ANWA BY OMNIYAT",
+      "date": "2025-11-19",
+      "sizeSqft": 1893.91,
+      "registeredPsf": 1798.86,
+      "timeLn": -0.0277004,
+      "sizeLn": 0.0697977,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1876.2,
+      "weightShare": 0.0802166,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "THE ANWA BY OMNIYAT",
+      "weightShare": 0.557204
+     },
+     {
+      "building": "Seagate Building 2",
+      "weightShare": 0.246752
+     },
+     {
+      "building": "RIVA RESIDENCE",
+      "weightShare": 0.104339
+     }
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 1148.0,
+    "master": "Al Barari",
+    "area": "Wadi Al Safa 3",
+    "askingPsf": 1514.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rt",
+    "centrePsf": 1709.76,
+    "buildings": 5,
+    "weight": 3.78061,
+    "comparables": 73,
+    "sizeDistance": 0.11477,
+    "lowPsf": 1312.3,
+    "highPsf": 2404.01,
+    "halfWidth": 0.319259,
+    "rangeLowPsf": 1310,
+    "rangeHighPsf": 2400,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-12095",
+      "building": "C2",
+      "date": "2026-03-31",
+      "sizeSqft": 1124.4,
+      "registeredPsf": 1778.73,
+      "timeLn": -0.0311629,
+      "sizeLn": -0.00923266,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1708.31,
+      "weightShare": 0.109961,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-12635",
+      "building": "C3",
+      "date": "2026-04-06",
+      "sizeSqft": 1243.34,
+      "registeredPsf": 2372.64,
+      "timeLn": -0.0311629,
+      "sizeLn": 0.0354608,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2382.86,
+      "weightShare": 0.10533,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-50068",
+      "building": "C3",
+      "date": "2025-11-28",
+      "sizeSqft": 1099.86,
+      "registeredPsf": 2182.1,
+      "timeLn": -0.0224512,
+      "sizeLn": -0.0190409,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2093.41,
+      "weightShare": 0.0678783,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "B2",
+      "weightShare": 0.264507
+     },
+     {
+      "building": "C1",
+      "weightShare": 0.264507
+     },
+     {
+      "building": "C2",
+      "weightShare": 0.238752
+     }
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "input": {
+    "bedrooms": 2,
+    "basis": 1,
+    "sizeSqft": 1209.0,
+    "master": "Al Barari",
+    "area": "Wadi Al Safa 3",
+    "askingPsf": 1295.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Ot",
+    "centrePsf": 3152.17,
+    "buildings": 3,
+    "weight": 2.4802,
+    "comparables": 58,
+    "sizeDistance": 0.418175,
+    "lowPsf": 2703.02,
+    "highPsf": 3943.27,
+    "halfWidth": 0.196729,
+    "rangeLowPsf": 2700,
+    "rangeHighPsf": 3940,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-78014",
+      "building": "The Cape - B",
+      "date": "2026-09-09",
+      "sizeSqft": 1777.55,
+      "registeredPsf": 2839.63,
+      "timeLn": 0.0162609,
+      "sizeLn": 0.100077,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 3151.86,
+      "weightShare": 0.0599599,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-78536",
+      "building": "The Cape - A",
+      "date": "2026-09-10",
+      "sizeSqft": 1839.77,
+      "registeredPsf": 2771.81,
+      "timeLn": 0.0162609,
+      "sizeLn": 0.10901,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 3104.19,
+      "weightShare": 0.0442655,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-41142",
+      "building": "The Cape - C",
+      "date": "2026-04-30",
+      "sizeSqft": 1760.01,
+      "registeredPsf": 2771.64,
+      "timeLn": -0.0136725,
+      "sizeLn": 0.097502,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 2977.99,
+      "weightShare": 0.0395025,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "The Cape - A",
+      "weightShare": 0.36212
+     },
+     {
+      "building": "The Cape - B",
+      "weightShare": 0.361383
+     },
+     {
+      "building": "The Cape - C",
+      "weightShare": 0.276497
+     }
+    ]
+   }
+  },
+  {
+   "id": 11,
+   "input": {
+    "bedrooms": 0,
+    "basis": 1,
+    "sizeSqft": 331.0,
+    "master": "Dubai Hills Estate",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "askingPsf": 2755.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Ot",
+    "centrePsf": 3548.72,
+    "buildings": 3,
+    "weight": 1.02428,
+    "comparables": 17,
+    "sizeDistance": 0.2183,
+    "lowPsf": 2574.36,
+    "highPsf": 4276.31,
+    "halfWidth": 0.239798,
+    "rangeLowPsf": 2570,
+    "rangeHighPsf": 4280,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-82951",
+      "building": "Soho The Berkeley",
+      "date": "2026-09-30",
+      "sizeSqft": 226.15,
+      "registeredPsf": 3097.1,
+      "timeLn": 0.0110992,
+      "sizeLn": -0.205302,
+      "vintageLn": 0.0816655,
+      "adjustedPsf": 2767.46,
+      "weightShare": 0.163395,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2025-109403",
+      "building": "Mallside Residence",
+      "date": "2025-10-30",
+      "sizeSqft": 424.31,
+      "registeredPsf": 2755.06,
+      "timeLn": -0.0150008,
+      "sizeLn": 0.133849,
+      "vintageLn": 0.124878,
+      "adjustedPsf": 3515.45,
+      "weightShare": 0.115572,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2025-35148",
+      "building": "Soho The Berkeley",
+      "date": "2025-04-28",
+      "sizeSqft": 376.95,
+      "registeredPsf": 3102.81,
+      "timeLn": -0.00665807,
+      "sizeLn": 0.0700621,
+      "vintageLn": 0.0816655,
+      "adjustedPsf": 3587.22,
+      "weightShare": 0.0940971,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Soho The Berkeley",
+      "weightShare": 0.639936
+     },
+     {
+      "building": "Mallside Residence",
+      "weightShare": 0.193045
+     },
+     {
+      "building": "THE GROVE BY IMAN",
+      "weightShare": 0.167019
+     }
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "input": {
+    "bedrooms": 3,
+    "basis": 0,
+    "sizeSqft": 2208.0,
+    "master": "Dubai Hills Estate",
+    "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+    "askingPsf": 2437.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rb",
+    "centrePsf": 2267.61,
+    "buildings": 35,
+    "weight": 25.9096,
+    "comparables": 217,
+    "sizeDistance": 0.196169,
+    "lowPsf": 1741.18,
+    "highPsf": 3224.63,
+    "halfWidth": 0.327095,
+    "rangeLowPsf": 1740,
+    "rangeHighPsf": 3220,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-26729",
+      "building": "Park Field Tower 2",
+      "date": "2026-08-31",
+      "sizeSqft": 2169.25,
+      "registeredPsf": 1982.25,
+      "timeLn": -0.00161907,
+      "sizeLn": -0.0055361,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1968.12,
+      "weightShare": 0.0287039,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-34990",
+      "building": "MULBERRY at PARK HEIGHTS Building B1",
+      "date": "2026-11-16",
+      "sizeSqft": 1949.45,
+      "registeredPsf": 2436.58,
+      "timeLn": 0.0,
+      "sizeLn": -0.0389404,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2343.53,
+      "weightShare": 0.0254632,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-32760",
+      "building": "Golf Residences by Fortimo",
+      "date": "2026-10-26",
+      "sizeSqft": 2390.66,
+      "registeredPsf": 2656.17,
+      "timeLn": 0.0,
+      "sizeLn": 0.0248521,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2723.01,
+      "weightShare": 0.0210849,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Park Field Tower 2",
+      "weightShare": 0.0385957
+     },
+     {
+      "building": "Park Heights I",
+      "weightShare": 0.0385957
+     },
+     {
+      "building": "399 Hills Park B",
+      "weightShare": 0.0385957
+     }
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 840.0,
+    "master": "DMCC Master Community",
+    "area": "Al Thanyah Fifth",
+    "askingPsf": 1025.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1351.36,
+    "buildings": 41,
+    "weight": 40.7791,
+    "comparables": 1016,
+    "sizeDistance": 0.105566,
+    "lowPsf": 1100.86,
+    "highPsf": 2006.94,
+    "halfWidth": 0.335249,
+    "rangeLowPsf": 1100,
+    "rangeHighPsf": 2010,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-29532",
+      "building": "AL SHERA",
+      "date": "2026-09-28",
+      "sizeSqft": 993.29,
+      "registeredPsf": 1359.12,
+      "timeLn": 0.00175845,
+      "sizeLn": 0.0745044,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1466.82,
+      "weightShare": 0.0101204,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-33335",
+      "building": "ARMADA 1",
+      "date": "2026-10-30",
+      "sizeSqft": 827.85,
+      "registeredPsf": 1177.75,
+      "timeLn": 0.0,
+      "sizeLn": -0.00647606,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1170.15,
+      "weightShare": 0.00885647,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-15493",
+      "building": "PALLADIUM",
+      "date": "2026-05-07",
+      "sizeSqft": 992.97,
+      "registeredPsf": 1172.56,
+      "timeLn": -0.0444915,
+      "sizeLn": 0.0743612,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1208.11,
+      "weightShare": 0.00864217,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "DUBAI ARCH TOWER",
+      "weightShare": 0.0245224
+     },
+     {
+      "building": "DUBAI GATE 2",
+      "weightShare": 0.0245224
+     },
+     {
+      "building": "GOLDCREST VIEWS 2",
+      "weightShare": 0.0245224
+     }
+    ]
+   }
+  },
+  {
+   "id": 14,
+   "input": {
+    "bedrooms": 2,
+    "basis": 1,
+    "sizeSqft": 1093.0,
+    "master": "DMCC Master Community",
+    "area": "Al Thanyah Fifth",
+    "askingPsf": 1818.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc1",
+    "centrePsf": 2527.39,
+    "buildings": 17,
+    "weight": 16.3751,
+    "comparables": 684,
+    "sizeDistance": 0.182804,
+    "lowPsf": 1570.38,
+    "highPsf": 3082.69,
+    "halfWidth": 0.299185,
+    "rangeLowPsf": 1570,
+    "rangeHighPsf": 3080,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-84225",
+      "building": "THE WIND TOWER II",
+      "date": "2026-10-08",
+      "sizeSqft": 1169.39,
+      "registeredPsf": 632.062,
+      "timeLn": 0.0136652,
+      "sizeLn": 0.0175403,
+      "vintageLn": 0.191756,
+      "adjustedPsf": 789.933,
+      "weightShare": 0.0362965,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-55901",
+      "building": "Seven City JLT",
+      "date": "2026-07-01",
+      "sizeSqft": 920.64,
+      "registeredPsf": 1194.82,
+      "timeLn": 0.0188927,
+      "sizeLn": -0.0445577,
+      "vintageLn": 0.191756,
+      "adjustedPsf": 1410.7,
+      "weightShare": 0.017595,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-45805",
+      "building": "WIND ONE",
+      "date": "2026-05-18",
+      "sizeSqft": 1381.44,
+      "registeredPsf": 1002.6,
+      "timeLn": 0.00180732,
+      "sizeLn": 0.060808,
+      "vintageLn": 0.191756,
+      "adjustedPsf": 1293.0,
+      "weightShare": 0.0166584,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "ME DO RE 2",
+      "weightShare": 0.0610684
+     },
+     {
+      "building": "Orra The Embankment - Tower 1",
+      "weightShare": 0.0610684
+     },
+     {
+      "building": "Saba 4",
+      "weightShare": 0.0610684
+     }
+    ]
+   }
+  },
+  {
+   "id": 15,
+   "input": {
+    "bedrooms": 0,
+    "basis": 1,
+    "sizeSqft": 529.0,
+    "master": "International City Phase 3",
+    "area": "Warsan Fourth",
+    "askingPsf": 938.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc2",
+    "centrePsf": 1110.18,
+    "buildings": 26,
+    "weight": 25.2578,
+    "comparables": 637,
+    "sizeDistance": 0.215916,
+    "lowPsf": 850.436,
+    "highPsf": 1353.33,
+    "halfWidth": 0.226493,
+    "rangeLowPsf": 850,
+    "rangeHighPsf": 1350,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-81695",
+      "building": "SADAAT TOWER",
+      "date": "2026-09-24",
+      "sizeSqft": 467.15,
+      "registeredPsf": 1155.95,
+      "timeLn": -0.00377726,
+      "sizeLn": -0.0670137,
+      "vintageLn": -3.32961e-05,
+      "adjustedPsf": 1076.91,
+      "weightShare": 0.0142554,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-80775",
+      "building": "SADAAT TOWER",
+      "date": "2026-09-21",
+      "sizeSqft": 467.15,
+      "registeredPsf": 1046.9,
+      "timeLn": -0.00377726,
+      "sizeLn": -0.0670137,
+      "vintageLn": -3.32961e-05,
+      "adjustedPsf": 975.32,
+      "weightShare": 0.014094,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-40511",
+      "building": "HZ RESIDENCES 5",
+      "date": "2026-04-30",
+      "sizeSqft": 475.87,
+      "registeredPsf": 1180.94,
+      "timeLn": 0.0116558,
+      "sizeLn": -0.0570459,
+      "vintageLn": 0.0536037,
+      "adjustedPsf": 1190.68,
+      "weightShare": 0.0137475,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Linden Residences",
+      "weightShare": 0.0395918
+     },
+     {
+      "building": "Park Residency",
+      "weightShare": 0.0395918
+     },
+     {
+      "building": "SPORTS VIEW RESIDENCE 2 BY AL HELAL AL ZAHABY",
+      "weightShare": 0.0395918
+     }
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "input": {
+    "bedrooms": 3,
+    "basis": 0,
+    "sizeSqft": 2549.0,
+    "master": "International City Phase 3",
+    "area": "Warsan Fourth",
+    "askingPsf": 928.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": false,
+    "reason": "too_few_buildings",
+    "scope": "community_and_area",
+    "group": "Rt",
+    "centrePsf": 688.039,
+    "buildings": 2,
+    "weight": 1.10545,
+    "comparables": 13,
+    "sizeDistance": 0.0689049,
+    "lowPsf": 499.532,
+    "highPsf": 806.529,
+    "halfWidth": 0.223096,
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-20027",
+      "building": "AIMARSOUMY",
+      "date": "2026-06-29",
+      "sizeSqft": 2328.12,
+      "registeredPsf": 687.25,
+      "timeLn": 0.0327943,
+      "sizeLn": -0.0283408,
+      "vintageLn": 0.0,
+      "adjustedPsf": 690.317,
+      "weightShare": 0.167049,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-16684",
+      "building": "AIMARSOUMY",
+      "date": "2026-05-19",
+      "sizeSqft": 2401.43,
+      "registeredPsf": 624.628,
+      "timeLn": 0.0268589,
+      "sizeLn": -0.0186469,
+      "vintageLn": 0.0,
+      "adjustedPsf": 629.778,
+      "weightShare": 0.150557,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-5207",
+      "building": "AIMARSOUMY",
+      "date": "2026-02-05",
+      "sizeSqft": 2625.75,
+      "registeredPsf": 647.434,
+      "timeLn": -0.02757,
+      "sizeLn": 0.00927563,
+      "vintageLn": 0.0,
+      "adjustedPsf": 635.697,
+      "weightShare": 0.104909,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "AIMARSOUMY",
+      "weightShare": 0.904609
+     },
+     {
+      "building": "BNH Smart Tower 02",
+      "weightShare": 0.0953911
+     }
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 628.0,
+    "area": "Al Barsha South Fourth",
+    "askingPsf": 1095.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "area",
+    "group": "Oa",
+    "centrePsf": 1658.32,
+    "buildings": 185,
+    "weight": 163.336,
+    "comparables": 9322,
+    "sizeDistance": 0.189599,
+    "lowPsf": 1273.47,
+    "highPsf": 2260.0,
+    "halfWidth": 0.297447,
+    "rangeLowPsf": 1270,
+    "rangeHighPsf": 2260,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-91086",
+      "building": "1WOOD Residence 2",
+      "date": "2026-11-05",
+      "sizeSqft": 702.34,
+      "registeredPsf": 1500.27,
+      "timeLn": 0.0,
+      "sizeLn": 0.0359583,
+      "vintageLn": -0.00231337,
+      "adjustedPsf": 1551.61,
+      "weightShare": 0.0043094,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-89874",
+      "building": "S'VN Residences",
+      "date": "2026-11-03",
+      "sizeSqft": 551.33,
+      "registeredPsf": 1865.99,
+      "timeLn": 0.0,
+      "sizeLn": -0.0418495,
+      "vintageLn": -0.000184587,
+      "adjustedPsf": 1789.18,
+      "weightShare": 0.00300998,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-42572",
+      "building": "SAMANA MIAMI",
+      "date": "2026-05-07",
+      "sizeSqft": 698.04,
+      "registeredPsf": 1495.41,
+      "timeLn": 0.0145373,
+      "sizeLn": 0.0339845,
+      "vintageLn": 0.191756,
+      "adjustedPsf": 1901.57,
+      "weightShare": 0.00259979,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Binghatti Circle",
+      "weightShare": 0.00612236
+     },
+     {
+      "building": "ONE SKY PARK BY IMAN",
+      "weightShare": 0.00612236
+     },
+     {
+      "building": "BERKELEY SQUARE BY PRESTIGE ONE",
+      "weightShare": 0.00612236
+     }
+    ]
+   }
+  },
+  {
+   "id": 18,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 1080.0,
+    "area": "Business Bay",
+    "askingPsf": 3486.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "area",
+    "group": "Oa",
+    "centrePsf": 2520.58,
+    "buildings": 54,
+    "weight": 45.1108,
+    "comparables": 4610,
+    "sizeDistance": 0.222487,
+    "lowPsf": 1758.06,
+    "highPsf": 3633.81,
+    "halfWidth": 0.372086,
+    "rangeLowPsf": 1760,
+    "rangeHighPsf": 3630,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-78812",
+      "building": "77S",
+      "date": "2026-09-11",
+      "sizeSqft": 878.23,
+      "registeredPsf": 1935.71,
+      "timeLn": 0.00933517,
+      "sizeLn": -0.0664697,
+      "vintageLn": -0.00937126,
+      "adjustedPsf": 1811.16,
+      "weightShare": 0.00736743,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-88917",
+      "building": "VENTO TOWER",
+      "date": "2026-10-27",
+      "sizeSqft": 983.93,
+      "registeredPsf": 2578.21,
+      "timeLn": 0.0,
+      "sizeLn": -0.0299429,
+      "vintageLn": 0.107112,
+      "adjustedPsf": 2785.04,
+      "weightShare": 0.006385,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-15429",
+      "building": "BURJ PACIFIC",
+      "date": "2026-02-11",
+      "sizeSqft": 1001.04,
+      "registeredPsf": 1200.75,
+      "timeLn": -0.0371324,
+      "sizeLn": -0.0244018,
+      "vintageLn": 0.191756,
+      "adjustedPsf": 1367.75,
+      "weightShare": 0.00616178,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Al Habtoor Tower",
+      "weightShare": 0.0221676
+     },
+     {
+      "building": "AYKON CITY 3 - TOWER D",
+      "weightShare": 0.0221676
+     },
+     {
+      "building": "Bayz 102 By Danube",
+      "weightShare": 0.0221676
+     }
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 855.0,
+    "area": "Al Barshaa South Second",
+    "askingPsf": 1554.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "area",
+    "group": "Oa",
+    "centrePsf": 1650.8,
+    "buildings": 15,
+    "weight": 14.3847,
+    "comparables": 2507,
+    "sizeDistance": 0.112811,
+    "lowPsf": 1286.93,
+    "highPsf": 2193.94,
+    "halfWidth": 0.274717,
+    "rangeLowPsf": 1290,
+    "rangeHighPsf": 2190,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-52773",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-06-15",
+      "sizeSqft": 792.44,
+      "registeredPsf": 1325.02,
+      "timeLn": -0.0352258,
+      "sizeLn": -0.0244221,
+      "vintageLn": 0.104095,
+      "adjustedPsf": 1385.24,
+      "weightShare": 0.00973193,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-82065",
+      "building": "Binghatti Hills - 1",
+      "date": "2026-09-25",
+      "sizeSqft": 848.3,
+      "registeredPsf": 1414.59,
+      "timeLn": 0.00885815,
+      "sizeLn": -0.00252856,
+      "vintageLn": 0.0944493,
+      "adjustedPsf": 1564.59,
+      "weightShare": 0.00799825,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2025-39932",
+      "building": "Opalz By Danube - Tower 1",
+      "date": "2025-05-12",
+      "sizeSqft": 792.12,
+      "registeredPsf": 1160.18,
+      "timeLn": 0.0392792,
+      "sizeLn": -0.0245519,
+      "vintageLn": 0.182202,
+      "adjustedPsf": 1412.7,
+      "weightShare": 0.00798834,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Sky Hills Astra Tower A",
+      "weightShare": 0.0695183
+     },
+     {
+      "building": "Vincitore Aqua Dimore",
+      "weightShare": 0.0695183
+     },
+     {
+      "building": "Binghatti Hills - 1",
+      "weightShare": 0.0695183
+     }
+    ]
+   }
+  },
+  {
+   "id": 20,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 621.0,
+    "area": "Madinat Dubai Almelaheyah",
+    "askingPsf": 2237.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "area",
+    "group": "Oa",
+    "centrePsf": 3164.48,
+    "buildings": 65,
+    "weight": 55.4305,
+    "comparables": 4069,
+    "sizeDistance": 0.230641,
+    "lowPsf": 2353.78,
+    "highPsf": 4228.93,
+    "halfWidth": 0.296282,
+    "rangeLowPsf": 2350,
+    "rangeHighPsf": 4230,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-92597",
+      "building": "Pier Point 2",
+      "date": "2026-11-13",
+      "sizeSqft": 803.63,
+      "registeredPsf": 3172.96,
+      "timeLn": 0.0,
+      "sizeLn": 0.0828616,
+      "vintageLn": 0.0765209,
+      "adjustedPsf": 3721.21,
+      "weightShare": 0.00661031,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-76291",
+      "building": "NAUTICA TWO",
+      "date": "2026-09-02",
+      "sizeSqft": 614.94,
+      "registeredPsf": 2369.34,
+      "timeLn": 0.0125342,
+      "sizeLn": -0.00315185,
+      "vintageLn": 0.124711,
+      "adjustedPsf": 2709.34,
+      "weightShare": 0.00570389,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-86706",
+      "building": "Marina Views Tower 3",
+      "date": "2026-10-16",
+      "sizeSqft": 742.39,
+      "registeredPsf": 2238.56,
+      "timeLn": 0.00789172,
+      "sizeLn": 0.0573854,
+      "vintageLn": 0.087122,
+      "adjustedPsf": 2607.09,
+      "weightShare": 0.00557464,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-C",
+      "weightShare": 0.0180406
+     },
+     {
+      "building": "LIV MARITIME",
+      "weightShare": 0.0180406
+     },
+     {
+      "building": "Breez by Danube",
+      "weightShare": 0.0180406
+     }
+    ]
+   }
+  },
+  {
+   "id": 21,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 3235.0,
+    "master": "Al Barari",
+    "askingPsf": 2347.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1987.52,
+    "buildings": 9,
+    "weight": 4.31199,
+    "comparables": 73,
+    "sizeDistance": 0.150561,
+    "lowPsf": 1506.68,
+    "highPsf": 2469.4,
+    "halfWidth": 0.242191,
+    "rangeLowPsf": 1510,
+    "rangeHighPsf": 2470,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-30734",
+      "building": "F1",
+      "date": "2026-10-07",
+      "sizeSqft": 4005.14,
+      "registeredPsf": 2022.4,
+      "timeLn": 0.00805886,
+      "sizeLn": 0.0865859,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2223.16,
+      "weightShare": 0.120154,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-18404",
+      "building": "E2",
+      "date": "2026-06-15",
+      "sizeSqft": 3132.51,
+      "registeredPsf": 2011.17,
+      "timeLn": 0.00126757,
+      "sizeLn": -0.0130535,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1987.6,
+      "weightShare": 0.0858428,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-50518",
+      "building": "F2",
+      "date": "2025-12-03",
+      "sizeSqft": 3133.05,
+      "registeredPsf": 2122.53,
+      "timeLn": -0.0224512,
+      "sizeLn": -0.0129836,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2048.64,
+      "weightShare": 0.0612008,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "E2",
+      "weightShare": 0.231911
+     },
+     {
+      "building": "SEVENTH HEAVEN",
+      "weightShare": 0.231911
+     },
+     {
+      "building": "F1",
+      "weightShare": 0.187834
+     }
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1036.0,
+    "master": "Dubai Hills Estate",
+    "askingPsf": 2335.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 2237.61,
+    "buildings": 51,
+    "weight": 45.9889,
+    "comparables": 733,
+    "sizeDistance": 0.161611,
+    "lowPsf": 1811.69,
+    "highPsf": 3025.7,
+    "halfWidth": 0.271274,
+    "rangeLowPsf": 1810,
+    "rangeHighPsf": 3030,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-18821",
+      "building": "Park Point Building D",
+      "date": "2026-06-17",
+      "sizeSqft": 1012.67,
+      "registeredPsf": 1925.6,
+      "timeLn": 0.00385723,
+      "sizeLn": -0.00923507,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1915.27,
+      "weightShare": 0.0121423,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-26634",
+      "building": "Golfville Block B",
+      "date": "2026-08-27",
+      "sizeSqft": 1216.86,
+      "registeredPsf": 1840.8,
+      "timeLn": -0.00161907,
+      "sizeLn": 0.0652413,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1961.73,
+      "weightShare": 0.0119985,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-13779",
+      "building": "Vida Residences Dubai Hills Estate",
+      "date": "2026-09-18",
+      "sizeSqft": 1250.23,
+      "registeredPsf": 2687.6,
+      "timeLn": -0.00345562,
+      "sizeLn": 0.0762105,
+      "vintageLn": 0.0,
+      "adjustedPsf": 2890.43,
+      "weightShare": 0.0117472,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Park Horizon - Tower 2",
+      "weightShare": 0.0217444
+     },
+     {
+      "building": "ACACIA AT PARK HEIGHTS BUILDING B",
+      "weightShare": 0.0217444
+     },
+     {
+      "building": "Collective 2.0 Tower A",
+      "weightShare": 0.0217444
+     }
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1131.0,
+    "master": "DMCC Master Community",
+    "askingPsf": 1045.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1450.18,
+    "buildings": 42,
+    "weight": 36.1792,
+    "comparables": 696,
+    "sizeDistance": 0.196976,
+    "lowPsf": 1145.15,
+    "highPsf": 2117.81,
+    "halfWidth": 0.335357,
+    "rangeLowPsf": 1150,
+    "rangeHighPsf": 2120,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-27310",
+      "building": "SABA 2",
+      "date": "2026-09-04",
+      "sizeSqft": 1249.58,
+      "registeredPsf": 1200.4,
+      "timeLn": 0.00228694,
+      "sizeLn": 0.0404266,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1252.79,
+      "weightShare": 0.0111999,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-10934",
+      "building": "Indigo Tower",
+      "date": "2026-03-13",
+      "sizeSqft": 1174.56,
+      "registeredPsf": 1541.0,
+      "timeLn": -0.0734696,
+      "sizeLn": 0.0153229,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1453.95,
+      "weightShare": 0.0106138,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-17610",
+      "building": "DUBAI ARCH TOWER",
+      "date": "2026-06-05",
+      "sizeSqft": 1360.02,
+      "registeredPsf": 1474.24,
+      "timeLn": -0.0128252,
+      "sizeLn": 0.0747658,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1568.45,
+      "weightShare": 0.0101728,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "GLOBAL LAKE VIEW",
+      "weightShare": 0.0276402
+     },
+     {
+      "building": "GREEN LAKES S1",
+      "weightShare": 0.0276402
+     },
+     {
+      "building": "ICON 1",
+      "weightShare": 0.0276402
+     }
+    ]
+   }
+  },
+  {
+   "id": 24,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1642.0,
+    "master": "International City Phase 3",
+    "askingPsf": 1108.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc2",
+    "centrePsf": 771.368,
+    "buildings": 12,
+    "weight": 4.5379,
+    "comparables": 66,
+    "sizeDistance": 0.225246,
+    "lowPsf": 638.666,
+    "highPsf": 1113.4,
+    "halfWidth": 0.307723,
+    "rangeLowPsf": 640,
+    "rangeHighPsf": 1110,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-30657",
+      "building": "HZ RESIDENCES 5",
+      "date": "2026-10-07",
+      "sizeSqft": 1444.3,
+      "registeredPsf": 803.157,
+      "timeLn": 0.0047699,
+      "sizeLn": -0.0520166,
+      "vintageLn": 0.0,
+      "adjustedPsf": 766.093,
+      "weightShare": 0.157739,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-27058",
+      "building": "7 Seasons",
+      "date": "2026-09-02",
+      "sizeSqft": 1258.84,
+      "registeredPsf": 1100.0,
+      "timeLn": 0.0246794,
+      "sizeLn": -0.107741,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1012.32,
+      "weightShare": 0.0757583,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-23178",
+      "building": "Glorious Central Residences",
+      "date": "2026-07-28",
+      "sizeSqft": 1222.24,
+      "registeredPsf": 1235.44,
+      "timeLn": 0.0341716,
+      "sizeLn": -0.119704,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1134.16,
+      "weightShare": 0.0550011,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "AIMARSOUMY",
+      "weightShare": 0.220366
+     },
+     {
+      "building": "HZ RESIDENCES 5",
+      "weightShare": 0.157739
+     },
+     {
+      "building": "7 Seasons",
+      "weightShare": 0.145862
+     }
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 883.0,
+    "building": [
+     "SEVENTH HEAVEN",
+     "Wadi Al Safa 3"
+    ],
+    "askingPsf": 1122.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": false,
+    "reason": "too_few_buildings",
+    "scope": "community",
+    "group": "Rt",
+    "centrePsf": 1623.1,
+    "buildings": 4,
+    "weight": 0.484917,
+    "comparables": 62,
+    "sizeDistance": 0.183839,
+    "lowPsf": 1353.46,
+    "highPsf": 2311.79,
+    "halfWidth": 0.295217,
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-12095",
+      "building": "C2",
+      "date": "2026-03-31",
+      "sizeSqft": 1124.4,
+      "registeredPsf": 1778.73,
+      "timeLn": -0.0311629,
+      "sizeLn": 0.107422,
+      "vintageLn": -0.0436508,
+      "adjustedPsf": 1837.68,
+      "weightShare": 0.119389,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-44027",
+      "building": "C2",
+      "date": "2025-10-22",
+      "sizeSqft": 1057.23,
+      "registeredPsf": 2080.91,
+      "timeLn": -0.0111418,
+      "sizeLn": 0.0800433,
+      "vintageLn": -0.0436508,
+      "adjustedPsf": 2134.12,
+      "weightShare": 0.0867673,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-50068",
+      "building": "C3",
+      "date": "2025-11-28",
+      "sizeSqft": 1099.86,
+      "registeredPsf": 2182.1,
+      "timeLn": -0.0224512,
+      "sizeLn": 0.097614,
+      "vintageLn": -0.0489153,
+      "adjustedPsf": 2240.13,
+      "weightShare": 0.0710461,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "C2",
+      "weightShare": 0.299831
+     },
+     {
+      "building": "B2",
+      "weightShare": 0.28119
+     },
+     {
+      "building": "C1",
+      "weightShare": 0.278942
+     }
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1111.0,
+    "building": [
+     "E1",
+     "Wadi Al Safa 3"
+    ],
+    "askingPsf": 696.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community_and_area",
+    "group": "Ra",
+    "centrePsf": 922.01,
+    "buildings": 10,
+    "weight": 2.29897,
+    "comparables": 468,
+    "sizeDistance": 0.163308,
+    "lowPsf": 704.961,
+    "highPsf": 1300.87,
+    "halfWidth": 0.323158,
+    "rangeLowPsf": 700,
+    "rangeHighPsf": 1300,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-19155",
+      "building": "KOA Canvas",
+      "date": "2026-06-19",
+      "sizeSqft": 1414.27,
+      "registeredPsf": 2227.3,
+      "timeLn": 0.00276952,
+      "sizeLn": 0.0978591,
+      "vintageLn": 0.0109098,
+      "adjustedPsf": 2490.11,
+      "weightShare": 0.0308811,
+      "inCommunity": false
+     },
+     {
+      "ref": "dld:1-11-2026-30141",
+      "building": "HERCULES TOWER",
+      "date": "2026-10-05",
+      "sizeSqft": 1402.21,
+      "registeredPsf": 846.877,
+      "timeLn": 0.00805886,
+      "sizeLn": 0.0943868,
+      "vintageLn": 0.0393304,
+      "adjustedPsf": 975.873,
+      "weightShare": 0.0270258,
+      "inCommunity": false
+     },
+     {
+      "ref": "dld:1-11-2026-12246",
+      "building": "CROESUS",
+      "date": "2026-03-31",
+      "sizeSqft": 1176.82,
+      "registeredPsf": 1040.94,
+      "timeLn": -0.0311629,
+      "sizeLn": 0.0233364,
+      "vintageLn": -0.0358466,
+      "adjustedPsf": 996.458,
+      "weightShare": 0.0250184,
+      "inCommunity": false
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Al Rabia Tower",
+      "weightShare": 0.340327
+     },
+     {
+      "building": "CLEOPATRA TOWER",
+      "weightShare": 0.103599
+     },
+     {
+      "building": "SHERENA RESIDENCE",
+      "weightShare": 0.0984682
+     }
+    ]
+   }
+  },
+  {
+   "id": 27,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 1018.0,
+    "building": [
+     "BELLA ROSE",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 1747.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc2",
+    "centrePsf": 1039.16,
+    "buildings": 8,
+    "weight": 2.27388,
+    "comparables": 120,
+    "sizeDistance": 0.206207,
+    "lowPsf": 887.521,
+    "highPsf": 1420.16,
+    "halfWidth": 0.256281,
+    "rangeLowPsf": 890,
+    "rangeHighPsf": 1420,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-33877",
+      "building": "ORCHID RESIDENCE",
+      "date": "2026-11-04",
+      "sizeSqft": 800.94,
+      "registeredPsf": 1079.98,
+      "timeLn": 0.0,
+      "sizeLn": -0.106591,
+      "vintageLn": -0.0239016,
+      "adjustedPsf": 947.86,
+      "weightShare": 0.0618534,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-21679",
+      "building": "ORCHID RESIDENCE",
+      "date": "2026-07-14",
+      "sizeSqft": 846.15,
+      "registeredPsf": 1146.37,
+      "timeLn": -0.00636469,
+      "sizeLn": -0.0821841,
+      "vintageLn": -0.0239016,
+      "adjustedPsf": 1024.44,
+      "weightShare": 0.0521705,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-17548",
+      "building": "ORCHID RESIDENCE",
+      "date": "2026-06-04",
+      "sizeSqft": 812.24,
+      "registeredPsf": 1212.7,
+      "timeLn": -0.0118445,
+      "sizeLn": -0.100364,
+      "vintageLn": -0.0239016,
+      "adjustedPsf": 1058.38,
+      "weightShare": 0.0372036,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "ORCHID RESIDENCE",
+      "weightShare": 0.439777
+     },
+     {
+      "building": "Three Towers B-2",
+      "weightShare": 0.163554
+     },
+     {
+      "building": "MONTROSE RESIDENCE B",
+      "weightShare": 0.111794
+     }
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1488.0,
+    "building": [
+     "MONTROSE RESIDENCE A",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 1560.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rt",
+    "centrePsf": 1067.52,
+    "buildings": 4,
+    "weight": 1.70959,
+    "comparables": 127,
+    "sizeDistance": 0.187313,
+    "lowPsf": 874.3,
+    "highPsf": 1215.04,
+    "halfWidth": 0.159595,
+    "rangeLowPsf": 870,
+    "rangeHighPsf": 1220,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-19226",
+      "building": "MONTROSE RESIDENCE B",
+      "date": "2026-06-22",
+      "sizeSqft": 1130.86,
+      "registeredPsf": 1204.0,
+      "timeLn": -0.00636469,
+      "sizeLn": -0.11128,
+      "vintageLn": -0.00119183,
+      "adjustedPsf": 1069.1,
+      "weightShare": 0.0959594,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-18381",
+      "building": "MONTROSE RESIDENCE B",
+      "date": "2026-06-15",
+      "sizeSqft": 1130.86,
+      "registeredPsf": 1208.84,
+      "timeLn": -0.0118445,
+      "sizeLn": -0.11128,
+      "vintageLn": -0.00119183,
+      "adjustedPsf": 1067.52,
+      "weightShare": 0.0934435,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-18394",
+      "building": "MONTROSE RESIDENCE B",
+      "date": "2026-06-15",
+      "sizeSqft": 1130.86,
+      "registeredPsf": 1208.84,
+      "timeLn": -0.0118445,
+      "sizeLn": -0.11128,
+      "vintageLn": -0.00119183,
+      "adjustedPsf": 1067.52,
+      "weightShare": 0.0934435,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "MONTROSE RESIDENCE B",
+      "weightShare": 0.584937
+     },
+     {
+      "building": "ORCHID RESIDENCE",
+      "weightShare": 0.241343
+     },
+     {
+      "building": "BELLA ROSE",
+      "weightShare": 0.0713226
+     }
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 621.0,
+    "building": [
+     "Orise Podium",
+     "Madinat Dubai Almelaheyah"
+    ],
+    "askingPsf": 2237.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc2",
+    "centrePsf": 3169.06,
+    "buildings": 30,
+    "weight": 27.6455,
+    "comparables": 3307,
+    "sizeDistance": 0.219752,
+    "lowPsf": 2414.66,
+    "highPsf": 3872.03,
+    "halfWidth": 0.229938,
+    "rangeLowPsf": 2410,
+    "rangeHighPsf": 3870,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-76291",
+      "building": "NAUTICA TWO",
+      "date": "2026-09-02",
+      "sizeSqft": 614.94,
+      "registeredPsf": 2369.34,
+      "timeLn": 0.0125342,
+      "sizeLn": -0.00315185,
+      "vintageLn": 0.0711071,
+      "adjustedPsf": 2567.93,
+      "weightShare": 0.0114366,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-77275",
+      "building": "Oceanz 3 By Danube",
+      "date": "2026-09-09",
+      "sizeSqft": 760.79,
+      "registeredPsf": 2786.58,
+      "timeLn": 0.0125342,
+      "sizeLn": 0.0652543,
+      "vintageLn": 0.0607151,
+      "adjustedPsf": 3200.53,
+      "weightShare": 0.00855254,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-74959",
+      "building": "Oceanz 3 By Danube",
+      "date": "2026-08-26",
+      "sizeSqft": 760.79,
+      "registeredPsf": 2975.85,
+      "timeLn": 0.0125342,
+      "sizeLn": 0.0652543,
+      "vintageLn": 0.0607151,
+      "adjustedPsf": 3417.93,
+      "weightShare": 0.00810995,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-C",
+      "weightShare": 0.0361723
+     },
+     {
+      "building": "LIV MARITIME",
+      "weightShare": 0.0361723
+     },
+     {
+      "building": "CHELSEA RESIDENCES BY DAMAC TOWER-C",
+      "weightShare": 0.0361723
+     }
+    ]
+   }
+  },
+  {
+   "id": 30,
+   "input": {
+    "bedrooms": 2,
+    "basis": 1,
+    "sizeSqft": 1666.0,
+    "building": [
+     "IL VENTO",
+     "Madinat Dubai Almelaheyah"
+    ],
+    "askingPsf": 3870.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc1",
+    "centrePsf": 3005.47,
+    "buildings": 27,
+    "weight": 20.8309,
+    "comparables": 1565,
+    "sizeDistance": 0.170291,
+    "lowPsf": 2355.75,
+    "highPsf": 3706.04,
+    "halfWidth": 0.224639,
+    "rangeLowPsf": 2360,
+    "rangeHighPsf": 3710,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-81356",
+      "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-A",
+      "date": "2026-09-22",
+      "sizeSqft": 1659.36,
+      "registeredPsf": 2986.12,
+      "timeLn": 0.00789172,
+      "sizeLn": -0.00103689,
+      "vintageLn": 0.0352737,
+      "adjustedPsf": 3114.6,
+      "weightShare": 0.0108006,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-80068",
+      "building": "Orise Podium",
+      "date": "2026-09-17",
+      "sizeSqft": 2023.72,
+      "registeredPsf": 2686.64,
+      "timeLn": 0.00789172,
+      "sizeLn": 0.0505033,
+      "vintageLn": 0.0564671,
+      "adjustedPsf": 3013.65,
+      "weightShare": 0.0106772,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-36051",
+      "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-B",
+      "date": "2026-04-14",
+      "sizeSqft": 1655.6,
+      "registeredPsf": 3312.39,
+      "timeLn": -0.00462898,
+      "sizeLn": -0.00162589,
+      "vintageLn": 0.0354775,
+      "adjustedPsf": 3410.62,
+      "weightShare": 0.00921059,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Orise Tower 2",
+      "weightShare": 0.0480056
+     },
+     {
+      "building": "Saria by Beyond",
+      "weightShare": 0.0480056
+     },
+     {
+      "building": "Franck Muller Yachting",
+      "weightShare": 0.0480056
+     }
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "input": {
+    "bedrooms": 3,
+    "basis": 0,
+    "sizeSqft": 1893.0,
+    "building": [
+     "THE ANWA BY OMNIYAT",
+     "Madinat Dubai Almelaheyah"
+    ],
+    "askingPsf": 2386.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": false,
+    "reason": "too_few_buildings",
+    "scope": "community_and_area",
+    "group": "Rt",
+    "centrePsf": 2369.37,
+    "buildings": 0,
+    "weight": 0.0990639,
+    "comparables": 9,
+    "sizeDistance": 0.167264,
+    "lowPsf": 1993.76,
+    "highPsf": 3227.53,
+    "halfWidth": 0.260358,
+    "topComparables": [
+     {
+      "ref": "dld:1-41-2026-4781",
+      "building": "RIVA RESIDENCE",
+      "date": "2026-03-18",
+      "sizeSqft": 2080.55,
+      "registeredPsf": 2400.81,
+      "timeLn": -0.0505225,
+      "sizeLn": 0.0295382,
+      "vintageLn": -0.108974,
+      "adjustedPsf": 2108.23,
+      "weightShare": 0.266984,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-6258",
+      "building": "RIVA RESIDENCE",
+      "date": "2026-04-20",
+      "sizeSqft": 2334.58,
+      "registeredPsf": 2224.38,
+      "timeLn": -0.0219355,
+      "sizeLn": 0.0655582,
+      "vintageLn": -0.108974,
+      "adjustedPsf": 2083.67,
+      "weightShare": 0.205177,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-31401",
+      "building": "Seagate Building 2",
+      "date": "2026-10-14",
+      "sizeSqft": 1529.55,
+      "registeredPsf": 3661.21,
+      "timeLn": 0.00063154,
+      "sizeLn": -0.0666588,
+      "vintageLn": -0.0837307,
+      "adjustedPsf": 3151.99,
+      "weightShare": 0.193408,
+      "inCommunity": false
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "RIVA RESIDENCE",
+      "weightShare": 0.480503
+     },
+     {
+      "building": "Seagate Building 2",
+      "weightShare": 0.324968
+     },
+     {
+      "building": "Seagate Building 1",
+      "weightShare": 0.194529
+     }
+    ]
+   }
+  },
+  {
+   "id": 32,
+   "input": {
+    "bedrooms": 0,
+    "basis": 1,
+    "sizeSqft": 358.0,
+    "building": [
+     "Nova Tower",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 1493.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc1",
+    "centrePsf": 2287.66,
+    "buildings": 14,
+    "weight": 11.7934,
+    "comparables": 3128,
+    "sizeDistance": 0.19568,
+    "lowPsf": 1907.51,
+    "highPsf": 2772.33,
+    "halfWidth": 0.189018,
+    "rangeLowPsf": 1910,
+    "rangeHighPsf": 2770,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-12164",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-02-04",
+      "sizeSqft": 454.88,
+      "registeredPsf": 1538.87,
+      "timeLn": -0.0432815,
+      "sizeLn": 0.129082,
+      "vintageLn": 0.110612,
+      "adjustedPsf": 1872.85,
+      "weightShare": 0.00457724,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-11966",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-02-03",
+      "sizeSqft": 455.31,
+      "registeredPsf": 1449.56,
+      "timeLn": -0.0432815,
+      "sizeLn": 0.129591,
+      "vintageLn": 0.110612,
+      "adjustedPsf": 1765.06,
+      "weightShare": 0.00453702,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-11965",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-02-03",
+      "sizeSqft": 459.08,
+      "registeredPsf": 1437.66,
+      "timeLn": -0.0432815,
+      "sizeLn": 0.134036,
+      "vintageLn": 0.110612,
+      "adjustedPsf": 1758.36,
+      "weightShare": 0.00433855,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Sky Hills Astra Tower A",
+      "weightShare": 0.0847935
+     },
+     {
+      "building": "Binghatti Hillviews",
+      "weightShare": 0.0847935
+     },
+     {
+      "building": "Binghatti Hillside",
+      "weightShare": 0.0847935
+     }
+    ]
+   }
+  },
+  {
+   "id": 33,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1935.0,
+    "building": [
+     "Three Towers A-1",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 2106.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rt",
+    "centrePsf": 1367.82,
+    "buildings": 3,
+    "weight": 1.76863,
+    "comparables": 114,
+    "sizeDistance": 0.266235,
+    "lowPsf": 1056.22,
+    "highPsf": 1725.84,
+    "halfWidth": 0.244774,
+    "rangeLowPsf": 1060,
+    "rangeHighPsf": 1730,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-16846",
+      "building": "Opalz By Danube - Tower 2",
+      "date": "2026-05-20",
+      "sizeSqft": 1489.62,
+      "registeredPsf": 1359.41,
+      "timeLn": -0.0118445,
+      "sizeLn": -0.106063,
+      "vintageLn": -0.0300487,
+      "adjustedPsf": 1172.45,
+      "weightShare": 0.0707915,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2025-21999",
+      "building": "Opalz By Danube - Tower 2",
+      "date": "2025-07-23",
+      "sizeSqft": 1981.74,
+      "registeredPsf": 1177.47,
+      "timeLn": -0.0241676,
+      "sizeLn": 0.0096775,
+      "vintageLn": -0.0300487,
+      "adjustedPsf": 1126.17,
+      "weightShare": 0.0479361,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-33341",
+      "building": "ORCHID RESIDENCE",
+      "date": "2026-10-30",
+      "sizeSqft": 1460.66,
+      "registeredPsf": 1163.86,
+      "timeLn": 0.0,
+      "sizeLn": -0.114023,
+      "vintageLn": 0.0613481,
+      "adjustedPsf": 1104.14,
+      "weightShare": 0.0402691,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Three Towers B-2",
+      "weightShare": 0.565408
+     },
+     {
+      "building": "ORCHID RESIDENCE",
+      "weightShare": 0.209936
+     },
+     {
+      "building": "Opalz By Danube - Tower 2",
+      "weightShare": 0.162085
+     }
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 783.0,
+    "building": [
+     "Skyhills Residences - 1",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 1294.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1416.23,
+    "buildings": 7,
+    "weight": 3.94862,
+    "comparables": 137,
+    "sizeDistance": 0.123721,
+    "lowPsf": 1211.65,
+    "highPsf": 1838.24,
+    "halfWidth": 0.221217,
+    "rangeLowPsf": 1210,
+    "rangeHighPsf": 1840,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-33085",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-28",
+      "sizeSqft": 683.94,
+      "registeredPsf": 1622.95,
+      "timeLn": 0.0,
+      "sizeLn": -0.0601217,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1528.25,
+      "weightShare": 0.0729261,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-14343",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-01",
+      "sizeSqft": 693.73,
+      "registeredPsf": 1405.45,
+      "timeLn": -0.00165206,
+      "sizeLn": -0.0538045,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1329.63,
+      "weightShare": 0.0685367,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-33448",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-30",
+      "sizeSqft": 648.09,
+      "registeredPsf": 1543.0,
+      "timeLn": 0.0,
+      "sizeLn": -0.0840529,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1418.6,
+      "weightShare": 0.0605431,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Opalz By Danube - Tower 1",
+      "weightShare": 0.253253
+     },
+     {
+      "building": "Opalz By Danube - Tower 2",
+      "weightShare": 0.253253
+     },
+     {
+      "building": "Skyhills Residences - 2",
+      "weightShare": 0.253253
+     }
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "input": {
+    "bedrooms": 1,
+    "basis": 1,
+    "sizeSqft": 621.0,
+    "building": [
+     "Harbour Lights",
+     "Madinat Dubai Almelaheyah"
+    ],
+    "askingPsf": 2237.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Oc2",
+    "centrePsf": 2841.2,
+    "buildings": 29,
+    "weight": 26.5197,
+    "comparables": 3288,
+    "sizeDistance": 0.215216,
+    "lowPsf": 2181.59,
+    "highPsf": 3472.85,
+    "halfWidth": 0.227239,
+    "rangeLowPsf": 2180,
+    "rangeHighPsf": 3470,
+    "verdict": "within",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-76291",
+      "building": "NAUTICA TWO",
+      "date": "2026-09-02",
+      "sizeSqft": 614.94,
+      "registeredPsf": 2369.34,
+      "timeLn": 0.0125342,
+      "sizeLn": -0.00315185,
+      "vintageLn": -0.038886,
+      "adjustedPsf": 2300.45,
+      "weightShare": 0.0119221,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-77275",
+      "building": "Oceanz 3 By Danube",
+      "date": "2026-09-09",
+      "sizeSqft": 760.79,
+      "registeredPsf": 2786.58,
+      "timeLn": 0.0125342,
+      "sizeLn": 0.0652543,
+      "vintageLn": -0.0492779,
+      "adjustedPsf": 2867.17,
+      "weightShare": 0.0101151,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-74959",
+      "building": "Oceanz 3 By Danube",
+      "date": "2026-08-26",
+      "sizeSqft": 760.79,
+      "registeredPsf": 2975.85,
+      "timeLn": 0.0125342,
+      "sizeLn": 0.0652543,
+      "vintageLn": -0.0492779,
+      "adjustedPsf": 3061.92,
+      "weightShare": 0.00959164,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-C",
+      "weightShare": 0.0377078
+     },
+     {
+      "building": "LIV MARITIME",
+      "weightShare": 0.0377078
+     },
+     {
+      "building": "CHELSEA RESIDENCES BY DAMAC TOWER-C",
+      "weightShare": 0.0377078
+     }
+    ]
+   }
+  },
+  {
+   "id": 36,
+   "input": {
+    "bedrooms": 0,
+    "basis": 0,
+    "sizeSqft": 542.0,
+    "building": [
+     "ORCHID RESIDENCE",
+     "Al Barshaa South Second"
+    ],
+    "askingPsf": 1911.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rt",
+    "centrePsf": 1183.47,
+    "buildings": 5,
+    "weight": 1.90258,
+    "comparables": 89,
+    "sizeDistance": 0.179451,
+    "lowPsf": 1020.92,
+    "highPsf": 1451.73,
+    "halfWidth": 0.182011,
+    "rangeLowPsf": 1020,
+    "rangeHighPsf": 1450,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-41-2026-16143",
+      "building": "Opalz By Danube - Tower 1",
+      "date": "2026-10-27",
+      "sizeSqft": 533.89,
+      "registeredPsf": 1258.87,
+      "timeLn": 0.0,
+      "sizeLn": -0.00826337,
+      "vintageLn": -0.0914968,
+      "adjustedPsf": 1139.35,
+      "weightShare": 0.0469042,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-33314",
+      "building": "Opalz By Danube - Tower 2",
+      "date": "2026-10-30",
+      "sizeSqft": 516.13,
+      "registeredPsf": 1230.31,
+      "timeLn": 0.0,
+      "sizeLn": -0.0268065,
+      "vintageLn": -0.0913968,
+      "adjustedPsf": 1093.15,
+      "weightShare": 0.0464039,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-25955",
+      "building": "Opalz By Danube - Tower 1",
+      "date": "2026-08-24",
+      "sizeSqft": 534.75,
+      "registeredPsf": 1097.73,
+      "timeLn": 0.00242223,
+      "sizeLn": -0.00738118,
+      "vintageLn": -0.0914968,
+      "adjustedPsf": 996.797,
+      "weightShare": 0.0368077,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "BELLA ROSE",
+      "weightShare": 0.525602
+     },
+     {
+      "building": "Opalz By Danube - Tower 2",
+      "weightShare": 0.228089
+     },
+     {
+      "building": "Opalz By Danube - Tower 1",
+      "weightShare": 0.176647
+     }
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "input": {
+    "bedrooms": 4,
+    "basis": 0,
+    "sizeSqft": 3500.0,
+    "master": "Business Bay",
+    "area": "Business Bay",
+    "askingPsf": 2500.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": false,
+    "reason": "bedrooms_not_validated",
+    "scope": "community",
+    "group": "Rc2",
+    "centrePsf": 1546.07,
+    "buildings": 16,
+    "weight": 6.70942,
+    "comparables": 60,
+    "sizeDistance": 0.202855,
+    "lowPsf": 1043.19,
+    "highPsf": 2723.78,
+    "halfWidth": 0.543503,
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-34552",
+      "building": "WEST HEIGHTS 3",
+      "date": "2026-11-10",
+      "sizeSqft": 3392.03,
+      "registeredPsf": 1636.19,
+      "timeLn": 0.0,
+      "sizeLn": 0.00205446,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1639.55,
+      "weightShare": 0.109316,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-16710",
+      "building": "Jumeirah Living Business Bay",
+      "date": "2026-11-05",
+      "sizeSqft": 4333.44,
+      "registeredPsf": 3894.37,
+      "timeLn": 0.0,
+      "sizeLn": -0.0140047,
+      "vintageLn": 0.0,
+      "adjustedPsf": 3840.21,
+      "weightShare": 0.0861855,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-16436",
+      "building": "WEST HEIGHTS 2",
+      "date": "2026-05-18",
+      "sizeSqft": 3427.98,
+      "registeredPsf": 1604.44,
+      "timeLn": -0.0370236,
+      "sizeLn": 0.00136323,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1548.24,
+      "weightShare": 0.0743418,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "WEST HEIGHTS 3",
+      "weightShare": 0.149044
+     },
+     {
+      "building": "Jumeirah Living Business Bay",
+      "weightShare": 0.138012
+     },
+     {
+      "building": "WEST HEIGHTS 2",
+      "weightShare": 0.136038
+     }
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 800.0,
+    "master": "No Such Community",
+    "area": "No Such Area",
+    "askingPsf": 1500.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": false,
+    "reason": "no_comparables",
+    "topComparables": [],
+    "topBuildings": []
+   }
+  },
+  {
+   "id": 39,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 2904.0,
+    "building": [
+     "SEVENTH HEAVEN",
+     "Wadi Al Safa 3"
+    ],
+    "askingPsf": 1412.0
+   },
+   "expected": {
+    "kind": "in",
+    "shown": false,
+    "reason": "too_few_buildings",
+    "scope": "community_and_area",
+    "group": "Rt",
+    "centrePsf": 1590.05,
+    "buildings": 0,
+    "weight": 0.0735494,
+    "comparables": 592,
+    "sizeDistance": 0.393213,
+    "lowPsf": 1427.75,
+    "highPsf": 1809.77,
+    "halfWidth": 0.12013,
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2025-46365",
+      "building": "F2",
+      "date": "2025-11-05",
+      "sizeSqft": 2001.44,
+      "registeredPsf": 1898.63,
+      "timeLn": -0.0111418,
+      "sizeLn": -0.165446,
+      "vintageLn": 0.00174191,
+      "adjustedPsf": 1594.07,
+      "weightShare": 0.677114,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-22085",
+      "building": "G1",
+      "date": "2025-05-26",
+      "sizeSqft": 1896.06,
+      "registeredPsf": 1898.67,
+      "timeLn": 0.00162403,
+      "sizeLn": -0.189488,
+      "vintageLn": -0.000275038,
+      "adjustedPsf": 1573.05,
+      "weightShare": 0.232882,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2024-45390",
+      "building": "E3",
+      "date": "2024-11-25",
+      "sizeSqft": 1896.17,
+      "registeredPsf": 1845.83,
+      "timeLn": 0.0474049,
+      "sizeLn": -0.189462,
+      "vintageLn": 0.021728,
+      "adjustedPsf": 1636.56,
+      "weightShare": 0.074906,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "F2",
+      "weightShare": 0.677114
+     },
+     {
+      "building": "G1",
+      "weightShare": 0.232882
+     },
+     {
+      "building": "E3",
+      "weightShare": 0.074906
+     }
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "input": {
+    "bedrooms": 1,
+    "basis": 0,
+    "sizeSqft": 6000.0,
+    "master": "Jumeirah Village Circle",
+    "area": "Al Barsha South Fourth",
+    "askingPsf": 900.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": false,
+    "reason": "too_few_buildings",
+    "scope": "community_and_area",
+    "group": "Rt",
+    "centrePsf": 286.603,
+    "buildings": 0,
+    "weight": 7.30629e-07,
+    "comparables": 4978,
+    "sizeDistance": 1.14356,
+    "lowPsf": 238.222,
+    "highPsf": 410.405,
+    "halfWidth": 0.300386,
+    "topComparables": [
+     {
+      "ref": "dld:1-11-2026-13147",
+      "building": "Emirates Gardens 1 - R2",
+      "date": "2026-04-09",
+      "sizeSqft": 1959.03,
+      "registeredPsf": 510.457,
+      "timeLn": -0.0806609,
+      "sizeLn": -0.497513,
+      "vintageLn": 0.0,
+      "adjustedPsf": 286.326,
+      "weightShare": 0.546597,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2025-29996",
+      "building": "Emirates Gardens 1 - R2",
+      "date": "2025-07-16",
+      "sizeSqft": 1959.03,
+      "registeredPsf": 533.8,
+      "timeLn": -0.0611139,
+      "sizeLn": -0.497513,
+      "vintageLn": 0.0,
+      "adjustedPsf": 305.33,
+      "weightShare": 0.198407,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-29853",
+      "building": "SANDOVAL GARDEN APARTMENTS 1",
+      "date": "2026-09-30",
+      "sizeSqft": 1801.55,
+      "registeredPsf": 596.708,
+      "timeLn": 0.0126799,
+      "sizeLn": -0.534761,
+      "vintageLn": 0.0,
+      "adjustedPsf": 354.018,
+      "weightShare": 0.122202,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "Emirates Gardens 1 - R2",
+      "weightShare": 0.745004
+     },
+     {
+      "building": "SANDOVAL GARDEN APARTMENTS 1",
+      "weightShare": 0.122202
+     },
+     {
+      "building": "Binghatti Galaxy - 1",
+      "weightShare": 0.0755437
+     }
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "input": {
+    "bedrooms": 3,
+    "basis": 1,
+    "sizeSqft": 1700.0,
+    "master": "Al Barari",
+    "area": "Wadi Al Safa 3",
+    "askingPsf": 2400.0
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Ot",
+    "centrePsf": 3081.91,
+    "buildings": 3,
+    "weight": 1.81778,
+    "comparables": 28,
+    "sizeDistance": 0.378256,
+    "lowPsf": 2547.6,
+    "highPsf": 3660.76,
+    "halfWidth": 0.180596,
+    "rangeLowPsf": 2550,
+    "rangeHighPsf": 3660,
+    "verdict": "below",
+    "topComparables": [
+     {
+      "ref": "dld:1-102-2026-86697",
+      "building": "The Cape - B",
+      "date": "2026-10-16",
+      "sizeSqft": 2419.62,
+      "registeredPsf": 2653.84,
+      "timeLn": 0.0101483,
+      "sizeLn": 0.070482,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 2842.31,
+      "weightShare": 0.121624,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-26821",
+      "building": "The Cape - B",
+      "date": "2026-03-18",
+      "sizeSqft": 2419.62,
+      "registeredPsf": 2939.42,
+      "timeLn": -0.0145115,
+      "sizeLn": 0.070482,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 3071.49,
+      "weightShare": 0.0543965,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-102-2026-22208",
+      "building": "The Cape - B",
+      "date": "2026-03-03",
+      "sizeSqft": 2419.62,
+      "registeredPsf": 2975.48,
+      "timeLn": -0.0178136,
+      "sizeLn": 0.070482,
+      "vintageLn": -0.0120208,
+      "adjustedPsf": 3098.92,
+      "weightShare": 0.0513861,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "The Cape - B",
+      "weightShare": 0.550123
+     },
+     {
+      "building": "The Cape - A",
+      "weightShare": 0.304523
+     },
+     {
+      "building": "The Cape - C",
+      "weightShare": 0.145354
+     }
+    ]
+   }
+  },
+  {
+   "id": 42,
+   "input": {
+    "bedrooms": 2,
+    "basis": 0,
+    "sizeSqft": 1491.0,
+    "master": "Dubai Science Park",
+    "area": "Al Barshaa South Second",
+    "askingPsf": 1807.511737089202
+   },
+   "expected": {
+    "kind": "out",
+    "shown": true,
+    "reason": null,
+    "scope": "community",
+    "group": "Rc1",
+    "centrePsf": 1206.2,
+    "buildings": 10,
+    "weight": 8.79553,
+    "comparables": 134,
+    "sizeDistance": 0.155305,
+    "lowPsf": 989.818,
+    "highPsf": 1773.57,
+    "halfWidth": 0.324884,
+    "rangeLowPsf": 990,
+    "rangeHighPsf": 1770,
+    "verdict": "above",
+    "topComparables": [
+     {
+      "ref": "dld:1-41-2026-16552",
+      "building": "Skyhills Residences - 1",
+      "date": "2026-11-03",
+      "sizeSqft": 1304.37,
+      "registeredPsf": 1277.07,
+      "timeLn": 0.0,
+      "sizeLn": -0.054221,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1209.67,
+      "weightShare": 0.0887517,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-41-2026-15146",
+      "building": "Skyhills Residences - 2",
+      "date": "2026-10-07",
+      "sizeSqft": 1295.33,
+      "registeredPsf": 1405.05,
+      "timeLn": -0.00165206,
+      "sizeLn": -0.0570408,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1324.95,
+      "weightShare": 0.0784295,
+      "inCommunity": true
+     },
+     {
+      "ref": "dld:1-11-2026-16846",
+      "building": "Opalz By Danube - Tower 2",
+      "date": "2026-05-20",
+      "sizeSqft": 1489.62,
+      "registeredPsf": 1359.41,
+      "timeLn": -0.0118445,
+      "sizeLn": -0.000375449,
+      "vintageLn": 0.0,
+      "adjustedPsf": 1342.9,
+      "weightShare": 0.0463061,
+      "inCommunity": true
+     }
+    ],
+    "topBuildings": [
+     {
+      "building": "MONTROSE RESIDENCE B",
+      "weightShare": 0.113694
+     },
+     {
+      "building": "ORCHID RESIDENCE",
+      "weightShare": 0.113694
+     },
+     {
+      "building": "Opalz By Danube - Tower 2",
+      "weightShare": 0.113694
+     }
+    ]
+   }
+  }
+ ]
+}

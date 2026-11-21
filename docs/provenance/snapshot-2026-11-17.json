@@ -1,0 +1,54 @@
+{
+    "note":  "Provenance of the Fairsquare analysis snapshot. Metadata only: no sale rows. Trimmed from the manifest that npm run data:build writes (model constants and backtest tables are left out; see reports/).",
+    "source":  "data.dubai",
+    "publisher":  "Dubai Land Department",
+    "datasetTitle":  "Transactions",
+    "datasetUrl":  "https://www.dubaipulse.gov.ae/data/dld-transactions/dld_transactions-open",
+    "licence":  "Dubai Open Data Licence",
+    "licenceUrl":  "https://data.dubai/en/terms-conditions",
+    "downloadedOn":  "2026-11-17",
+    "sourceFiles":  [
+                        {
+                            "name":  "transactions_2026-11-17_17-54-54_0001.csv",
+                            "sha256":  "45b00b87f392711cdffcd59ef4021c83a833f62aa25bf685c6e11db94dc26a9c",
+                            "rows":  910002
+                        },
+                        {
+                            "name":  "transactions_2026-11-17_17-54-54_0002.csv",
+                            "sha256":  "5a5c3e0af4653c2723f7db8b83bc4b08ca7d02d4ec88449dbd15bc96103befa3",
+                            "rows":  910001
+                        }
+                    ],
+    "dataFrom":  "2023-11-17",
+    "dataThrough":  "2026-11-16",
+    "counts":  {
+                   "read":  1820003,
+                   "kept":  403867,
+                   "excluded":  {
+                                    "not_sales":  429059,
+                                    "procedure_excluded":  72906,
+                                    "not_flat":  406301,
+                                    "not_residential":  0,
+                                    "rooms_excluded":  1936,
+                                    "no_building_name":  0,
+                                    "no_area":  0,
+                                    "no_size_or_price":  0,
+                                    "size_out_of_range":  579,
+                                    "psf_out_of_range":  2367,
+                                    "bad_date":  0,
+                                    "date_out_of_range":  0,
+                                    "no_transaction_id":  0,
+                                    "repeated_in_other_file":  0,
+                                    "multi_unit_deal":  0,
+                                    "portfolio_deal":  19539,
+                                    "size_unlike_building":  4545,
+                                    "outside_window":  478904
+                                }
+               },
+    "buildings":  4348,
+    "snapshotSha256":  "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+    "buildingsFile":  {
+                          "sha256":  "722da73cd0da531f473e4541887697b602c22c57af2d0030128c0ac12f4c3f92",
+                          "rows":  4348
+                      }
+}

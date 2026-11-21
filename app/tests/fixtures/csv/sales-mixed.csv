@@ -1,0 +1,26 @@
+building_name,sale_date,bedrooms,size_sqft,price_aed,external_ref,is_demo
+Mockup Crest Tower,2026-10-02,2,1284,2236000,TX-2026-0001,false
+Mockup Crest Tower,2026-09-14,2,1310,2210000,TX-2026-0002,
+Mockup Crest Tower,2026-08-21,2,1250,2105000,,
+Mockup Crest Tower,2026-07-30,1,820,1390000,TX-2026-0004,false
+Mockup Crest Tower,2026-06-11,1,805,1352000,,
+Mockup Crest Tower,2026-05-19,3,1720,2890000,TX-2026-0006,
+Mockup Crest Tower 2,2026-10-10,2,1295,2180000,TX-2026-0007,
+Mockup Crest Tower 2,2026-04-03,2,1302,2165000,,
+Fake Vista Residences,2026-10-28,1,742,880000,TX-2026-0009,
+Fake Vista Residences,2026-09-05,1,760,905000,,
+Fake Vista Residences,2026-07-12,studio,455,560000,TX-2026-0011,
+Fake Vista Residences,2026-03-22,2,1105,1310000,,
+Fake Vista Residences 2,2026-08-08,1,735,850000,TX-2026-0013,
+Fake Vista Residences 2,2026-02-14,1,720,812000,,
+Dummyside Heights 2,2026-10-15,3,1890,3150000,TX-2026-0015,
+Dummyside Heights 2,2026-06-30,3,1925,3220000,,
+Dummyside Heights 2,2026-01-09,2,1240,2030000,TX-2026-0017,
+Dummyside Heights 1,2026-09-25,3,1880,3090000,,
+Dummyside Heights 1,2026-05-02,2,1215,1985000,TX-2026-0019,
+Mockup Crest Tower,2025-12-05,2,1290,2150000,TX-2025-0020,
+Mockup Crest Tower,2025-06-01,2,1284,2050000,TX-2025-0021,
+Fake Vista Res,2026-04-17,1,750,"900,000",,
+Dummyside Heights 2,2026-11-17,3,1900,3180000,TX-2026-0023,true
+Nowhere Pt,2026-09-01,2,1200,2000000,,
+Mockup Crest Tower,2026-12-01,2,1284,2300000,,

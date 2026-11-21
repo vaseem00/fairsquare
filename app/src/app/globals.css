@@ -1,0 +1,508 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+ * Fairsquare design tokens: docs/REDESIGN.md sections 2 to 5 (type, colour, space, radius, elevation,
+ * motion). They replace DESIGN.md section 2; every token name is kept so admin and shadcn still work.
+ * Two inks on paper: blue-black ink for text and controls, indigo for the stamp and its markers only.
+ */
+
+@custom-variant dark (&:is(.dark *));
+
+/* Static Archivo instances for the stamp SVG (DESIGN.md section 8). Unchanged by the redesign. */
+@font-face {
+  font-family: "Mizan Stamp Condensed";
+  src: url("/fonts/archivo-stamp-condensed.woff") format("woff");
+  font-weight: 780;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Mizan Stamp Wide";
+  src: url("/fonts/archivo-stamp-wide.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --radius: 0.375rem;
+  --background: #f5f4f0;
+  --foreground: #17191e;
+  --card: #fdfcf9;
+  --card-foreground: #17191e;
+  --popover: #fdfcf9;
+  --popover-foreground: #17191e;
+  --primary: #17191e;
+  --primary-foreground: #f5f4f0;
+  --primary-hover: #2c2f36;
+  --secondary: #eceae4;
+  --secondary-foreground: #17191e;
+  --muted: #eceae4;
+  --muted-foreground: #595c65;
+  --accent: #e8e5dd;
+  --accent-foreground: #17191e;
+  --destructive: #b3261e;
+  --destructive-foreground: #ffffff;
+  --border: #dedbd3;
+  --input: #7a7d85;
+  --ring: #17191e;
+  --chart-1: #3b5b7a;
+  --chart-2: #3a37c9;
+  --chart-3: #17191e;
+  --chart-4: #e7e4dc;
+  --chart-5: #8f4a0a;
+  --stamp: #3a37c9;
+  --verdict-above: #8f4a0a;
+  --verdict-inline: #17191e; /* ink: the in-line words never read dimmer than the rest of the headline */
+  --verdict-below: #1e5b98;
+  --notice: #f5eacd;
+  --notice-foreground: #6b4300;
+  --elev-sheet: 0 0 0 1px rgb(23 25 30 / 0.06), 0 1px 2px rgb(23 25 30 / 0.06), 0 18px 40px -20px rgb(23 25 30 / 0.3);
+  --elev-overlay: 0 24px 56px -12px rgb(23 25 30 / 0.36);
+  --scrim: rgb(18 19 23 / 0.56);
+  /* The frame around the person's screenshot on the balance pan. */
+  --doc-frame: var(--border);
+
+  /* The shadcn sidebar (admin only) reuses the same palette. */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  /* Motion (REDESIGN.md section 5.1). */
+  --dur-press: 80ms;
+  --dur-fast: 140ms;
+  --dur-base: 200ms;
+  --dur-set: 220ms;
+  --dur-sheet: 280ms;
+
+  /* Fixed offsets. */
+  --header-h: 56px;
+  --action-bar-h: 0px; /* 72px below 1024px while <html data-action-bar> is set by <ActionBar> */
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 64px;
+  }
+}
+
+.dark {
+  --background: #121317;
+  --foreground: #ece9e2;
+  --card: #1b1d22;
+  --card-foreground: #ece9e2;
+  --popover: #1b1d22;
+  --popover-foreground: #ece9e2;
+  --primary: #ece9e2;
+  --primary-foreground: #121317;
+  --primary-hover: #d7d3cb;
+  --secondary: #24272d;
+  --secondary-foreground: #ece9e2;
+  --muted: #24272d;
+  --muted-foreground: #a3a6ae;
+  --accent: #2a2d34;
+  --accent-foreground: #ece9e2;
+  --destructive: #f2867e;
+  --destructive-foreground: #121317;
+  --border: #2c2f36;
+  --input: #7a7e87;
+  --ring: #ece9e2;
+  --chart-1: #8fb3d9;
+  --chart-2: #a9a7ff;
+  --chart-3: #ece9e2;
+  --chart-4: #24272d;
+  --chart-5: #eba65a;
+  --stamp: #a9a7ff;
+  --verdict-above: #eba65a;
+  --verdict-inline: #ece9e2;
+  --verdict-below: #86b6ee;
+  --notice: #3a2d12;
+  --notice-foreground: #f0c46c;
+  --elev-sheet: 0 0 0 1px rgb(255 255 255 / 0.08);
+  --elev-overlay: 0 0 0 1px rgb(255 255 255 / 0.06), 0 24px 56px -12px rgb(0 0 0 / 0.7);
+  --scrim: rgb(0 0 0 / 0.64);
+  --doc-frame: rgb(255 255 255 / 0.12);
+}
+
+@theme inline {
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-newsreader), "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-heading: var(--font-display);
+  --font-stamp-condensed: "Mizan Stamp Condensed", "Arial Narrow", sans-serif;
+  --font-stamp-wide: "Mizan Stamp Wide", Arial, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-stamp: var(--stamp);
+  --color-verdict-above: var(--verdict-above);
+  --color-verdict-inline: var(--verdict-inline);
+  --color-verdict-below: var(--verdict-below);
+  --color-notice: var(--notice);
+  --color-notice-foreground: var(--notice-foreground);
+  --color-scrim: var(--scrim);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Radius (REDESIGN.md section 4): documents 4, controls 6, dialog and drawer tops 12, dots round. */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
+  --radius-xl: 12px;
+  --radius-2xl: 12px;
+  --radius-3xl: 12px;
+  --radius-4xl: 999px;
+
+  --shadow-sheet: var(--elev-sheet);
+  --shadow-overlay: var(--elev-overlay);
+}
+
+/* Archivo UI sizes (kept for UI and admin): 14, 16, 18, 21, 24, 30, 36, 48. */
+@theme {
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.45;
+  --text-body: 1rem;
+  --text-body--line-height: 1.55;
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.5;
+  --text-title: 1.3125rem;
+  --text-title--line-height: 1.3;
+  --text-heading: 1.5rem;
+  --text-heading--line-height: 1.2;
+  --text-display-sm: 1.875rem;
+  --text-display-sm--line-height: 1.1;
+  --text-display-md: 2.25rem;
+  --text-display-md--line-height: 1.08;
+  --text-display: 3rem;
+  --text-display--line-height: 1.04;
+
+  /* Easing (REDESIGN.md section 5.1): out for arrivals, in for exits, sway for the beam's CSS fallback. */
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-sway: cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+/*
+ * The public type scale (REDESIGN.md section 2.3). Newsreader for words, with lining figures; each
+ * utility carries its own breakpoints (phone, 768px, 1024px). Nothing in Newsreader is below 16px.
+ */
+@utility type-display-xl {
+  font-family: var(--font-display);
+  font-weight: 460;
+  font-size: 2.75rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: balance;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 0.98;
+  }
+  @media (min-width: 1024px) {
+    font-size: 5.5rem;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+  }
+}
+@utility type-display-lg {
+  font-family: var(--font-display);
+  font-weight: 520;
+  font-size: 2.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: balance;
+  @media (min-width: 768px) {
+    font-size: 3.25rem;
+    line-height: 1.02;
+  }
+  @media (min-width: 1024px) {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+@utility type-display-md {
+  font-family: var(--font-display);
+  font-weight: 480;
+  font-size: 1.875rem;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: balance;
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.75rem;
+    line-height: 1.08;
+  }
+}
+@utility type-heading {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: balance;
+  @media (min-width: 768px) {
+    font-size: 1.625rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.75rem;
+  }
+}
+@utility type-title {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: balance;
+  @media (min-width: 1024px) {
+    font-size: 1.3125rem;
+  }
+}
+@utility type-statement {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: pretty;
+  @media (min-width: 768px) {
+    font-size: 1.375rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+}
+@utility type-lead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: pretty;
+  @media (min-width: 768px) {
+    font-size: 1.1875rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.25rem;
+  }
+}
+@utility type-prose {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 62ch;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-wrap: pretty;
+}
+/* Archivo labels (14/1.4, 500, ink, sentence case) and figures (scene labels, cost). */
+@utility type-label {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+@utility type-figure {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.3;
+  font-weight: 500;
+  font-variation-settings: "wdth" 88;
+  font-variant-numeric: tabular-nums lining-nums;
+  @media (min-width: 1024px) {
+    font-size: 1.1875rem;
+  }
+}
+
+/* Every existing heading that used the wide Archivo turns Newsreader (REDESIGN.md section 8.12). */
+@utility wdth-heading {
+  font-family: var(--font-display);
+  font-variation-settings: normal;
+}
+@utility wdth-title {
+  font-variation-settings: "wdth" 100;
+}
+@utility wdth-figure {
+  font-variation-settings: "wdth" 88;
+}
+@utility num {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+/* Page gutter: max(16px, safe area) below 768px, 24px from 768px, 32px from 1024px. */
+@utility gutter {
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+  @media (min-width: 768px) {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+  }
+  @media (min-width: 1024px) {
+    padding-left: max(32px, env(safe-area-inset-left));
+    padding-right: max(32px, env(safe-area-inset-right));
+  }
+}
+
+/* The action bar sets data-action-bar on <html> (not <body>): scroll-padding lives on html,
+   and custom properties only inherit downward. */
+@media (max-width: 1023px) {
+  html[data-action-bar] {
+    --action-bar-h: 72px;
+  }
+  html[data-action-bar="tall"] {
+    --action-bar-h: 124px;
+  }
+}
+
+/* The balance drawing (REDESIGN.md section 7.2): vector-effect is not inherited, so set it on every stroke. */
+[data-balance] :is(line, path, circle, rect, polyline) {
+  vector-effect: non-scaling-stroke;
+}
+
+/* The read line (REDESIGN.md section 7.4): a figure sets in with a 1px ink underline that dries once
+   it has set, so a read figure never reads as a link (ReadLine adds the class only with motion on). */
+@keyframes read-ink-dry {
+  from {
+    text-decoration-color: currentColor;
+  }
+  to {
+    text-decoration-color: transparent;
+  }
+}
+.read-ink {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: transparent;
+  animation: read-ink-dry 280ms var(--ease-in) 760ms both;
+}
+
+/* The market scale's settle (RESULT_SPEC sections 2.7 and 4.6): transform and opacity only, set as
+   inline `animation` while the settle runs and removed when it ends, so an interrupt shows the final
+   frame at once. */
+@keyframes mz-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes mz-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+@keyframes mz-draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes mz-impact {
+  50% {
+    transform: translateY(1.5px);
+  }
+}
+@keyframes mz-bar-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-padding-top: calc(var(--header-h) + 8px);
+    scroll-padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom) + 8px);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.55;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--stamp) 22%, transparent);
+  }
+  button,
+  a,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  label {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  /* Headings that receive programmatic focus (tabIndex -1) show no ring on mouse use. */
+  [tabindex="-1"]:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,1025 @@
+<title>Mizan Price Check</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Archivo+Narrow:wght@700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Kufi+Arabic:wght@600&display=swap">
+<style>
+/* Layout: app shell with a sticky header and four views; the Check view puts input and details on the left, the stamped result on the right. */
+:root{
+  --paper:#F2F4F1; --surface:#FFFFFF; --surface-2:#E8ECE8; --ink:#13272C; --muted:#56676A; --line:#D5DCD7;
+  --brand:#0F4C5C; --brand-ink:#FFFFFF; --brand-soft:#DCECEF; --stamp:#3A37C9; --stamp-soft:#E6E5FB;
+  --above:#A85F00; --inline:#2B7A4B; --below:#1F6AA8; --warn-bg:#FFF4DC; --warn:#7A4B00; --danger:#B3261E;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --f-ar:"Noto Kufi Arabic","Geeza Pro",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0D1517; --surface:#142024; --surface-2:#1B2A2F; --ink:#E4ECEA; --muted:#93A5A7; --line:#27383D;
+  --brand:#6BBBCB; --brand-ink:#0D1517; --brand-soft:#173840; --stamp:#9C99FF; --stamp-soft:#24234D;
+  --above:#E9A64A; --inline:#62C58D; --below:#6CB1EC; --warn-bg:#3A2A0C; --warn:#F2C46B; --danger:#F2867E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0D1517; --surface:#142024; --surface-2:#1B2A2F; --ink:#E4ECEA; --muted:#93A5A7; --line:#27383D;
+  --brand:#6BBBCB; --brand-ink:#0D1517; --brand-soft:#173840; --stamp:#9C99FF; --stamp-soft:#24234D;
+  --above:#E9A64A; --inline:#62C58D; --below:#6CB1EC; --warn-bg:#3A2A0C; --warn:#F2C46B; --danger:#F2867E; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--stamp);outline-offset:2px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+h1,h2,h3{text-wrap:balance}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px}
+.brand-name{font-family:var(--f-display);font-weight:800;font-stretch:118%;font-size:20px;letter-spacing:.03em}
+.brand-ar{font-family:var(--f-ar);font-size:14px;color:var(--brand)}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+nav.tabs a{padding:7px 12px;border-radius:9px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14px}
+nav.tabs a[aria-current="page"]{background:var(--brand-soft);color:var(--ink)}
+nav.tabs .count{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--stamp);color:var(--surface);font-size:11px;margin-left:5px}
+.syncbar{font-size:12px;color:var(--muted);padding-block:6px;border-bottom:1px solid var(--line);background:var(--paper)}
+.syncbar .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--muted);margin-right:6px;vertical-align:middle}
+.syncbar .dot.on{background:var(--inline)}
+
+main{padding-block:24px 64px}
+.view-head{display:grid;gap:6px;margin-bottom:20px}
+.view-head h1{font-family:var(--f-display);font-stretch:110%;font-weight:760;font-size:clamp(24px,3.4vw,34px);line-height:1.08;margin:0}
+.view-head p{margin:0;color:var(--muted);max-width:66ch}
+
+/* Panels and controls */
+.grid-check{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:940px){.grid-check{grid-template-columns:minmax(0,1fr)}}
+.stack{display:grid;gap:16px;min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:14px;min-width:0}
+.panel-h{display:flex;align-items:center;gap:10px}
+.step{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 12px var(--f-mono);background:var(--ink);color:var(--surface);flex:none}
+.step.off{background:var(--surface-2);color:var(--muted)}
+.panel-h h2{margin:0;font-size:16px;font-weight:700}
+.panel-h .tag{margin-left:auto}
+.tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--stamp-soft);color:var(--stamp)}
+.drop{border:1.5px dashed var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;justify-items:center;text-align:center;background:var(--paper);cursor:pointer;transition:border-color .15s}
+.drop.over,.drop:hover{border-color:var(--brand)}
+.drop strong{font-size:14px}
+.drop span{font-size:12.5px;color:var(--muted)}
+.drop img{max-height:180px;max-width:100%;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+textarea{width:100%;min-height:72px;resize:vertical;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--paper)}
+label.f{display:grid;gap:4px;font-size:12.5px;font-weight:600;color:var(--muted);min-width:0}
+input[type=text],input[type=number],input[type=tel],input[type=date],select{width:100%;border:1px solid var(--line);border-radius:9px;padding:8px 10px;background:var(--paper);font-size:14px;min-width:0}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fields .wide{grid-column:1/-1}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--danger)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:6px 10px;font-size:13px}
+.samples{display:grid;gap:6px}
+.samples .lbl{font-size:12px;font-weight:600;color:var(--muted)}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;font-size:12.5px;font-weight:600}
+.chip:hover{border-color:var(--brand)}
+.status{font-size:13.5px;border-radius:10px;padding:10px 12px;background:var(--paper);display:flex;gap:10px;align-items:center}
+.status.err{background:var(--warn-bg);color:var(--warn)}
+.spinner{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite;flex:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.warn{font-size:13px;background:var(--warn-bg);color:var(--warn);border-radius:10px;padding:8px 12px}
+.cands{display:grid;gap:6px}
+.cand{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer;background:var(--surface)}
+.cand:has(input:checked){border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand);background:var(--brand-soft)}
+.cand input{accent-color:var(--brand)}
+.cand b{font-size:14px}
+.cand span{font-size:12px;color:var(--muted)}
+.cand .score{margin-left:auto;font:600 11px var(--f-mono);color:var(--muted)}
+
+/* Result */
+.result{display:grid;gap:16px;min-width:0}
+.verdict-head{display:grid;gap:6px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;padding:4px 10px;border-radius:999px;background:var(--surface-2);width:max-content}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.b-above{color:var(--above)}.b-inline{color:var(--inline)}.b-below{color:var(--below)}.b-thin,.b-none{color:var(--muted)}
+.big{font-family:var(--f-display);font-weight:780;font-stretch:96%;font-size:clamp(34px,5vw,52px);line-height:1}
+.verdict-head p{margin:0;max-width:62ch}
+.card-wrap{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:640px){.card-wrap{grid-template-columns:minmax(0,1fr)}}
+.card-img{width:100%;border-radius:12px;box-shadow:0 8px 30px -12px rgba(0,0,0,.35);background:var(--surface-2)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px;margin:0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.note{font-size:12.5px;color:var(--muted)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:8px 12px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line)}
+th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--paper)}
+td.r,th.r{text-align:right}
+tr:last-child td{border-bottom:0}
+tr.hl td{background:var(--stamp-soft)}
+.chart{width:100%;height:auto;display:block}
+details.box{border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+details.box > summary{list-style:none;cursor:pointer;padding:14px 16px;font-weight:700;display:flex;gap:8px;align-items:center}
+details.box > summary::-webkit-details-marker{display:none}
+details.box > summary::after{content:"+";margin-left:auto;font:600 18px var(--f-mono);color:var(--muted)}
+details.box[open] > summary::after{content:"−"}
+details.box > .inner{padding:0 16px 16px;display:grid;gap:14px}
+.mort-out{background:var(--brand-soft);border-radius:12px;padding:12px 14px;display:grid;gap:4px}
+.mort-out .m{font-family:var(--f-display);font-weight:760;font-size:28px;line-height:1.1}
+.kv{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted)}
+.kv b{color:var(--ink);font-weight:600}
+input[type=range]{width:100%;accent-color:var(--brand)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45}
+.consent input{margin-top:3px;width:16px;height:16px;accent-color:var(--brand);flex:none}
+.okbox{background:var(--stamp-soft);border-radius:12px;padding:12px 14px;font-size:13.5px;display:grid;gap:6px}
+pre.log{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:12px/1.55 var(--f-mono);overflow-x:auto}
+.empty{border:1.5px dashed var(--line);border-radius:14px;padding:28px 20px;text-align:center;color:var(--muted);display:grid;gap:8px;justify-items:center}
+.empty b{color:var(--ink)}
+
+/* Saved, buildings, admin */
+.list{display:grid;gap:10px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:center}
+.item h3{margin:0;font-size:15px}
+.item .sub{font-size:13px;color:var(--muted)}
+.item .badge{font-size:12px;font-weight:700;color:var(--stamp);background:var(--stamp-soft);padding:3px 8px;border-radius:999px;width:max-content}
+.item .side{display:grid;justify-items:end;gap:6px;text-align:right}
+@media (max-width:560px){.item{grid-template-columns:minmax(0,1fr)}.item .side{justify-items:start;text-align:left}}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:2px}
+.kpi span{font-size:12px;color:var(--muted);font-weight:600}
+.kpi b{font-family:var(--f-display);font-size:28px;font-weight:760;font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+.bar{height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;background:var(--brand)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:10px 16px;border-radius:10px;font-size:14px;z-index:20;max-width:calc(100% - 32px)}
+.confirm-inline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;background:var(--warn-bg);color:var(--warn);padding:8px 12px;border-radius:10px}
+footer.foot{border-top:1px solid var(--line);padding-block:20px 32px;font-size:12px;color:var(--muted)}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand" aria-label="Mizan">
+      <svg width="30" height="30" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--brand)" stroke-width="2"/>
+        <circle cx="17" cy="17" r="12" fill="none" stroke="var(--brand)" stroke-width="1" stroke-dasharray="2 2"/>
+        <path d="M17 9v15M10 13h14M10 13l-3 6h6zM24 13l-3 6h6zM13 24h8" fill="none" stroke="var(--stamp)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">MIZAN</span><span class="brand-ar" lang="ar">ميزان</span>
+    </span>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#check" data-view="check">Check a listing</a>
+      <a href="#saved" data-view="saved">Saved<span class="count" id="saved-count" hidden></span></a>
+      <a href="#buildings" data-view="buildings">Buildings</a>
+      <a href="#admin" data-view="admin" id="admin-tab" hidden>Admin</a>
+    </nav>
+  </div>
+</header>
+<div class="syncbar"><div class="wrap" id="syncbar"><span class="dot"></span>Connecting…</div></div>
+
+<main class="wrap">
+  <section id="view-check" data-v="check"></section>
+  <section id="view-saved" data-v="saved" hidden></section>
+  <section id="view-buildings" data-v="buildings" hidden></section>
+  <section id="view-admin" data-v="admin" hidden></section>
+</main>
+<footer class="foot"><div class="wrap">Demo data: every building, sale and the mortgage partner are fictional. Mizan compares a listing with the building's median; floor, view and condition are not taken into account. Not financial advice.</div></footer>
+
+<script>
+(function(){
+"use strict";
+
+/* ===================== Demo data (fictional) ===================== */
+const DEMO = [
+  {name:"Marina Crest Tower", area:"Dubai Marina", aliases:["Marina Crest","Marina Crest Twr"], beds:2,
+   sales:[[40,1262,2140000],[57,1284,2090000],[76,1310,2310000],[95,1198,1935000],[113,1284,2180000],[140,1262,2010000],[182,1340,2295000],[228,1284,2150000],[274,1198,1985000],[312,1310,2235000],[340,1262,2085000]]},
+  {name:"Marina Crest Tower 2", area:"Dubai Marina", aliases:["Marina Crest 2","Marina Crest II"], beds:2,
+   sales:[[22,1250,2050000],[88,1250,1995000],[150,1302,2160000],[260,1250,1960000]]},
+  {name:"Palm Vista Residences", area:"Jumeirah Village Circle", aliases:["Palm Vista Res","Palm Vista JVC"], beds:1,
+   sales:[[28,742,880000],[46,760,905000],[67,735,860000],[104,742,899000],[125,780,915000],[168,742,870000],[209,735,845000],[253,760,925000],[293,742,890000]]},
+  {name:"Palm Vista Residences 2", area:"Jumeirah Village Circle", aliases:["Palm Vista Res 2"], beds:1,
+   sales:[[35,720,830000],[120,720,815000],[200,735,842000]]},
+  {name:"Creekside Heights 2", area:"Al Jaddaf", aliases:["Creekside Hts 2","Creekside Heights II"], beds:3,
+   sales:[[110,1880,3150000],[279,1905,3240000]]},
+  {name:"Creekside Heights 1", area:"Al Jaddaf", aliases:["Creekside Hts 1"], beds:3,
+   sales:[[60,1850,3050000],[190,1850,3010000],[300,1880,3120000]]},
+];
+const SAMPLES = [
+  {key:"A", label:"Marina 2-bed", building:"Marina Crest", area:"Dubai Marina", beds:2, baths:3, size:1284, price:2450000, sky:["#9CC7E3","#F1D9B5"], tower:"#2F4A5A"},
+  {key:"B", label:"JVC 1-bed", building:"Palm Vista Res.", area:"JVC", beds:1, baths:2, size:742, price:865000, sky:["#B8D8C8","#F4E3C3"], tower:"#4A5A3E"},
+  {key:"C", label:"Al Jaddaf 3-bed", building:"Creekside Hts 2", area:"Al Jaddaf", beds:3, baths:4, size:1905, price:3600000, sky:["#C6C2E6","#F2D4C2"], tower:"#3E3A5C"},
+  {key:"D", label:"Uncovered tower", building:"Harbour Point Tower", area:"Dubai Creek Harbour", beds:2, baths:2, size:1180, price:2300000, sky:["#A9CFE0","#E9D7C9"], tower:"#35505E"},
+];
+const RULES = {minSales:3, windowDays:365, bandPct:5};
+const PARTNER = "Demo Mortgage Partner";
+const CONSENT_VERSION = "optin-v1";
+const CONSENT_TEXT = `Share my name, phone number and this listing with ${PARTNER}, a licensed mortgage broker, so an adviser can contact me about financing. I can withdraw this at any time.`;
+
+/* ===================== Helpers ===================== */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const n0 = v => Math.round(v).toLocaleString("en-US");
+const aed = v => "AED " + n0(v);
+const pct = d => (d >= 0 ? "+" : "−") + Math.abs(d*100).toFixed(1) + "%";
+const bedsLabel = b => b === 0 ? "studio" : `${b}-bed`;
+const DAY = 86400000;
+const isoDaysAgo = n => new Date(Date.now() - n*DAY).toISOString().slice(0,10);
+const fmtDate = s => new Date(s + "T00:00:00").toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"});
+const median = a => { const s=[...a].sort((x,y)=>x-y), m=Math.floor(s.length/2); return s.length%2 ? s[m] : (s[m-1]+s[m])/2; };
+const newCode = () => { const A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; const r=new Uint32Array(6); crypto.getRandomValues(r); return [...r].map(v=>A[v%A.length]).join(""); };
+let toastTimer;
+function toast(msg){ let t=$("#toast"); if(!t){ t=document.createElement("div"); t.id="toast"; t.className="toast"; t.setAttribute("role","status"); document.body.append(t);} t.textContent=msg; t.hidden=false; clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.hidden=true, 3200); }
+
+const BUILDINGS = DEMO.map(b => ({name:b.name, area:b.area, aliases:b.aliases}));
+const BASE_SALES = DEMO.flatMap(b => b.sales.map(([d,size,price]) => ({building:b.name, date:isoDaysAgo(d), beds:b.beds, size, price, source:"demo"})));
+let extraSales = [];   // registered by the admin, from the shared store
+const allSales = () => BASE_SALES.concat(extraSales);
+function recentSales(building, beds){
+  const since = isoDaysAgo(RULES.windowDays), today = isoDaysAgo(0);
+  return allSales().filter(s => s.building===building && s.beds===beds && s.date>=since && s.date<=today).sort((a,b)=>b.date.localeCompare(a.date));
+}
+function analyse(price, size, sales){
+  const psfs = sales.map(s => s.price/s.size), asking = price/size;
+  const med = psfs.length ? median(psfs) : null;
+  if (psfs.length < RULES.minSales) return {asking, count:psfs.length, med, diff:null, band:"thin", sales};
+  const diff = asking/med - 1, b = RULES.bandPct/100;
+  return {asking, count:psfs.length, med, diff, band: diff>=b ? "above" : diff<=-b ? "below" : "inline", sales};
+}
+const BAND_LABEL = {above:"Above recent sales", inline:"In line with recent sales", below:"Below recent sales", thin:"Not enough sales", none:"Not covered yet"};
+
+/* ===================== Building matching (same rules as the bot) ===================== */
+const ABBREV = {res:"residences",resi:"residences",residence:"residences",twr:"tower",towers:"tower",hts:"heights",ht:"heights",bldg:"building",blg:"building",apts:"apartments",apt:"apartments",jvc:"jumeirah village circle",jlt:"jumeirah lake towers",dxb:"dubai",no:"",the:""};
+const ROMAN = {i:"1",ii:"2",iii:"3",iv:"4",v:"5"};
+const GENERIC = new Set(["tower","residences","heights","building","apartments","and","at","by","dubai"]);
+const STRONG_MATCH = .8;  // pre-select a building only above this score
+function normalise(t){
+  t = String(t||"").toLowerCase().replace(/&/g," and ").replace(/[^a-z0-9 ]+/g," ");
+  const out = [];
+  for (let w of t.split(/\s+/)) { if(!w) continue; w = ROMAN[w] ?? w; w = ABBREV[w] ?? w; if (w) out.push(...w.split(" ")); }
+  return out.join(" ");
+}
+function matched(a, b){ // Ratcliff-Obershelp matching characters
+  if (!a || !b) return 0;
+  let best=0, ai=0, bi=0, prev=new Array(b.length+1).fill(0);
+  for (let i=1;i<=a.length;i++){ const cur=new Array(b.length+1).fill(0);
+    for (let j=1;j<=b.length;j++) if (a[i-1]===b[j-1]) { cur[j]=prev[j-1]+1; if(cur[j]>best){best=cur[j]; ai=i-best; bi=j-best;} }
+    prev=cur; }
+  return best ? best + matched(a.slice(0,ai), b.slice(0,bi)) + matched(a.slice(ai+best), b.slice(bi+best)) : 0;
+}
+function score(q, alias){
+  if (!q || !alias) return 0;
+  const ratio = 2*matched(q, alias)/(q.length+alias.length);
+  const Q = new Set(q.split(" ")), A = new Set(alias.split(" "));
+  // Generic words ("tower", "residences") say nothing about which building it is.
+  const distinct = [...A].filter(w => !GENERIC.has(w));
+  const base = distinct.length ? distinct : [...A];
+  const overlap = base.filter(w=>Q.has(w)).length / base.length;
+  const qn = [...Q].filter(w=>/^\d+$/.test(w)), an = [...A].filter(w=>/^\d+$/.test(w));
+  let pen = 0;
+  if (qn.length && an.length && !qn.some(w=>an.includes(w))) pen = .25; else if (!!qn.length !== !!an.length) pen = .15;
+  return Math.max(ratio, overlap) - pen;
+}
+function candidates(query, areaHint){
+  const q = normalise(query), an = areaHint ? normalise(areaHint) : "", best = new Map();
+  for (const b of BUILDINGS) for (const alias of [b.name, ...b.aliases].map(normalise)) {
+    let s = Math.max(score(q, alias), score(q, alias + " " + normalise(b.area)));
+    if (an && normalise(b.area).includes(an)) s += .05;
+    if (s >= .62 && (!best.has(b.name) || s > best.get(b.name).score)) best.set(b.name, {name:b.name, area:b.area, score:+s.toFixed(2)});
+  }
+  return [...best.values()].sort((x,y)=>y.score-x.score).slice(0,3);
+}
+
+/* ===================== Typed details and mortgage ===================== */
+function parseFields(text){
+  const t = String(text).toLowerCase().replace(/,/g,""), out = {};
+  let m;
+  if (/\bstudio\b/.test(t)) out.bedrooms = 0;
+  else if ((m = t.match(/(\d+)\s*(?:br|bed|beds|bedroom|bedrooms|bhk)\b/))) out.bedrooms = +m[1];
+  if ((m = t.match(/(\d+(?:\.\d+)?)\s*(?:sq\.?\s*ft|sqft|sft|square feet|ft2)/))) out.size_sqft = +m[1];
+  else if ((m = t.match(/(\d+(?:\.\d+)?)\s*(?:sq\.?\s*m|sqm|m2)\b/))) out.size_sqft = Math.round(+m[1]*10.7639*10)/10;
+  if ((m = t.match(/(?:aed|dhs?)?\s*(\d+(?:\.\d+)?)\s*(m|mn|million|k)\b/))) out.price_aed = +m[1] * (m[2]==="k" ? 1e3 : 1e6);
+  else if ((m = t.match(/(?:aed|dhs?)\s*(\d{5,9})/))) out.price_aed = +m[1];
+  return out;
+}
+function estimate(price, down, rate, years){
+  const loan = price*(1-down/100), r = rate/100/12, n = years*12;
+  const monthly = r>0 ? loan*r/(1-Math.pow(1+r,-n)) : loan/n;
+  return {loan, monthly, down: price*down/100, upfront: price*down/100 + price*.04 + loan*.0025 + price*.02*1.05};
+}
+
+/* ===================== Canvas: sample screenshots and the stamped card ===================== */
+let fontsReady = null;
+function loadFonts(){
+  if (!fontsReady) fontsReady = Promise.all([
+    "800 40px Archivo","700 40px 'Archivo Narrow'","700 20px Inter","600 20px Inter","400 20px Inter","500 16px 'JetBrains Mono'"
+  ].map(f => document.fonts.load(f).catch(()=>null))).then(()=>{});
+  return fontsReady;
+}
+function rr(x, X, Y, W, H, R){ x.beginPath(); x.moveTo(X+R,Y); x.arcTo(X+W,Y,X+W,Y+H,R); x.arcTo(X+W,Y+H,X,Y+H,R); x.arcTo(X,Y+H,X,Y,R); x.arcTo(X,Y,X+W,Y,R); x.closePath(); }
+function fitFont(x, text, weight, family, maxW, start, min=10){ let s=start; do { x.font = `${weight} ${s}px ${family}`; s -= 2; } while (s>min && x.measureText(text).width>maxW); }
+function rng(seed){ return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed>>>15, 1|seed); t = t + Math.imul(t ^ t>>>7, 61|t) ^ t; return ((t ^ t>>>14)>>>0)/4294967296; }; }
+const toBlob = (c, type="image/png", q) => new Promise(res => c.toBlob(res, type, q));
+
+async function sampleScreenshot(s){
+  await loadFonts();
+  const W=720, H=1440, c=document.createElement("canvas"); c.width=W; c.height=H; const x=c.getContext("2d");
+  x.fillStyle="#FFFFFF"; x.fillRect(0,0,W,H);
+  x.fillStyle="#111"; x.font="600 24px Inter"; x.fillText("10:42", 40, 46); x.textAlign="right"; x.fillText("5G  86%", W-40, 46); x.textAlign="left";
+  x.fillStyle="#F3F4F4"; x.fillRect(0,70,W,80); x.fillStyle="#1B2326"; x.font="700 28px Inter"; x.fillText("‹  Apartment for sale", 32, 122);
+  const py=150, ph=470, g=x.createLinearGradient(0,py,0,py+ph); g.addColorStop(0,s.sky[0]); g.addColorStop(1,s.sky[1]); x.fillStyle=g; x.fillRect(0,py,W,ph);
+  x.fillStyle=s.tower; x.globalAlpha=.5; [[20,330,90],[580,300,110],[490,380,80]].forEach(([X,Y,w])=>x.fillRect(X,py+Y-120,w,ph-(Y-120))); x.globalAlpha=1;
+  [[260,60,150],[420,150,110],[130,190,115]].forEach(([X,Y,w])=>{ x.fillRect(X,py+Y,w,ph-Y); x.fillStyle="rgba(255,255,255,.28)"; for(let yy=py+Y+20; yy<py+ph-20; yy+=26) x.fillRect(X+14,yy,w-28,8); x.fillStyle=s.tower; });
+  x.fillStyle="rgba(0,0,0,.45)"; rr(x,W-120,py+ph-56,96,38,19); x.fill(); x.fillStyle="#fff"; x.font="600 20px Inter"; x.fillText("1/18", W-98, py+ph-30);
+  let y = py+ph+70;
+  x.fillStyle="#1B2326"; x.font="800 54px Archivo"; x.fillText("AED " + n0(s.price), 36, y);
+  y += 56; x.font="400 28px Inter"; x.fillStyle="#3D4A4E"; x.fillText(`${s.beds} ${s.beds===1?"Bed":"Beds"}   ·   ${s.baths} Baths   ·   ${n0(s.size)} sqft`, 36, y);
+  y += 54; x.font="700 30px Inter"; x.fillStyle="#1B2326"; x.fillText(`${s.building}, ${s.area}`, 36, y);
+  y += 44; x.font="400 24px Inter"; x.fillStyle="#6B777A"; x.fillText("Ready to move · Freehold · Listed 3 days ago", 36, y);
+  y += 40; x.fillStyle="#E5E8E8"; x.fillRect(36,y,W-72,2);
+  y += 56; x.fillStyle="#1B2326"; x.font="600 26px Inter"; x.fillText("About this property", 36, y);
+  x.font="400 24px Inter"; x.fillStyle="#3D4A4E";
+  [`Bright ${s.beds}-bedroom apartment in ${s.building} with`, "balcony, built-in wardrobes and covered parking.", "Vacant on transfer. Call to arrange a viewing."].forEach((l,i)=>x.fillText(l, 36, y+48+i*38));
+  y += 220; x.fillStyle="#F3F4F4"; rr(x,36,y,W-72,110,18); x.fill();
+  x.fillStyle="#9AA6A9"; x.beginPath(); x.arc(96,y+55,32,0,7); x.fill();
+  x.fillStyle="#1B2326"; x.font="700 26px Inter"; x.fillText("Sara K.", 148, y+48); x.font="400 22px Inter"; x.fillStyle="#6B777A"; x.fillText("Property consultant", 148, y+82);
+  x.fillStyle="#1F7A4D"; rr(x,36,H-120,W-72,80,16); x.fill(); x.fillStyle="#fff"; x.font="700 28px Inter"; x.textAlign="center"; x.fillText("WhatsApp agent", W/2, H-70); x.textAlign="left";
+  return toBlob(c);
+}
+
+const INK = "#3A37C9", BRAND_HEX = "#0F4C5C", PAPER_HEX = "#F6F7F4";
+function stampCanvas(w, big, l1, l2, seed){
+  const h = Math.round(w*.56), c = document.createElement("canvas"); c.width=w; c.height=h; const x=c.getContext("2d");
+  x.strokeStyle=INK; x.fillStyle=INK; x.textAlign="center"; x.textBaseline="middle";
+  const outer=Math.max(4,w/50); x.lineWidth=outer; rr(x,outer/2,outer/2,w-outer,h-outer,w/18); x.stroke();
+  const pad=w*.045; x.lineWidth=Math.max(2,w/160); rr(x,pad,pad,w-2*pad,h-2*pad,w/30); x.stroke();
+  const inner=w-2*pad-w*.14;
+  x.font=`700 ${Math.round(w*.05)}px Inter`; x.fillText("M I Z A N   ·   C H E C K E D", w/2, h*.19);
+  fitFont(x, big, 700, "'Archivo Narrow', 'Arial Narrow', sans-serif", inner, Math.round(h*.38)); x.fillText(big, w/2, h*.47);
+  x.lineWidth=Math.max(2,w/200); x.beginPath(); x.moveTo(pad+w*.06,h*.655); x.lineTo(w-pad-w*.06,h*.655); x.stroke();
+  fitFont(x, l1, 700, "Inter, sans-serif", inner, Math.round(w*.05)); x.fillText(l1, w/2, h*.765);
+  fitFont(x, l2, 500, "'JetBrains Mono', monospace", inner, Math.round(w*.04)); x.fillText(l2, w/2, h*.865);
+  // Rubber-stamp texture: knock out speckles.
+  const r = rng(seed); x.globalCompositeOperation="destination-out";
+  for (let i=0;i<w*h/260;i++){ x.globalAlpha=.35+r()*.65; x.beginPath(); x.arc(r()*w, r()*h, .6+r()*1.6, 0, 7); x.fill(); }
+  x.globalAlpha=1; x.globalCompositeOperation="source-over";
+  const a=-9*Math.PI/180, rw=Math.ceil(w*Math.cos(-a)+h*Math.sin(-a)), rh=Math.ceil(w*Math.sin(-a)+h*Math.cos(-a));
+  const o=document.createElement("canvas"); o.width=rw; o.height=rh; const ox=o.getContext("2d");
+  ox.globalAlpha=.9; ox.translate(rw/2,rh/2); ox.rotate(a); ox.drawImage(c,-w/2,-h/2);
+  return o;
+}
+function wrapLines(x, text, maxW){ const words=text.split(" "), lines=[]; let cur=""; for (const w of words){ const t=cur?cur+" "+w:w; if (x.measureText(t).width>maxW && cur){ lines.push(cur); cur=w; } else cur=t; } if(cur) lines.push(cur); return lines; }
+
+async function renderCard({image, f, building, a, code}){
+  await loadFonts();
+  const W=1080; let base;
+  if (image){
+    const bmp = await createImageBitmap(image);
+    const h = Math.min(Math.round(bmp.height*W/bmp.width), Math.round(W*2.4));
+    base = document.createElement("canvas"); base.width=W; base.height=h;
+    base.getContext("2d").drawImage(bmp, 0, 0, W, Math.round(bmp.height*W/bmp.width));
+  } else {
+    base = document.createElement("canvas"); base.width=W; base.height=1000; const x=base.getContext("2d");
+    x.fillStyle=PAPER_HEX; x.fillRect(0,0,W,1000);
+    x.fillStyle="#5A686C"; x.font="700 34px Inter"; x.fillText("Listing details", 64, 110);
+    x.fillStyle="#13272C"; x.font="800 86px Archivo"; x.fillText(aed(f.price_aed), 64, 230);
+    x.font="400 46px Inter"; x.fillText(`${bedsLabel(f.bedrooms)} · ${n0(f.size_sqft)} sq ft`, 64, 320);
+    x.font="700 46px Inter"; x.fillText(building, 64, 395);
+  }
+  let big, l1, l2;
+  if (a.diff !== null){ big=pct(a.diff); l1=`vs median of ${a.count} registered sales`; l2=`${bedsLabel(f.bedrooms)} · last 12 months · per sq ft`; }
+  else { big="NO VERDICT"; l1=`only ${a.count} registered sale${a.count===1?"":"s"} in 12 months`; l2=`need ${RULES.minSales} · alert set on save`; }
+  const st = stampCanvas(Math.round(W*.64), big, l1, l2, [...code].reduce((s,ch)=>s+ch.charCodeAt(0),0));
+  const sx = W - st.width - Math.round(W*.03);
+  let sy = image ? Math.max(Math.round(base.height*.04), Math.round(base.height*.30 - st.height/2)) : base.height - st.height - Math.round(W*.03);
+  sy = Math.min(sy, Math.max(0, base.height - st.height));
+  const bx = base.getContext("2d"); bx.globalCompositeOperation="multiply"; bx.drawImage(st, sx, sy); bx.globalCompositeOperation="source-over";
+
+  const pad=48, meas=document.createElement("canvas").getContext("2d");
+  const headline = a.diff !== null
+    ? `${pct(a.diff).replace(/^[+−]/,"")} ${a.diff>=0?"above":"below"} the median of ${a.count} registered ${bedsLabel(f.bedrooms)} sales in ${building}`
+    : `Too few registered ${bedsLabel(f.bedrooms)} sales in ${building} to judge yet`;
+  const detail = a.diff !== null
+    ? `Asking ${aed(a.asking)}/sq ft · median ${aed(a.med)}/sq ft · last 12 months`
+    : `Asking ${aed(a.asking)}/sq ft · ${a.count} sale(s) in the last 12 months`;
+  meas.font="700 40px Inter"; const lines = wrapLines(meas, headline, W-2*pad);
+  const footH = pad + lines.length*52 + 12 + 44 + 24 + 44 + pad;
+  const out = document.createElement("canvas"); out.width=W; out.height=base.height+footH; const x=out.getContext("2d");
+  x.drawImage(base,0,0); x.fillStyle=BRAND_HEX; x.fillRect(0,base.height,W,footH);
+  let y = base.height + pad + 36; x.fillStyle="#FFFFFF"; x.font="700 40px Inter";
+  for (const l of lines){ x.fillText(l, pad, y); y += 52; }
+  y += 6; fitFont(x, detail, 400, "Inter", W-2*pad, 30); x.fillStyle="#C8E2E7"; x.fillText(detail, pad, y);
+  y += 64; const tag="DEMO DATA"; x.font="700 30px Inter"; const tw=x.measureText(tag).width;
+  const link=`Check any Dubai listing · mizan.example/c/${code}`; fitFont(x, link, 700, "Inter", W-2*pad-tw-52, 30);
+  x.fillStyle="#FFFFFF"; x.fillText(link, pad, y);
+  x.fillStyle="#FFC45C"; rr(x, W-pad-tw-28, y-34, tw+28, 46, 10); x.fill(); x.fillStyle="#281E00"; x.font="700 30px Inter"; x.fillText(tag, W-pad-tw-14, y);
+  const blob = await toBlob(out, "image/png");
+  return {blob, url: out.toDataURL("image/jpeg", .9)};
+}
+
+/* ===================== Platform capabilities ===================== */
+const CL = window.claude;
+const cap = { db:null, user:null, sample:null, downloads:null, uid:null, admin:false, imagesOK:false, sampleState:"unknown" };
+let savedDoc = {items:[]}, activityDoc = null, leadDoc = null, adminActivity = [], adminLeads = [], adminSales = [];
+let syncState = "connecting";
+const writeQueues = {};
+function queueWrite(path, fn){ const q = (writeQueues[path] || Promise.resolve()).then(fn).catch(e => { console.warn("write failed", path, e); toast(e && e.code === "quota_exceeded" ? "Storage is full. Ask the owner to clear old data." : "Couldn't save that. Try again."); }); writeQueues[path]=q; return q; }
+
+function setSync(){
+  const el = $("#syncbar");
+  const msg = {
+    connecting:"Connecting…",
+    on:"Saved listings, alerts and adviser requests are stored for your account in this app.",
+    slow:"Your saved data can't be reached yet. Checks still work.",
+    off:"Open this app signed in to Claude to save listings and request an adviser. Checks still work.",
+  }[syncState];
+  el.innerHTML = `<span class="dot${syncState==="on"?" on":""}"></span>${esc(msg)}`;
+}
+
+async function initPlatform(){
+  if (!CL || !CL.use){ syncState="off"; setSync(); renderAll(); return; }
+  const [db, user, sample, downloads] = await Promise.all(["db","user","sample","downloads"].map(n => CL.use(n).catch(()=>null)));
+  Object.assign(cap, {db, user, sample, downloads});
+  if (sample){ try { const lim = await sample.limits(); cap.imagesOK = !!lim.images; } catch { cap.imagesOK = false; } }
+  if (user){
+    cap.uid = await user.id().catch(()=>null);
+    cap.admin = (await user.isOwner().catch(()=>false)) || (await user.canEdit().catch(()=>false));
+  }
+  $("#admin-tab").hidden = !cap.admin;
+  if (!db || !cap.uid){ syncState="off"; setSync(); renderAll(); return; }
+
+  const slow = setTimeout(()=>{ if (syncState==="connecting"){ syncState="slow"; setSync(); } }, 10000);
+  const ok = () => { clearTimeout(slow); if (syncState!=="on"){ syncState="on"; setSync(); } };
+  const fail = e => { clearTimeout(slow); console.warn(e); syncState="slow"; setSync(); };
+  db.collection("sales").onSnapshot(snap => {
+    extraSales = snap.docs.filter(d=>d.exists).map(d => ({id:d.id, ...d.data(), source:"registered"}))
+      .filter(s => s.building && s.date && Number.isFinite(+s.size) && Number.isFinite(+s.price)).map(s => ({...s, beds:+s.beds, size:+s.size, price:+s.price}));
+    adminSales = extraSales;
+    if (!snap.metadata.fromCache) ok();
+    renderSaved(); renderBuildings(); if (cap.admin) renderAdmin(); updateSavedCount();
+  }, fail);
+  db.doc(`data/users/${cap.uid}/saved`).onSnapshot(s => { savedDoc = s.exists ? {items:[], ...s.data()} : {items:[]}; renderSaved(); updateSavedCount(); syncResultButtons(); }, fail);
+  db.doc(`activity/${cap.uid}`).onSnapshot(s => { activityDoc = s.exists ? s.data() : null; }, fail);
+  db.doc(`leads/${cap.uid}`).onSnapshot(s => { leadDoc = s.exists ? s.data() : null; renderSaved(); }, fail);
+  if (cap.admin){
+    db.collection("activity").onSnapshot(s => { adminActivity = s.docs.filter(d=>d.exists).map(d=>({id:d.id, ...d.data()})); renderAdmin(); }, fail);
+    db.collection("leads").onSnapshot(s => { adminLeads = s.docs.filter(d=>d.exists).map(d=>({id:d.id, ...d.data()})); renderAdmin(); }, fail);
+  }
+  renderAll();
+}
+
+function logActivity(kind, entry){
+  if (!cap.db || !cap.uid) return;
+  const path = `activity/${cap.uid}`;
+  queueWrite(path, async () => {
+    const cur = activityDoc || {checks:[], requests:[]};
+    const next = {checks:[...(cur.checks||[])], requests:[...(cur.requests||[])], updated:new Date().toISOString()};
+    next[kind] = [...next[kind], entry].slice(-200);
+    activityDoc = next;
+    await cap.db.doc(path).set(next);
+  });
+}
+
+/* ===================== Check flow state ===================== */
+const S = {
+  example:true, image:null, imageURL:null, imageLabel:"", text:"",
+  status:null, statusErr:false, abort:null,
+  fields:null, source:null, cands:[], chosen:null, sampleKey:null,
+  result:null, mort:{down:20, rate:4.25, years:25}, consentTicked:false, leadSent:null, confirmDelete:false,
+};
+
+async function readListing(){
+  if (!S.image && !S.text.trim()){ setStatus("Add a screenshot or paste the listing text first.", true); return; }
+  const sample = cap.sample;
+  const sampleData = SAMPLES.find(s => s.key === S.sampleKey);
+  if (!sample || (S.image && !cap.imagesOK && !S.text.trim())){
+    if (sampleData && S.image){ useSampleFields(sampleData, "Claude can't read images in this view, so the sample's details were filled in for you."); return; }
+    setStatus(sample ? "This view can't send images to Claude. Paste the listing text, or enter the details by hand." : "Claude isn't available in this view. Enter the details by hand.", true);
+    return;
+  }
+  S.abort?.abort(); const ctl = new AbortController(); S.abort = ctl;
+  setStatus("Claude is reading the listing…", false, true);
+  const prompt = `You read Dubai property listings and return their key facts.
+The input is a screenshot or pasted text from a property portal, an agent's WhatsApp message, or a social post.
+Rules:
+- is_listing: true only if it advertises a specific property for sale or rent.
+- listing_type: "sale", "rent" or "unknown".
+- building_text: the building or tower name exactly as written, without unit or floor numbers; null if none.
+- area_text: the community, e.g. "Dubai Marina" or "JVC"; null if not shown.
+- bedrooms: integer; a studio is 0.
+- size_sqft: built-up area in square feet; convert square metres by multiplying by 10.7639.
+- price_aed: the full asking price in AED as a plain number ("2.45M" -> 2450000).
+- If several properties appear, use the most prominent one. Never guess: a value that is not visible is null.
+${S.text.trim() ? "\nListing text:\n" + S.text.trim().slice(0,4000) + "\n" : ""}${S.image ? "\nThe attached image is the listing screenshot.\n" : ""}
+Reply with only a JSON object with exactly these keys: {"is_listing": boolean, "listing_type": "sale"|"rent"|"unknown", "building_text": string|null, "area_text": string|null, "bedrooms": number|null, "size_sqft": number|null, "price_aed": number|null}`;
+  try {
+    const opts = {modelTier:"quick", signal:ctl.signal};
+    if (S.image && cap.imagesOK) opts.images = [S.image];
+    const v = await sample.json(prompt, opts);
+    if (S.abort !== ctl) return;
+    S.abort = null;
+    if (!v || typeof v !== "object" || !v.is_listing){ setStatus("That doesn't look like a property listing. Try a screenshot that shows the price.", true); return; }
+    if (v.listing_type === "rent"){ setStatus("That's a rental listing. Mizan checks sale prices only for now.", true); return; }
+    const num = k => (v[k] === null || v[k] === undefined || v[k] === "" || !Number.isFinite(+v[k])) ? null : +v[k];
+    setFields({building_text: v.building_text ? String(v.building_text).slice(0,120) : "", area_text: v.area_text ? String(v.area_text).slice(0,80) : "",
+               bedrooms: num("bedrooms"), size_sqft: num("size_sqft"), price_aed: num("price_aed")}, "claude");
+    setStatus("Read by Claude. Check the details and pick the building.");
+  } catch (e) {
+    if (S.abort === ctl) S.abort = null;
+    if (e.code === "cancelled"){ setStatus(null); return; }
+    const copy = {
+      not_granted:"Claude wasn't allowed for this app, so enter the details by hand.",
+      sampling_disabled:"Claude isn't available for this account. Enter the details by hand.",
+      rate_limited:"Too many reads just now. Wait a minute, or enter the details by hand.",
+      image_rejected:"That image couldn't be read. Try a JPEG or PNG screenshot.",
+      images_unavailable:"This view can't send images to Claude. Paste the listing text instead.",
+      refused:"Claude couldn't read this one. Enter the details by hand.",
+      invalid_json:"Claude's answer couldn't be read. Try again, or enter the details by hand.",
+    }[e.code] || "Reading failed. Try again, or enter the details by hand.";
+    if (["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed"].includes(e.code)) cap.sample = null;
+    if (sampleData && S.image){ useSampleFields(sampleData, copy.replace(/ Enter the details by hand\.| or enter the details by hand\./,"") + " The sample's details were filled in for you."); return; }
+    setStatus(copy, true);
+  }
+}
+function useSampleFields(s, msg){
+  setFields({building_text:`${s.building}`, area_text:s.area, bedrooms:s.beds, size_sqft:s.size, price_aed:s.price}, "sample");
+  setStatus(msg);
+}
+function setFields(f, source){
+  S.fields = f; S.source = source; S.example = false;
+  S.cands = f.building_text ? candidates(f.building_text, f.area_text) : [];
+  S.chosen = preselect(S.cands, f.building_text);
+  renderConfirm();
+}
+function preselect(cands, text){
+  if (cands.length && cands[0].score >= STRONG_MATCH) return cands[0].name;
+  return cands.length ? null : (text ? "none" : null);   // weak match: the user must pick
+}
+function setStatus(msg, err=false, busy=false){ S.status = msg ? {msg, err, busy} : null; renderStatus(); }
+
+async function compare(){
+  const f = S.fields; if (!f) return;
+  const problems = fieldProblems(f); if (problems.length){ renderConfirm(); return; }
+  const code = newCode();
+  if (S.chosen === "none" || !S.chosen){
+    const text = (f.building_text || "").trim();
+    logActivity("requests", {text, area:f.area_text||"", t:new Date().toISOString()});
+    S.result = {code, none:true, f:{...f}, building:text};
+    renderResult(); scrollToResult(); return;
+  }
+  const sales = recentSales(S.chosen, f.bedrooms);
+  const a = analyse(f.price_aed, f.size_sqft, sales);
+  S.result = {code, f:{...f}, building:S.chosen, a, card:null, image:S.image, example:S.example};
+  S.consentTicked = false; S.leadSent = null;
+  renderResult(); scrollToResult();
+  S.result.card = await renderCard({image:S.image, f, building:S.chosen, a, code});
+  renderResult();
+  if (!S.example) logActivity("checks", {code, building:S.chosen, beds:f.bedrooms, size:f.size_sqft, price:f.price_aed, diff:a.diff===null?null:+(a.diff*100).toFixed(2), band:a.band, count:a.count, source:S.source, t:new Date().toISOString()});
+}
+function scrollToResult(){ if (window.matchMedia("(max-width:940px)").matches) $("#result")?.scrollIntoView({behavior:"smooth", block:"start"}); }
+function fieldProblems(f){
+  const p = [];
+  if (!(f.bedrooms >= 0 && f.bedrooms <= 8)) p.push("Choose the number of bedrooms.");
+  if (!(f.size_sqft > 150)) p.push("Enter the size in sq ft.");
+  if (!(f.price_aed > 50000)) p.push("Enter the asking price in AED.");
+  if (!p.length){ const psf = f.price_aed/f.size_sqft; if (psf < 300 || psf > 6000) p.push(`That works out to ${aed(psf)} per sq ft, which looks wrong. Check the size and price.`); }
+  if (!f.building_text || !f.building_text.trim()) p.push("Enter the building name.");
+  else if (!S.chosen) p.push("Pick the building below, or “None of these”.");
+  return p;
+}
+
+/* ===================== Render: Check view ===================== */
+function renderCheck(){
+  const v = $("#view-check");
+  v.innerHTML = `
+    <div class="view-head"><h1>Is this Dubai listing fairly priced?</h1>
+      <p>Add a listing screenshot, from a portal, an agent's WhatsApp, anywhere. Mizan reads it, compares the asking price per sq ft with registered sales of the same flat type in that building over the last 12 months, and stamps the result on your screenshot.</p></div>
+    <div class="grid-check">
+      <div class="stack">
+        <div class="panel" id="p-input">
+          <div class="panel-h"><span class="step">1</span><h2>Add a listing</h2></div>
+          <label class="drop" id="drop" for="file">
+            <span id="drop-inner"></span>
+            <input type="file" id="file" accept="image/png,image/jpeg,image/webp" hidden>
+          </label>
+          <label class="f" for="ltext">Or paste the listing text
+            <textarea id="ltext" placeholder="e.g. 2BR in Marina Crest, Dubai Marina · 1,284 sqft · AED 2.45M"></textarea></label>
+          <div class="row">
+            <button class="btn primary" id="read">Read listing</button>
+            <button class="btn ghost" id="manual">Enter details by hand</button>
+          </div>
+          <div class="samples"><span class="lbl">No screenshot handy? Try a sample listing</span>
+            <div class="row" id="sample-row">${SAMPLES.map(s=>`<button class="chip" data-sample="${s.key}">${esc(s.label)}</button>`).join("")}</div></div>
+          <div id="status"></div>
+        </div>
+        <div class="panel" id="p-confirm"></div>
+      </div>
+      <div class="result" id="result"></div>
+    </div>`;
+  $("#ltext").value = S.text;
+  renderDrop(); renderStatus(); renderConfirm(); renderResult();
+
+  const drop = $("#drop");
+  drop.tabIndex = 0;
+  drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " "){ e.preventDefault(); $("#file").click(); } });
+  $("#file").addEventListener("change", e => { const f = e.target.files[0]; if (f) setImage(f, f.name, null); e.target.value=""; });
+  ["dragenter","dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave","drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+  drop.addEventListener("drop", e => { const f = [...(e.dataTransfer?.files||[])].find(f=>f.type.startsWith("image/")); if (f) setImage(f, f.name, null); });
+  $("#ltext").addEventListener("input", e => { S.text = e.target.value; });
+  $("#read").addEventListener("click", readListing);
+  $("#manual").addEventListener("click", () => { setFields({building_text:"", area_text:"", bedrooms:null, size_sqft:null, price_aed:null}, "manual"); setStatus("Fill in the details below."); $("#f-building")?.focus(); });
+  $("#sample-row").addEventListener("click", async e => {
+    const b = e.target.closest("[data-sample]"); if (!b) return;
+    const s = SAMPLES.find(x=>x.key===b.dataset.sample);
+    setImage(await sampleScreenshot(s), `Sample: ${s.label}`, s.key);
+    setStatus("Sample screenshot added. Press “Read listing”.");
+  });
+}
+function setImage(blob, label, sampleKey){
+  if (S.imageURL) URL.revokeObjectURL(S.imageURL);
+  S.image = blob; S.imageURL = URL.createObjectURL(blob); S.imageLabel = label; S.sampleKey = sampleKey; S.example = false;
+  renderDrop();
+}
+function renderDrop(){
+  const el = $("#drop-inner"); if (!el) return;
+  el.innerHTML = S.image
+    ? `<img src="${S.imageURL}" alt="Listing screenshot preview"><strong>${esc(S.imageLabel)}</strong><span>Click to choose a different screenshot</span>`
+    : `<strong>Drop a screenshot here, or click to choose</strong><span>You can also paste an image with Ctrl+V. JPEG, PNG or WebP.</span>`;
+}
+function renderStatus(){
+  const el = $("#status"); if (!el) return;
+  if (!S.status){ el.innerHTML=""; return; }
+  el.innerHTML = `<div class="status${S.status.err?" err":""}">${S.status.busy?'<span class="spinner" aria-hidden="true"></span>':""}<span>${esc(S.status.msg)}</span>${S.status.busy?'<button class="btn sm ghost" id="stop" style="margin-left:auto">Stop</button>':""}</div>`;
+  $("#stop")?.addEventListener("click", () => { S.abort?.abort(); S.abort=null; setStatus(null); });
+}
+function renderConfirm(){
+  const p = $("#p-confirm"); if (!p) return;
+  const f = S.fields;
+  if (!f){ p.innerHTML = `<div class="panel-h"><span class="step off">2</span><h2>Check the details</h2></div><p class="note" style="margin:0">After Claude reads the listing, its details and the matching buildings appear here.</p>`; return; }
+  const probs = fieldProblems(f);
+  const srcTag = {claude:"Read by Claude", sample:"Sample data", manual:"Typed by you", example:"Example"}[S.example ? "example" : S.source] || "";
+  p.innerHTML = `
+    <div class="panel-h"><span class="step">2</span><h2>Check the details</h2><span class="tag">${esc(srcTag)}</span></div>
+    <div class="fields">
+      <label class="f wide" for="f-building">Building, as written<input type="text" id="f-building" value="${esc(f.building_text)}" autocomplete="off"></label>
+      <label class="f" for="f-area">Area<input type="text" id="f-area" value="${esc(f.area_text||"")}" autocomplete="off"></label>
+      <label class="f" for="f-beds">Bedrooms<select id="f-beds"><option value="">Choose</option>${[0,1,2,3,4,5].map(b=>`<option value="${b}"${f.bedrooms===b?" selected":""}>${b===0?"Studio":b+" bed"}</option>`).join("")}</select></label>
+      <label class="f" for="f-size">Size, sq ft<input type="number" id="f-size" min="0" step="1" value="${f.size_sqft ?? ""}"></label>
+      <label class="f" for="f-price">Asking price, AED<input type="number" id="f-price" min="0" step="1000" value="${f.price_aed ?? ""}"></label>
+      <label class="f wide" for="f-quick">Quick fill (optional)<input type="text" id="f-quick" placeholder="e.g. 2 bed, 1284 sqft, 2.45m"></label>
+    </div>
+    <div><div class="note" style="margin-bottom:6px">Which building is it?</div><div class="cands" id="cands"></div></div>
+    <div id="probs"></div>
+    <button class="btn primary" id="compare">Compare with registered sales</button>`;
+  renderCands(); renderProbs();
+  const upd = () => {
+    f.building_text = $("#f-building").value; f.area_text = $("#f-area").value;
+    f.bedrooms = $("#f-beds").value === "" ? null : +$("#f-beds").value;
+    f.size_sqft = $("#f-size").value === "" ? null : +$("#f-size").value;
+    f.price_aed = $("#f-price").value === "" ? null : +$("#f-price").value;
+    renderProbs();
+  };
+  ["f-beds","f-size","f-price"].forEach(id => $("#"+id).addEventListener("input", upd));
+  let t; ["f-building","f-area"].forEach(id => $("#"+id).addEventListener("input", () => { upd(); clearTimeout(t); t=setTimeout(()=>{ S.cands = f.building_text ? candidates(f.building_text, f.area_text) : []; if (S.chosen !== "none" && !S.cands.some(c=>c.name===S.chosen)) S.chosen = preselect(S.cands, f.building_text); if (S.chosen === "none" && !f.building_text) S.chosen = null; renderCands(); renderProbs(); }, 250); }));
+  $("#f-quick").addEventListener("change", e => { const v = parseFields(e.target.value); if (!Object.keys(v).length){ toast("Couldn't read that. Try: 2 bed, 1284 sqft, 2.45m"); return; } Object.assign(f, v); S.fields = f; renderConfirm(); });
+  $("#compare").addEventListener("click", compare);
+}
+function renderCands(){
+  const el = $("#cands"); if (!el) return;
+  const f = S.fields;
+  const rows = S.cands.map(c => `<label class="cand"><input type="radio" name="bld" value="${esc(c.name)}"${S.chosen===c.name?" checked":""}><div><b>${esc(c.name)}</b><br><span>${esc(c.area)}</span></div><span class="score">${Math.round(Math.min(c.score,1)*100)}% match</span></label>`).join("");
+  el.innerHTML = rows + (f.building_text ? `<label class="cand"><input type="radio" name="bld" value="none"${S.chosen==="none"?" checked":""}><div><b>None of these</b><br><span>Ask Mizan to add “${esc(f.building_text)}”</span></div></label>` : `<p class="note" style="margin:0">Type the building name to see matches.</p>`);
+  el.querySelectorAll("input[name=bld]").forEach(r => r.addEventListener("change", () => { S.chosen = r.value; renderProbs(); }));
+}
+function renderProbs(){
+  const el = $("#probs"); if (!el) return;
+  const pr = fieldProblems(S.fields);
+  el.innerHTML = pr.length ? `<div class="warn">${pr.map(esc).join("<br>")}</div>` : "";
+  const b = $("#compare"); if (b) b.disabled = pr.length > 0;
+}
+
+function chartSVG(r){
+  const a = r.a, W=640, H=150, L=26, R=26;
+  if (!a.sales.length) return "";
+  const vals = a.sales.map(s=>s.price/s.size).concat([a.asking]);
+  let lo = Math.min(...vals), hi = Math.max(...vals); const pad=(hi-lo)*.12||50; lo-=pad; hi+=pad;
+  const step = (hi-lo) > 500 ? 100 : 50, X = v => L + (v-lo)/(hi-lo)*(W-L-R);
+  const ticks=[]; for (let t=Math.ceil(lo/step)*step; t<=hi; t+=step) ticks.push(t);
+  const anchor = px => px<90 ? "start" : px>W-90 ? "end" : "middle";
+  const mx = a.med !== null ? X(a.med) : null, ax = X(a.asking);
+  const close = mx !== null && Math.abs(ax-mx) < 120;
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Registered sales per square foot with the median and this listing">
+    <line x1="${L}" x2="${W-R}" y1="112" y2="112" stroke="var(--line)"/>
+    ${ticks.map(t=>`<line x1="${X(t)}" x2="${X(t)}" y1="108" y2="116" stroke="var(--line)"/><text x="${X(t)}" y="132" text-anchor="middle" fill="var(--muted)" style="font:11px var(--f-mono)">${n0(t)}</text>`).join("")}
+    ${a.diff!==null ? `<line x1="${mx}" x2="${mx}" y1="36" y2="108" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${mx}" y="28" text-anchor="${anchor(mx)}" fill="var(--ink)" style="font:600 12px var(--f-body)">Median ${n0(a.med)}</text>` : ""}
+    ${a.sales.map((s,i)=>`<circle cx="${X(s.price/s.size).toFixed(1)}" cy="${i%2?70:84}" r="6" fill="var(--brand)" fill-opacity=".75"><title>${fmtDate(s.date)}: ${aed(s.price/s.size)}/sq ft</title></circle>`).join("")}
+    <path d="M${ax} 62 l9 15 l-9 15 l-9 -15z" fill="var(--stamp)"/>
+    <text x="${ax}" y="${close?104:28}" dx="${close?(ax>mx?14:-14):0}" text-anchor="${close?(ax>mx?"start":"end"):anchor(ax)}" fill="var(--stamp)" style="font:600 12px var(--f-body)">This listing ${n0(a.asking)}</text>
+    <text x="${W-R}" y="148" text-anchor="end" fill="var(--muted)" style="font:11px var(--f-body)">AED per sq ft</text></svg>`;
+}
+
+function isSaved(code){ return (savedDoc.items||[]).some(i=>i.code===code); }
+function renderResult(){
+  const el = $("#result"); if (!el) return;
+  const r = S.result;
+  if (!r){ el.innerHTML = `<div class="panel"><div class="panel-h"><span class="step off">3</span><h2>Your stamped listing</h2></div><div class="empty"><b>Nothing checked yet</b>The stamped screenshot, the sales behind it and the monthly cost appear here.</div></div>`; return; }
+  if (r.none){
+    el.innerHTML = `<div class="panel"><div class="panel-h"><span class="step">3</span><h2>Not covered yet</h2></div>
+      <div class="verdict-head"><span class="pill b-none">${BAND_LABEL.none}</span>
+      <p>Mizan doesn't have sales data for <b>${esc(r.building)}</b> yet. It covers ${BUILDINGS.length} buildings in this demo. Your request is logged, and the most-requested buildings get added first.</p></div>
+      <div class="actions"><a class="btn" href="#buildings">See covered buildings</a></div></div>`;
+    return;
+  }
+  const a = r.a, f = r.f, band = a.band;
+  const sentence = a.diff !== null
+    ? `This listing asks <b>${aed(a.asking)}</b> per sq ft, <b>${pct(a.diff).replace(/^[+−]/,"")} ${a.diff>=0?"above":"below"}</b> the median of ${a.count} registered ${bedsLabel(f.bedrooms)} sales in ${esc(r.building)} in the last 12 months (${aed(a.med)} per sq ft).`
+    : `Only ${a.count} registered ${bedsLabel(f.bedrooms)} sale${a.count===1?"":"s"} in ${esc(r.building)} in the last 12 months. Mizan needs at least ${RULES.minSales} to compare fairly. Save it to get an alert when the next one registers.`;
+  const e = estimate(f.price_aed, S.mort.down, S.mort.rate, S.mort.years);
+  const saved = isSaved(r.code);
+  el.innerHTML = `
+    <div class="panel">
+      <div class="panel-h"><span class="step">3</span><h2>Your stamped listing</h2>${r.example?'<span class="tag">Example</span>':""}</div>
+      <div class="verdict-head">
+        <span class="pill b-${band}">${BAND_LABEL[band]}</span>
+        <div class="big mono">${a.diff!==null ? pct(a.diff) : "No verdict"}</div>
+        <p>${sentence}</p>
+      </div>
+      <div class="card-wrap">
+        ${r.card ? `<img class="card-img" src="${r.card.url}" alt="Stamped listing card: ${esc(a.diff!==null?pct(a.diff):"no verdict")}">` : `<div class="card-img" style="aspect-ratio:9/16;display:grid;place-items:center"><span class="spinner"></span></div>`}
+        <div style="display:grid;gap:14px;min-width:0">
+          <dl class="facts">
+            <dt>Building</dt><dd>${esc(r.building)}</dd>
+            <dt>Flat</dt><dd>${bedsLabel(f.bedrooms)} · ${n0(f.size_sqft)} sq ft</dd>
+            <dt>Asking</dt><dd class="mono">${aed(f.price_aed)}</dd>
+            <dt>Card code</dt><dd class="mono">${r.code}</dd>
+          </dl>
+          <div class="actions">
+            <button class="btn primary" id="dl" ${r.card && cap.downloads ? "" : "disabled"}>Save card image</button>
+            <button class="btn" id="copy">Copy share text</button>
+            <button class="btn" id="save" data-saved="${saved}">${saved ? "Saved, alerts on" : "Save and alert me"}</button>
+          </div>
+          <p class="note" style="margin:0">${cap.downloads ? "Forward the card to anyone you're deciding with. Its link brings them to Mizan." : "Saving the image isn't available in this view. Long-press or right-click the card to save it."}${cap.db && cap.uid ? "" : " Sign in to Claude to save listings."}</p>
+        </div>
+      </div>
+    </div>
+    <details class="box" open>
+      <summary>The registered sales behind this</summary>
+      <div class="inner">
+        ${chartSVG(r)}
+        <div class="tbl-wrap"><table><thead><tr><th>Registered</th><th class="r">Size, sq ft</th><th class="r">Price, AED</th><th class="r">AED / sq ft</th></tr></thead><tbody>
+          ${a.sales.map(s=>`<tr><td>${fmtDate(s.date)}${s.source==="registered"?' <span class="tag">new</span>':""}</td><td class="r mono">${n0(s.size)}</td><td class="r mono">${n0(s.price)}</td><td class="r mono">${n0(s.price/s.size)}</td></tr>`).join("")}
+          <tr class="hl"><td><b>This listing</b></td><td class="r mono">${n0(f.size_sqft)}</td><td class="r mono">${n0(f.price_aed)}</td><td class="r mono"><b>${n0(a.asking)}</b></td></tr>
+        </tbody></table></div>
+        <p class="note" style="margin:0">Same building, same bedroom count, registered in the last 12 months. Comparing per sq ft evens out small size differences. Floor, view and condition can justify a different price.</p>
+      </div>
+    </details>
+    <details class="box" id="mort" ${S.leadSent || S.consentTicked ? "open" : ""}>
+      <summary>What would this cost per month?</summary>
+      <div class="inner">
+        <div class="fields">
+          <label class="f wide" for="m-down">Down payment: <span class="mono" id="m-downv">${S.mort.down}% · ${aed(e.down)}</span><input type="range" id="m-down" min="20" max="50" step="5" value="${S.mort.down}"></label>
+          <label class="f" for="m-rate">Interest rate, %<input type="number" id="m-rate" min="1" max="12" step="0.05" value="${S.mort.rate}"></label>
+          <label class="f" for="m-years">Term<select id="m-years">${[15,20,25].map(y=>`<option value="${y}"${y===S.mort.years?" selected":""}>${y} years</option>`).join("")}</select></label>
+        </div>
+        <div class="mort-out">
+          <span class="kv"><span>Monthly payment, about</span></span>
+          <span class="m mono" id="m-monthly">${aed(e.monthly)}</span>
+          <span class="kv"><span>Loan</span><b class="mono" id="m-loan">${aed(e.loan)}</b></span>
+          <span class="kv"><span>Cash needed upfront, about</span><b class="mono" id="m-up">${aed(e.upfront)}</b></span>
+        </div>
+        <p class="note" style="margin:0">Estimate only, not an offer of credit. Upfront cash adds the 4% transfer fee, 0.25% mortgage registration and 2% agency fee plus VAT. Expats usually need at least 20% down on a first home under AED 5M.</p>
+        <div id="lead"></div>
+      </div>
+    </details>`;
+  bindResult(r, e);
+  renderLead();
+}
+function syncResultButtons(){ const b = $("#save"); if (b && S.result && !S.result.none){ const s = isSaved(S.result.code); b.textContent = s ? "Saved, alerts on" : "Save and alert me"; b.dataset.saved = s; } }
+function bindResult(r){
+  $("#dl")?.addEventListener("click", async () => {
+    try { await cap.downloads.save({filename:`mizan-check-${r.code}.png`, data:r.card.blob}); toast("Card saved"); }
+    catch (e) { if (e.code !== "declined") toast("Couldn't save the image here. Right-click the card to save it."); }
+  });
+  $("#copy")?.addEventListener("click", async () => {
+    const a = r.a, t = a.diff !== null
+      ? `Checked on Mizan: ${r.building}, ${bedsLabel(r.f.bedrooms)}, ${aed(r.f.price_aed)} is ${pct(a.diff)} vs the median of ${a.count} registered sales in the last 12 months. mizan.example/c/${r.code}`
+      : `Checked on Mizan: too few registered sales in ${r.building} to judge ${aed(r.f.price_aed)} yet. mizan.example/c/${r.code}`;
+    try { await navigator.clipboard.writeText(t); toast("Share text copied"); } catch { toast(t); }
+  });
+  $("#save")?.addEventListener("click", () => toggleSave(r));
+  const upd = () => {
+    const e = estimate(r.f.price_aed, S.mort.down, S.mort.rate, S.mort.years);
+    $("#m-downv").textContent = `${S.mort.down}% · ${aed(e.down)}`; $("#m-monthly").textContent = aed(e.monthly);
+    $("#m-loan").textContent = aed(e.loan); $("#m-up").textContent = aed(e.upfront);
+  };
+  $("#m-down").addEventListener("input", e => { S.mort.down = +e.target.value; upd(); });
+  $("#m-rate").addEventListener("input", e => { const v = parseFloat(e.target.value); if (v>0 && v<20){ S.mort.rate=v; upd(); } });
+  $("#m-years").addEventListener("change", e => { S.mort.years = +e.target.value; upd(); });
+}
+function renderLead(){
+  const el = $("#lead"); const r = S.result; if (!el || !r || r.none) return;
+  const canStore = cap.db && cap.uid;
+  if (S.leadSent){
+    el.innerHTML = `<div class="okbox"><b>Request sent to ${esc(PARTNER)}.</b><span>An adviser will contact you about this listing. You can withdraw any time under Saved → Your data.</span>
+      <pre class="log">${esc(JSON.stringify(S.leadSent, null, 2))}</pre></div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div style="display:grid;gap:10px;border-top:1px solid var(--line);padding-top:14px">
+      <b>Talk to a mortgage adviser</b>
+      <label class="consent" for="c-tick"><input type="checkbox" id="c-tick"${S.consentTicked?" checked":""}><span>${esc(CONSENT_TEXT)}</span></label>
+      <div class="fields" id="c-fields"${S.consentTicked?"":" hidden"}>
+        <label class="f" for="c-name">Your name<input type="text" id="c-name" autocomplete="name"></label>
+        <label class="f" for="c-phone">Mobile number<input type="tel" id="c-phone" autocomplete="tel" placeholder="+971 5x xxx xxxx"></label>
+      </div>
+      <div class="row"><button class="btn primary" id="c-send" ${S.consentTicked?"":"disabled"}>Send my details to ${esc(PARTNER)}</button></div>
+      <p class="note" style="margin:0">${canStore ? "Nothing is shared unless you tick the box and press send. This demo partner is fictional: requests reach only the owner of this app." : "Sign in to Claude to send a request. Nothing is shared from this view."}</p>
+    </div>`;
+  $("#c-tick").addEventListener("change", e => { S.consentTicked = e.target.checked; $("#c-fields").hidden = !S.consentTicked; $("#c-send").disabled = !S.consentTicked; });
+  $("#c-send").addEventListener("click", async () => {
+    const name = $("#c-name").value.trim(), phone = $("#c-phone").value.replace(/[^\d+]/g,"");
+    if (!name){ toast("Enter your name."); $("#c-name").focus(); return; }
+    if (!/^\+?\d{9,15}$/.test(phone)){ toast("Enter a valid mobile number, e.g. +971501234567."); $("#c-phone").focus(); return; }
+    const e = estimate(r.f.price_aed, S.mort.down, S.mort.rate, S.mort.years);
+    const rec = {event:"lead_sent", time:new Date().toISOString(), partner:PARTNER, consent_text:CONSENT_VERSION, name, phone,
+      listing:{code:r.code, building:r.building, beds:r.f.bedrooms, size_sqft:r.f.size_sqft, price_aed:r.f.price_aed}, down_pct:S.mort.down, loan_estimate:Math.round(e.loan)};
+    if (!canStore){ toast("Sign in to Claude to send a request."); return; }
+    $("#c-send").disabled = true;
+    const path = `leads/${cap.uid}`;
+    await queueWrite(path, async () => {
+      const items = [...((leadDoc && leadDoc.items) || []), rec].slice(-20);
+      await cap.db.doc(path).set({items, updated:rec.time});
+      leadDoc = {items, updated:rec.time};
+      S.leadSent = {...rec, phone: rec.phone.replace(/\d(?=\d{4})/g,"•")};
+    });
+    renderLead();
+  });
+}
+async function toggleSave(r){
+  if (!cap.db || !cap.uid){ toast("Sign in to Claude to save listings and get alerts."); return; }
+  const path = `data/users/${cap.uid}/saved`;
+  await queueWrite(path, async () => {
+    let items = [...(savedDoc.items||[])];
+    if (items.some(i=>i.code===r.code)) items = items.filter(i=>i.code!==r.code);
+    else items.push({code:r.code, building:r.building, beds:r.f.bedrooms, size:r.f.size_sqft, price:r.f.price_aed, countAtSave:r.a.count,
+      diffAtSave: r.a.diff===null?null:+(r.a.diff*100).toFixed(2), savedAt:new Date().toISOString()});
+    items = items.slice(-50);
+    savedDoc = {items}; await cap.db.doc(path).set({items});
+  });
+  syncResultButtons(); renderSaved(); updateSavedCount();
+  toast(isSaved(r.code) ? "Saved. You'll see new sales for this building under Saved." : "Removed from saved");
+}
+
+/* ===================== Render: Saved ===================== */
+function savedStatus(i){ const a = analyse(i.price, i.size, recentSales(i.building, i.beds)); return {a, fresh: Math.max(0, a.count - (i.countAtSave||0))}; }
+function updateSavedCount(){
+  const n = (savedDoc.items||[]).filter(i => savedStatus(i).fresh > 0).length;
+  const el = $("#saved-count"); el.hidden = !n; el.textContent = n;
+}
+function renderSaved(){
+  const v = $("#view-saved"); if (!v) return;
+  const items = [...(savedDoc.items||[])].reverse();
+  const signed = cap.db && cap.uid;
+  v.innerHTML = `
+    <div class="view-head"><h1>Saved listings</h1><p>When a new sale of the same flat type registers in a saved building, the listing is flagged here and its verdict updates.</p></div>
+    ${!signed ? `<div class="empty"><b>Saving needs a signed-in Claude account</b>Open this app while signed in to Claude, then use “Save and alert me” under a result.</div>` :
+      !items.length ? `<div class="empty"><b>No saved listings yet</b>Check a listing, then press “Save and alert me” under the result.<a class="btn primary" href="#check">Check a listing</a></div>` :
+      `<div class="list">${items.map(i => { const {a, fresh} = savedStatus(i); return `
+        <div class="item">
+          <div><h3>${esc(i.building)} · ${bedsLabel(i.beds)} · <span class="mono">${aed(i.price)}</span></h3>
+            <div class="sub">Saved ${fmtDate(i.savedAt.slice(0,10))} · card ${esc(i.code)} · then ${i.diffAtSave===null?"no verdict":(i.diffAtSave>=0?"+":"−")+Math.abs(i.diffAtSave).toFixed(1)+"%"} vs ${i.countAtSave} sales</div>
+            ${fresh ? `<span class="badge">${fresh} new sale${fresh>1?"s":""} since you saved</span>` : ""}</div>
+          <div class="side"><span class="pill b-${a.band}">${a.diff!==null?pct(a.diff):"No verdict"} now</span>
+            <span class="row"><button class="btn sm" data-recheck="${esc(i.code)}">Open</button><button class="btn sm ghost" data-unsave="${esc(i.code)}">Remove</button></span></div>
+        </div>`; }).join("")}</div>`}
+    ${signed ? `<div class="panel" style="margin-top:24px"><div class="panel-h"><h2>Your data</h2></div>
+      <p style="margin:0" class="note">Stored for your account: ${items.length} saved listing${items.length===1?"":"s"}, your checks, building requests${leadDoc ? ", and one adviser request" : ""}. Screenshots never leave your browser except to Claude for reading.</p>
+      ${leadDoc ? `<div class="row"><span>Adviser request to ${esc(PARTNER)}, sent ${fmtDate((leadDoc.updated||"").slice(0,10)||isoDaysAgo(0))}.</span><button class="btn sm" id="withdraw">Withdraw request</button></div>` : ""}
+      <div id="del-area"><button class="btn danger" id="del">Delete all my data</button></div></div>` : ""}`;
+  v.querySelectorAll("[data-unsave]").forEach(b => b.addEventListener("click", () => { const i = savedDoc.items.find(x=>x.code===b.dataset.unsave); toggleSave({code:i.code}); }));
+  v.querySelectorAll("[data-recheck]").forEach(b => b.addEventListener("click", () => {
+    const i = savedDoc.items.find(x=>x.code===b.dataset.recheck); if (!i) return;
+    S.example=false; S.image=null; S.imageURL=null; S.imageLabel=""; S.sampleKey=null;
+    S.fields = {building_text:i.building, area_text:"", bedrooms:i.beds, size_sqft:i.size, price_aed:i.price}; S.source="manual";
+    S.cands = candidates(i.building); S.chosen = i.building; location.hash = "check"; renderCheck(); setStatus("Re-checked against the latest registered sales."); compare();
+  }));
+  $("#withdraw")?.addEventListener("click", () => queueWrite(`leads/${cap.uid}`, async () => { await cap.db.doc(`leads/${cap.uid}`).delete(); leadDoc=null; S.leadSent=null; toast("Request withdrawn"); renderSaved(); }));
+  $("#del")?.addEventListener("click", () => {
+    $("#del-area").innerHTML = `<div class="confirm-inline">Delete saved listings, checks, requests and any adviser request? This can't be undone.<button class="btn sm danger" id="del-yes">Delete</button><button class="btn sm" id="del-no">Keep</button></div>`;
+    $("#del-no").onclick = renderSaved;
+    $("#del-yes").onclick = async () => {
+      await Promise.all([`data/users/${cap.uid}/saved`, `activity/${cap.uid}`, `leads/${cap.uid}`].map(p => queueWrite(p, () => cap.db.doc(p).delete())));
+      savedDoc={items:[]}; activityDoc=null; leadDoc=null; S.leadSent=null; toast("Your data is deleted"); renderSaved(); updateSavedCount();
+    };
+  });
+}
+
+/* ===================== Render: Buildings ===================== */
+function renderBuildings(){
+  const v = $("#view-buildings"); if (!v) return;
+  v.innerHTML = `
+    <div class="view-head"><h1>Covered buildings</h1><p>Registered sales in the last 12 months, by flat type. A verdict needs at least ${RULES.minSales} sales of the same type. This demo covers ${BUILDINGS.length} fictional buildings.</p></div>
+    <div class="tbl-wrap"><table><thead><tr><th>Building</th><th>Area</th><th>Flat type</th><th class="r">Sales, 12 mo</th><th class="r">Median AED / sq ft</th><th>Verdicts</th></tr></thead><tbody>
+    ${BUILDINGS.flatMap(b => { const types = [...new Set(allSales().filter(s=>s.building===b.name).map(s=>s.beds))].sort(); return types.map(t => { const s = recentSales(b.name, t); const m = s.length ? median(s.map(x=>x.price/x.size)) : null;
+      return `<tr><td><b>${esc(b.name)}</b></td><td>${esc(b.area)}</td><td>${bedsLabel(t)}</td><td class="r mono">${s.length}</td><td class="r mono">${m?n0(m):"–"}</td><td>${s.length>=RULES.minSales?'<span class="pill b-inline">Ready</span>':'<span class="pill b-thin">Too few</span>'}</td></tr>`; }); }).join("")}
+    </tbody></table></div>
+    <div class="panel" style="margin-top:24px;max-width:560px"><div class="panel-h"><h2>Request a building</h2></div>
+      <p class="note" style="margin:0">Tell us which building you want covered. The most-requested ones get added first.</p>
+      <div class="row"><input type="text" id="req-text" placeholder="Building name and area" style="flex:1;min-width:200px"><button class="btn primary" id="req-send">Request</button></div></div>`;
+  $("#req-send").addEventListener("click", () => {
+    const t = $("#req-text").value.trim(); if (t.length < 3){ toast("Type a building name."); return; }
+    if (!cap.db || !cap.uid){ toast("Sign in to Claude to send requests."); return; }
+    logActivity("requests", {text:t.slice(0,120), area:"", t:new Date().toISOString()}); $("#req-text").value=""; toast("Requested. Thanks.");
+  });
+}
+
+/* ===================== Render: Admin ===================== */
+function renderAdmin(){
+  const v = $("#view-admin"); if (!v || !cap.admin) return;
+  const checks = adminActivity.flatMap(u => (u.checks||[]).map(c=>({...c, user:u.id})));
+  const reqs = adminActivity.flatMap(u => (u.requests||[]));
+  const leads = adminLeads.flatMap(u => (u.items||[]).map(l=>({...l, user:u.id})));
+  const users = new Set([...adminActivity.map(u=>u.id), ...adminLeads.map(u=>u.id)]).size;
+  const bands = ["above","inline","below","thin"].map(b => [b, checks.filter(c=>c.band===b).length]);
+  const reqCount = {}; reqs.forEach(r => { const k = normalise(r.text); if (k) reqCount[k] = {text:r.text, n:(reqCount[k]?.n||0)+1}; });
+  const reqTop = Object.values(reqCount).sort((a,b)=>b.n-a.n).slice(0,10);
+  const maxBand = Math.max(1, ...bands.map(b=>b[1]));
+  v.innerHTML = `
+    <div class="view-head"><h1>Admin</h1><p>Only you see this. Numbers come from everyone who used this app while signed in.</p></div>
+    <div class="kpis">
+      <div class="kpi"><span>People</span><b>${users}</b></div>
+      <div class="kpi"><span>Checks</span><b>${checks.length}</b></div>
+      <div class="kpi"><span>Adviser requests</span><b>${leads.length}</b></div>
+      <div class="kpi"><span>Building requests</span><b>${reqs.length}</b></div>
+    </div>
+    <div class="two" style="margin-top:16px">
+      <div class="panel"><div class="panel-h"><h2>Verdicts given</h2></div>
+        ${bands.map(([b,n])=>`<div class="row" style="flex-wrap:nowrap"><span class="pill b-${b}" style="min-width:190px">${BAND_LABEL[b]}</span><span class="bar" style="flex:1"><i style="width:${n/maxBand*100}%"></i></span><b class="mono">${n}</b></div>`).join("")}</div>
+      <div class="panel"><div class="panel-h"><h2>Most-requested buildings</h2></div>
+        ${reqTop.length ? `<div class="tbl-wrap"><table><tbody>${reqTop.map(r=>`<tr><td>${esc(r.text)}</td><td class="r mono">${r.n}</td></tr>`).join("")}</tbody></table></div>` : `<p class="note" style="margin:0">No requests yet. They appear when someone picks “None of these” or uses Request a building.</p>`}</div>
+    </div>
+    <div class="panel" style="margin-top:16px"><div class="panel-h"><h2>Adviser requests</h2><span class="tag">${esc(CONSENT_VERSION)}</span></div>
+      ${leads.length ? `<div class="tbl-wrap"><table><thead><tr><th>Sent</th><th>Name</th><th>Phone</th><th>Listing</th><th class="r">Loan, approx.</th><th>Consent</th></tr></thead><tbody>
+        ${leads.sort((a,b)=>(b.time||"").localeCompare(a.time||"")).map(l=>`<tr><td>${esc((l.time||"").replace("T"," ").slice(0,16))}</td><td>${esc(l.name)}</td><td class="mono">${esc(l.phone)}</td><td>${esc(l.listing?.building)} · ${bedsLabel(+l.listing?.beds)} · ${aed(+l.listing?.price_aed||0)}</td><td class="r mono">${aed(+l.loan_estimate||0)}</td><td>${esc(l.consent_text)} → ${esc(l.partner)}</td></tr>`).join("")}
+      </tbody></table></div>` : `<p class="note" style="margin:0">No adviser requests yet. They appear when someone ticks the consent box and sends their details.</p>`}</div>
+    <div class="two" style="margin-top:16px">
+      <div class="panel"><div class="panel-h"><h2>Register a new sale</h2></div>
+        <p class="note" style="margin:0">Adds a sale to the shared data. Saved listings in that building show it as a new sale, and verdicts update for everyone.</p>
+        <div class="fields">
+          <label class="f wide" for="a-bld">Building<select id="a-bld">${BUILDINGS.map(b=>`<option>${esc(b.name)}</option>`).join("")}</select></label>
+          <label class="f" for="a-date">Registered on<input type="date" id="a-date" value="${isoDaysAgo(0)}"></label>
+          <label class="f" for="a-beds">Bedrooms<select id="a-beds">${[0,1,2,3,4].map(b=>`<option value="${b}"${b===2?" selected":""}>${b===0?"Studio":b+" bed"}</option>`).join("")}</select></label>
+          <label class="f" for="a-size">Size, sq ft<input type="number" id="a-size" value="1284"></label>
+          <label class="f" for="a-price">Price, AED<input type="number" id="a-price" value="2236000"></label>
+        </div>
+        <button class="btn primary" id="a-add">Register sale</button></div>
+      <div class="panel"><div class="panel-h"><h2>Sales you registered</h2></div>
+        ${adminSales.length ? `<div class="tbl-wrap"><table><tbody>${[...adminSales].sort((a,b)=>b.date.localeCompare(a.date)).map(s=>`<tr><td>${fmtDate(s.date)}</td><td>${esc(s.building)}</td><td>${bedsLabel(s.beds)}</td><td class="r mono">${n0(s.price/s.size)}/sq ft</td><td><button class="btn sm ghost" data-delsale="${esc(s.id)}">Remove</button></td></tr>`).join("")}</tbody></table></div>`
+          : `<p class="note" style="margin:0">None yet. Demo sales are built in; sales you add here sit on top of them.</p>`}</div>
+    </div>`;
+  $("#a-add").addEventListener("click", async () => {
+    const s = {building:$("#a-bld").value, date:$("#a-date").value, beds:+$("#a-beds").value, size:+$("#a-size").value, price:+$("#a-price").value, addedAt:new Date().toISOString()};
+    if (!s.date || !(s.size>150) || !(s.price>50000)){ toast("Check the date, size and price."); return; }
+    try { await cap.db.collection("sales").add(s); toast("Sale registered"); } catch (e) { toast("Couldn't register the sale."); }
+  });
+  v.querySelectorAll("[data-delsale]").forEach(b => b.addEventListener("click", async () => { try { await cap.db.doc("sales/"+b.dataset.delsale).delete(); toast("Sale removed"); } catch { toast("Couldn't remove it."); } }));
+}
+
+/* ===================== Routing ===================== */
+const VIEWS = ["check","saved","buildings","admin"];
+function route(){
+  let v = location.hash.replace("#","");
+  if (!VIEWS.includes(v) || (v==="admin" && !cap.admin)) v = "check";
+  document.querySelectorAll("main > section").forEach(s => s.hidden = s.dataset.v !== v);
+  document.querySelectorAll("nav.tabs a").forEach(a => { if (a.dataset.view===v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  if (v === "admin") renderAdmin();
+}
+function renderAll(){ renderSaved(); renderBuildings(); renderAdmin(); updateSavedCount(); renderResult(); route(); }
+window.addEventListener("hashchange", route);
+document.addEventListener("paste", e => {
+  if (location.hash && location.hash !== "#check") return;
+  const item = [...(e.clipboardData?.items||[])].find(i => i.type.startsWith("image/"));
+  if (item){ e.preventDefault(); setImage(item.getAsFile(), "Pasted screenshot", null); setStatus("Screenshot pasted. Press “Read listing”."); }
+});
+
+/* ===================== Start: open on a worked example ===================== */
+async function start(){
+  setSync(); renderCheck(); renderBuildings(); renderSaved(); route();
+  const s = SAMPLES[0];
+  S.image = await sampleScreenshot(s); S.imageURL = URL.createObjectURL(S.image); S.imageLabel = `Sample: ${s.label}`; S.sampleKey = s.key;
+  S.fields = {building_text:s.building, area_text:s.area, bedrooms:s.beds, size_sqft:s.size, price_aed:s.price}; S.source="example";
+  S.cands = candidates(s.building, s.area); S.chosen = preselect(S.cands, s.building) || "Marina Crest Tower";
+  S.example = true; renderDrop(); renderConfirm();
+  await compare();
+  S.example = false;
+}
+start();
+initPlatform();
+})();
+</script>

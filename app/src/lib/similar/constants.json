@@ -1,0 +1,288 @@
+{
+  "version": 4,
+  "fittedOn": {
+    "dataThrough": "2026-11-16",
+    "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+    "note": "Refit by scripts/model/refit.py (seed 31337) on 2689 combinations with 10 or more sales; own and indirect multipliers times thinCellFactor 1.2."
+  },
+  "minComparableSales": 3,
+  "levelMinBuildings": {
+    "project": 1,
+    "community": 2,
+    "area": 3
+  },
+  "maxBedrooms": 3,
+  "countBuckets": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    20
+  ],
+  "spreadDivisor": 2.563,
+  "otherBedroomsWeightK": 3,
+  "referenceVariance": {
+    "project": {
+      "ready": [
+        0.003219734244994658,
+        0.0
+      ],
+      "off_plan": [
+        0.001570754310702415,
+        0.0
+      ]
+    },
+    "community": {
+      "ready": [
+        0.01150127979622892,
+        1.0710295417738644
+      ],
+      "off_plan": [
+        0.008279693157761878,
+        0.516134092588591
+      ]
+    },
+    "area": {
+      "ready": [
+        0.006161325977846924,
+        0.970744201481688
+      ],
+      "off_plan": [
+        0.008457138879145749,
+        0.4656706776615647
+      ]
+    }
+  },
+  "evidenceVariance": {
+    "own": {
+      "ready": {
+        "1": 0.008171989698324994,
+        "2": 0.0054546651907632655,
+        "3": 0.00401298453160139,
+        "4": 0.003076103075668668
+      },
+      "off_plan": {
+        "1": 0.002914716050418561,
+        "2": 0.0018717289791951594,
+        "3": 0.0014478696691588185,
+        "4": 0.00112609104391947
+      }
+    },
+    "older12to24": {
+      "ready": {
+        "1": 0.011373523670767643,
+        "2": 0.008550811026466997,
+        "3": 0.006097527895849774,
+        "4": 0.004965048106537377,
+        "5": 0.004965048106537377,
+        "6": 0.003969630080739846
+      },
+      "off_plan": {
+        "1": 0.0046018087375762585,
+        "2": 0.0033780025419061686,
+        "3": 0.0033780025419061686,
+        "4": 0.002515038175344568,
+        "5": 0.002354212956475417,
+        "6": 0.0018497387359743772
+      }
+    },
+    "older24to36": {
+      "ready": {
+        "1": 0.023565665170090077,
+        "2": 0.01608807997135249,
+        "3": 0.014175776018745603,
+        "4": 0.012923451513480452,
+        "5": 0.011493775867925096,
+        "6": 0.008909670247606428
+      },
+      "off_plan": {
+        "1": 0.016387690874610346,
+        "2": 0.006206917045265796,
+        "3": 0.005247798884139681,
+        "4": 0.005247798884139681,
+        "5": 0.005247798884139681,
+        "6": 0.0035441022458085987
+      }
+    },
+    "otherBedrooms": {
+      "ready": {
+        "1": 0.01947657056235189,
+        "2": 0.013955601530147176,
+        "3": 0.013955601530147176,
+        "4": 0.012815380537134068,
+        "5": 0.009358303518960567,
+        "6": 0.009358303518960567
+      },
+      "off_plan": {
+        "1": 0.01202748090899762,
+        "2": 0.009172481511486598,
+        "3": 0.00822458298092747,
+        "4": 0.007117796975152325,
+        "5": 0.006873820686227492,
+        "6": 0.0054597820379710385
+      }
+    }
+  },
+  "thinCellFactor": 1.2,
+  "range80": {
+    "project": [
+      0.0,
+      4.2,
+      4.2
+    ],
+    "community": [
+      0.06,
+      1.1523016799514194,
+      2.212
+    ],
+    "area": [
+      0.06,
+      1.1129626709226514,
+      2.558
+    ],
+    "own": [
+      0.03,
+      1.5000190511706042,
+      2.00214956862147
+    ],
+    "indirect": [
+      0.03,
+      1.5811485370663971,
+      2.2238766015460447
+    ]
+  },
+  "range80BeforeThinCellFactor": {
+    "project": [
+      0.0,
+      4.2,
+      4.2
+    ],
+    "community": [
+      0.06,
+      1.1523016799514194,
+      2.212
+    ],
+    "area": [
+      0.06,
+      1.1129626709226514,
+      2.558
+    ],
+    "own": [
+      0.03,
+      1.2500158759755036,
+      1.668457973851225
+    ],
+    "indirect": [
+      0.03,
+      1.3176237808886644,
+      1.8532305012883707
+    ]
+  },
+  "range80LeaveBuildingOutOnly": {
+    "project": [
+      0.0,
+      1.7280730237161628,
+      1.8923972118176773
+    ],
+    "community": [
+      0.06,
+      1.1523016799514194,
+      1.3392336726594718
+    ],
+    "area": [
+      0.06,
+      1.1129626709226514,
+      1.5195882543939496
+    ],
+    "own": [
+      0.03,
+      1.2533918959314054,
+      1.6704088359790787
+    ],
+    "indirect": [
+      0.03,
+      1.3505181116387683,
+      1.8819941302688004
+    ]
+  },
+  "maxHalfWidth": 0.2,
+  "closeHalfWidth": 0.1,
+  "requireEvidenceBeyondOwnSales": true,
+  "maxOwnMedianRatio": 1.25,
+  "ownMedianInsideRange": true,
+  "neverShownClasses": [
+    "project",
+    "community",
+    "area"
+  ],
+  "displayRounding": 10,
+  "projectRoute": {
+    "note": "Version 4 (19 Nov 2026): a range for an off-plan listing of a building that is not in the data, from the other buildings of the project its words name (REAL_DATA.md section 15.8). Fitted by scripts/model/project_route.py: lowLog and highLog are the 10th and 90th points of ln(the new building's median of its first 183 days) - ln(the median of the project's other buildings' 12-month medians), on buildings that first appeared after four cutoffs.",
+    "basis": "off_plan",
+    "maxBedrooms": 3,
+    "minBuildings": 1,
+    "minComparableSales": 3,
+    "lowLog": -0.028818742390796712,
+    "highLog": 0.19621610304734738,
+    "heldOf10": 7,
+    "fittedOn": {
+      "dataThrough": "2026-11-16",
+      "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+      "cutoffs": [
+        "2024-11-17",
+        "2025-05-17",
+        "2025-11-16",
+        "2026-05-17"
+      ],
+      "cases": 145,
+      "projects": 41
+    },
+    "backtest": {
+      "cases": 119,
+      "buildings": 71,
+      "projectNumbers": 43,
+      "projects": 32,
+      "coveragePct": 89.9,
+      "coverageGroupsWeightedPct": 82.0,
+      "lowestCutoffCoveragePct": 76.9,
+      "meanHalfWidthPct": 15.9,
+      "typicalErrorPct": 4.9,
+      "p80ErrorPct": 12.3,
+      "biasMedianPct": 3.6,
+      "biasMeanPct": 4.8,
+      "byCutoff": [
+        {
+          "cutoff": "2025-05-17",
+          "train": 26,
+          "test": 65,
+          "rangePct": [
+            -9.8,
+            28.2
+          ],
+          "coveragePct": 86.2
+        },
+        {
+          "cutoff": "2025-11-16",
+          "train": 91,
+          "test": 41,
+          "rangePct": [
+            -8.4,
+            23.4
+          ],
+          "coveragePct": 100.0
+        },
+        {
+          "cutoff": "2026-05-17",
+          "train": 132,
+          "test": 13,
+          "rangePct": [
+            -3.1,
+            20.6
+          ],
+          "coveragePct": 76.9
+        }
+      ]
+    }
+  }
+}

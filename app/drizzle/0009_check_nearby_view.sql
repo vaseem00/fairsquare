@@ -1,0 +1,1 @@
+ALTER TABLE "checks" ADD COLUMN "nearby_view" jsonb;

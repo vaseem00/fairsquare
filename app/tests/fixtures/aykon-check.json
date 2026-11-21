@@ -1,0 +1,595 @@
+{
+ "listing": {
+  "building": "Aykon City Tower C",
+  "area": "Business Bay",
+  "bedrooms": 2,
+  "sizeSqft": 812,
+  "priceAed": 1450000,
+  "completion": "ready",
+  "portal": "dubizzle",
+  "portalShows": [
+   "Est. Payment AED 5.9K/mo",
+   "Average Rent AED 104,131 yearly",
+   "Service charge 28.47 AED/sqft",
+   "Property age 3 years"
+  ]
+ },
+ "match": {
+  "candidates": [
+   {
+    "buildingId": 3491,
+    "name": "Aykon City (2) -Tower C",
+    "area": "Business Bay",
+    "strength": "strong",
+    "salesForBedrooms": 43
+   },
+   {
+    "buildingId": 134,
+    "name": "Aykon City 3 - Tower A",
+    "area": "Business Bay",
+    "strength": "possible",
+    "salesForBedrooms": 0
+   },
+   {
+    "buildingId": 66,
+    "name": "Aykon City 3 - Tower D",
+    "area": "Business Bay",
+    "strength": "possible",
+    "salesForBedrooms": 0
+   }
+  ],
+  "preselectId": 3491,
+  "towerCheck": false,
+  "areaCheck": false
+ },
+ "check": {
+  "code": "FYZ79D",
+  "url": "https://fairsquare.example/c/FYZ79D",
+  "createdAt": "2026-11-18T13:06:42.862Z",
+  "building": {
+   "id": 3491,
+   "name": "Aykon City (2) -Tower C",
+   "area": "Business Bay",
+   "areaDld": "Business Bay"
+  },
+  "buildingText": "Aykon City Tower C",
+  "areaText": "Business Bay",
+  "bedrooms": 2,
+  "sizeSqft": 812,
+  "priceAed": 1450000,
+  "propertyType": "unknown",
+  "completion": "ready",
+  "source": "claude",
+  "analysis": {
+   "band": "inline",
+   "askingPsf": 1785.7142857142858,
+   "medianPsf": 1760.933232826267,
+   "medianPriceAed": 1485000,
+   "count": 43,
+   "diff": 0.014072681704260681,
+   "windowStart": "2025-11-16",
+   "windowEnd": "2026-11-16",
+   "completionBasis": "ready",
+   "outliersDropped": 0,
+   "medianSizeSqft": 816.55,
+   "dataThrough": "2026-11-16"
+  },
+  "sales": [
+   {
+    "saleDate": "2026-11-16",
+    "sizeSqft": 942.59,
+    "priceAed": 1500000,
+    "psf": 1591.359976235691
+   },
+   {
+    "saleDate": "2026-11-03",
+    "sizeSqft": 816.55,
+    "priceAed": 1200000,
+    "psf": 1469.5976976302738
+   },
+   {
+    "saleDate": "2026-11-02",
+    "sizeSqft": 816.55,
+    "priceAed": 1256921,
+    "psf": 1539.3068397526179
+   },
+   {
+    "saleDate": "2026-11-02",
+    "sizeSqft": 818.92,
+    "priceAed": 1260045,
+    "psf": 1538.6667806379135
+   },
+   {
+    "saleDate": "2026-10-05",
+    "sizeSqft": 813.54,
+    "priceAed": 1440000,
+    "psf": 1770.0420384984145
+   },
+   {
+    "saleDate": "2026-09-25",
+    "sizeSqft": 946.58,
+    "priceAed": 1520000,
+    "psf": 1605.7808109193095
+   },
+   {
+    "saleDate": "2026-09-24",
+    "sizeSqft": 798.68,
+    "priceAed": 1320000,
+    "psf": 1652.7269995492563
+   },
+   {
+    "saleDate": "2026-09-15",
+    "sizeSqft": 816.55,
+    "priceAed": 2137920,
+    "psf": 2618.235258098096
+   },
+   {
+    "saleDate": "2026-09-10",
+    "sizeSqft": 811.71,
+    "priceAed": 1300000,
+    "psf": 1601.557206391445
+   },
+   {
+    "saleDate": "2026-09-08",
+    "sizeSqft": 813.43,
+    "priceAed": 1775000,
+    "psf": 2182.1176991259235
+   },
+   {
+    "saleDate": "2026-08-25",
+    "sizeSqft": 897.6,
+    "priceAed": 1400000,
+    "psf": 1559.7147950089127
+   },
+   {
+    "saleDate": "2026-08-13",
+    "sizeSqft": 942.59,
+    "priceAed": 1500000,
+    "psf": 1591.359976235691
+   },
+   {
+    "saleDate": "2026-08-13",
+    "sizeSqft": 953.04,
+    "priceAed": 1485000,
+    "psf": 1558.1717451523546
+   },
+   {
+    "saleDate": "2026-08-06",
+    "sizeSqft": 817.09,
+    "priceAed": 1510000,
+    "psf": 1848.021637763282
+   },
+   {
+    "saleDate": "2026-08-04",
+    "sizeSqft": 809.77,
+    "priceAed": 1475000,
+    "psf": 1821.504871753708
+   },
+   {
+    "saleDate": "2026-08-03",
+    "sizeSqft": 809.34,
+    "priceAed": 1280000,
+    "psf": 1581.5355721946275
+   },
+   {
+    "saleDate": "2026-06-09",
+    "sizeSqft": 897.6,
+    "priceAed": 1500000,
+    "psf": 1671.1229946524063
+   },
+   {
+    "saleDate": "2026-05-15",
+    "sizeSqft": 824.73,
+    "priceAed": 1300000,
+    "psf": 1576.273447067525
+   },
+   {
+    "saleDate": "2026-05-14",
+    "sizeSqft": 798.68,
+    "priceAed": 1275000,
+    "psf": 1596.3840336555318
+   },
+   {
+    "saleDate": "2026-04-09",
+    "sizeSqft": 818.27,
+    "priceAed": 2372000,
+    "psf": 2898.7986850306133
+   },
+   {
+    "saleDate": "2026-04-06",
+    "sizeSqft": 805.79,
+    "priceAed": 1460000,
+    "psf": 1811.8864716613512
+   },
+   {
+    "saleDate": "2026-03-25",
+    "sizeSqft": 804.92,
+    "priceAed": 1450000,
+    "psf": 1801.4212592555782
+   },
+   {
+    "saleDate": "2026-03-18",
+    "sizeSqft": 811.71,
+    "priceAed": 1440000,
+    "psf": 1774.0325978489855
+   },
+   {
+    "saleDate": "2026-03-02",
+    "sizeSqft": 946.58,
+    "priceAed": 1630000,
+    "psf": 1721.988632762154
+   },
+   {
+    "saleDate": "2026-02-25",
+    "sizeSqft": 896.96,
+    "priceAed": 1400000,
+    "psf": 1560.8276846236174
+   },
+   {
+    "saleDate": "2026-02-16",
+    "sizeSqft": 809.23,
+    "priceAed": 1425000,
+    "psf": 1760.933232826267
+   },
+   {
+    "saleDate": "2026-02-12",
+    "sizeSqft": 798.68,
+    "priceAed": 1350000,
+    "psf": 1690.2889768117395
+   },
+   {
+    "saleDate": "2026-02-11",
+    "sizeSqft": 818.92,
+    "priceAed": 2175160,
+    "psf": 2656.1324671518587
+   },
+   {
+    "saleDate": "2026-02-05",
+    "sizeSqft": 812.89,
+    "priceAed": 1700000,
+    "psf": 2091.3038664517953
+   },
+   {
+    "saleDate": "2026-02-04",
+    "sizeSqft": 798.68,
+    "priceAed": 1350000,
+    "psf": 1690.2889768117395
+   },
+   {
+    "saleDate": "2026-02-02",
+    "sizeSqft": 818.92,
+    "priceAed": 1500000,
+    "psf": 1831.6807502564354
+   },
+   {
+    "saleDate": "2026-01-30",
+    "sizeSqft": 813.43,
+    "priceAed": 2000000,
+    "psf": 2458.72416802921
+   },
+   {
+    "saleDate": "2026-01-16",
+    "sizeSqft": 813.43,
+    "priceAed": 1550000,
+    "psf": 1905.5112302226376
+   },
+   {
+    "saleDate": "2026-01-05",
+    "sizeSqft": 878.76,
+    "priceAed": 1500000,
+    "psf": 1706.9507032636898
+   },
+   {
+    "saleDate": "2025-12-18",
+    "sizeSqft": 812.89,
+    "priceAed": 1450000,
+    "psf": 1783.7591802088843
+   },
+   {
+    "saleDate": "2025-12-18",
+    "sizeSqft": 946.58,
+    "priceAed": 1650000,
+    "psf": 1743.1173276426714
+   },
+   {
+    "saleDate": "2025-12-08",
+    "sizeSqft": 878.76,
+    "priceAed": 1600000,
+    "psf": 1820.7474168146025
+   },
+   {
+    "saleDate": "2025-12-08",
+    "sizeSqft": 897.28,
+    "priceAed": 1710000,
+    "psf": 1905.759629101284
+   },
+   {
+    "saleDate": "2025-11-27",
+    "sizeSqft": 809.23,
+    "priceAed": 1470000,
+    "psf": 1816.541650704991
+   },
+   {
+    "saleDate": "2025-11-24",
+    "sizeSqft": 813,
+    "priceAed": 1400000,
+    "psf": 1722.0172201722016
+   },
+   {
+    "saleDate": "2025-11-21",
+    "sizeSqft": 806.43,
+    "priceAed": 1500000,
+    "psf": 1860.0498493359623
+   },
+   {
+    "saleDate": "2025-11-19",
+    "sizeSqft": 816.55,
+    "priceAed": 1825000,
+    "psf": 2235.0131651460415
+   },
+   {
+    "saleDate": "2025-11-18",
+    "sizeSqft": 812.89,
+    "priceAed": 2000000,
+    "psf": 2460.357489943289
+   }
+  ],
+  "rules": {
+   "minSales": 5,
+   "windowDays": 365,
+   "bandPct": 5
+  }
+ },
+ "monthly2bed": [
+  {
+   "m": "2023-11",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1941
+  },
+  {
+   "m": "2023-12",
+   "completion": "ready",
+   "n": 12,
+   "median_psf": 2043
+  },
+  {
+   "m": "2024-01",
+   "completion": "ready",
+   "n": 3,
+   "median_psf": 2601
+  },
+  {
+   "m": "2024-02",
+   "completion": "ready",
+   "n": 2,
+   "median_psf": 2165
+  },
+  {
+   "m": "2024-03",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 2105
+  },
+  {
+   "m": "2024-04",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 2199
+  },
+  {
+   "m": "2024-05",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 2413
+  },
+  {
+   "m": "2024-06",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 2067
+  },
+  {
+   "m": "2024-07",
+   "completion": "ready",
+   "n": 2,
+   "median_psf": 1993
+  },
+  {
+   "m": "2024-08",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1929
+  },
+  {
+   "m": "2024-09",
+   "completion": "ready",
+   "n": 5,
+   "median_psf": 2122
+  },
+  {
+   "m": "2024-10",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 1889
+  },
+  {
+   "m": "2024-11",
+   "completion": "ready",
+   "n": 3,
+   "median_psf": 1934
+  },
+  {
+   "m": "2024-12",
+   "completion": "ready",
+   "n": 5,
+   "median_psf": 2019
+  },
+  {
+   "m": "2025-01",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 2077
+  },
+  {
+   "m": "2025-02",
+   "completion": "ready",
+   "n": 11,
+   "median_psf": 1889
+  },
+  {
+   "m": "2025-03",
+   "completion": "ready",
+   "n": 3,
+   "median_psf": 1794
+  },
+  {
+   "m": "2025-04",
+   "completion": "ready",
+   "n": 8,
+   "median_psf": 1815
+  },
+  {
+   "m": "2025-05",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1890
+  },
+  {
+   "m": "2025-06",
+   "completion": "ready",
+   "n": 5,
+   "median_psf": 2014
+  },
+  {
+   "m": "2025-07",
+   "completion": "ready",
+   "n": 11,
+   "median_psf": 1864
+  },
+  {
+   "m": "2025-08",
+   "completion": "ready",
+   "n": 1,
+   "median_psf": 1679
+  },
+  {
+   "m": "2025-09",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1925
+  },
+  {
+   "m": "2025-10",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 1841
+  },
+  {
+   "m": "2025-11",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1838
+  },
+  {
+   "m": "2025-12",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 1802
+  },
+  {
+   "m": "2026-01",
+   "completion": "ready",
+   "n": 3,
+   "median_psf": 1906
+  },
+  {
+   "m": "2026-02",
+   "completion": "ready",
+   "n": 7,
+   "median_psf": 1761
+  },
+  {
+   "m": "2026-03",
+   "completion": "ready",
+   "n": 3,
+   "median_psf": 1774
+  },
+  {
+   "m": "2026-04",
+   "completion": "ready",
+   "n": 2,
+   "median_psf": 2355
+  },
+  {
+   "m": "2026-05",
+   "completion": "ready",
+   "n": 2,
+   "median_psf": 1586
+  },
+  {
+   "m": "2026-06",
+   "completion": "ready",
+   "n": 1,
+   "median_psf": 1671
+  },
+  {
+   "m": "2026-08",
+   "completion": "ready",
+   "n": 6,
+   "median_psf": 1586
+  },
+  {
+   "m": "2026-09",
+   "completion": "ready",
+   "n": 5,
+   "median_psf": 1653
+  },
+  {
+   "m": "2026-10",
+   "completion": "ready",
+   "n": 1,
+   "median_psf": 1770
+  },
+  {
+   "m": "2026-11",
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 1539
+  }
+ ],
+ "last12mByBeds": [
+  {
+   "bedrooms": 0,
+   "completion": "ready",
+   "n": 11,
+   "median_psf": 1937,
+   "median_size": 446
+  },
+  {
+   "bedrooms": 1,
+   "completion": "ready",
+   "n": 10,
+   "median_psf": 1800,
+   "median_size": 560
+  },
+  {
+   "bedrooms": 2,
+   "completion": "ready",
+   "n": 43,
+   "median_psf": 1761,
+   "median_size": 817
+  },
+  {
+   "bedrooms": 3,
+   "completion": "ready",
+   "n": 4,
+   "median_psf": 1797,
+   "median_size": 1302
+  }
+ ],
+ "businessBay2bedReady12m": {
+  "n": 581,
+  "median_psf": 1721
+ }
+}

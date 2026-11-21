@@ -1,0 +1,847 @@
+[
+ {
+  "title": "Marriott Residences Tower 2, Dubai Science Park (not in the data), ready 2-bed 1,491 sq ft, AED 2,695,000",
+  "input": {
+   "bedrooms": 2,
+   "basis": 0,
+   "sizeSqft": 1491.0,
+   "master": "Dubai Science Park",
+   "area": "Al Barshaa South Second",
+   "askingPsf": 1807.511737089202
+  },
+  "output": {
+   "kind": "out",
+   "shown": true,
+   "reason": null,
+   "scope": "community",
+   "group": "Rc1",
+   "centrePsf": 1206.2,
+   "buildings": 10,
+   "weight": 8.79553,
+   "comparables": 134,
+   "sizeDistance": 0.155305,
+   "lowPsf": 989.818,
+   "highPsf": 1773.57,
+   "halfWidth": 0.324884,
+   "rangeLowPsf": 990,
+   "rangeHighPsf": 1770,
+   "verdict": "above",
+   "topComparables": [
+    {
+     "ref": "dld:1-41-2026-16552",
+     "building": "Skyhills Residences - 1",
+     "date": "2026-11-03",
+     "sizeSqft": 1304.37,
+     "registeredPsf": 1277.07,
+     "timeLn": 0.0,
+     "sizeLn": -0.054221,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1209.67,
+     "weightShare": 0.0887517,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-41-2026-15146",
+     "building": "Skyhills Residences - 2",
+     "date": "2026-10-07",
+     "sizeSqft": 1295.33,
+     "registeredPsf": 1405.05,
+     "timeLn": -0.00165206,
+     "sizeLn": -0.0570408,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1324.95,
+     "weightShare": 0.0784295,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-16846",
+     "building": "Opalz By Danube - Tower 2",
+     "date": "2026-05-20",
+     "sizeSqft": 1489.62,
+     "registeredPsf": 1359.41,
+     "timeLn": -0.0118445,
+     "sizeLn": -0.000375449,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1342.9,
+     "weightShare": 0.0463061,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-7244",
+     "building": "Opalz By Danube - Tower 2",
+     "date": "2026-02-16",
+     "sizeSqft": 1428.15,
+     "registeredPsf": 1417.92,
+     "timeLn": -0.0633934,
+     "sizeLn": -0.017462,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1307.78,
+     "weightShare": 0.0318722,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-28507",
+     "building": "Skyhills Residences - 2",
+     "date": "2026-09-17",
+     "sizeSqft": 1067.89,
+     "registeredPsf": 1334.41,
+     "timeLn": -0.00165206,
+     "sizeLn": -0.135327,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1163.59,
+     "weightShare": 0.0263205,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-11985",
+     "building": "BELLA ROSE",
+     "date": "2026-03-30",
+     "sizeSqft": 1144.31,
+     "registeredPsf": 1153.49,
+     "timeLn": -0.056037,
+     "sizeLn": -0.107303,
+     "vintageLn": 0.0,
+     "adjustedPsf": 979.659,
+     "weightShare": 0.0217589,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-33341",
+     "building": "ORCHID RESIDENCE",
+     "date": "2026-10-30",
+     "sizeSqft": 1460.66,
+     "registeredPsf": 1163.86,
+     "timeLn": 0.0,
+     "sizeLn": -0.00833572,
+     "vintageLn": 0.0,
+     "adjustedPsf": 1154.2,
+     "weightShare": 0.0216686,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-41-2026-10601",
+     "building": "Opalz By Danube - Tower 1",
+     "date": "2026-08-06",
+     "sizeSqft": 1046.47,
+     "registeredPsf": 1144.88,
+     "timeLn": 0.000501797,
+     "sizeLn": -0.143543,
+     "vintageLn": 0.0,
+     "adjustedPsf": 992.286,
+     "weightShare": 0.0192283,
+     "inCommunity": true
+    }
+   ],
+   "topBuildings": [
+    {
+     "building": "MONTROSE RESIDENCE B",
+     "weightShare": 0.113694
+    },
+    {
+     "building": "ORCHID RESIDENCE",
+     "weightShare": 0.113694
+    },
+    {
+     "building": "Opalz By Danube - Tower 2",
+     "weightShare": 0.113694
+    },
+    {
+     "building": "Three Towers A-1",
+     "weightShare": 0.113694
+    },
+    {
+     "building": "Three Towers B-2",
+     "weightShare": 0.113694
+    },
+    {
+     "building": "Skyhills Residences - 2",
+     "weightShare": 0.10475
+    },
+    {
+     "building": "Opalz By Danube - Tower 1",
+     "weightShare": 0.101922
+    },
+    {
+     "building": "Skyhills Residences - 1",
+     "weightShare": 0.0887517
+    }
+   ]
+  }
+ },
+ {
+  "title": "Chelsea Residences by Damac Tower D, Dubai Maritime City (not in the data), off-plan 1-bed 750 sq ft, asking assumed AED 2,150,000",
+  "input": {
+   "bedrooms": 1,
+   "basis": 1,
+   "sizeSqft": 750.0,
+   "master": "Dubai Maritime City",
+   "area": "Madinat Dubai Almelaheyah",
+   "askingPsf": 2866.6666666666665
+  },
+  "output": {
+   "kind": "out",
+   "shown": true,
+   "reason": null,
+   "scope": "community",
+   "group": "Oc0",
+   "centrePsf": 3118.91,
+   "buildings": 30,
+   "weight": 30.0,
+   "comparables": 3307,
+   "sizeDistance": 0.0848889,
+   "lowPsf": 2323.91,
+   "highPsf": 3687.47,
+   "halfWidth": 0.218596,
+   "rangeLowPsf": 2320,
+   "rangeHighPsf": 3690,
+   "verdict": "within",
+   "topComparables": [
+    {
+     "ref": "dld:1-102-2026-47855",
+     "building": "CORAL REEF",
+     "date": "2026-05-25",
+     "sizeSqft": 779.74,
+     "registeredPsf": 2638.06,
+     "timeLn": 0.00678505,
+     "sizeLn": 0.0124987,
+     "vintageLn": 0.127057,
+     "adjustedPsf": 3053.79,
+     "weightShare": 0.00982519,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-77275",
+     "building": "Oceanz 3 By Danube",
+     "date": "2026-09-09",
+     "sizeSqft": 760.79,
+     "registeredPsf": 2786.58,
+     "timeLn": 0.0125342,
+     "sizeLn": 0.00459105,
+     "vintageLn": 0.114319,
+     "adjustedPsf": 3178.02,
+     "weightShare": 0.00860327,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-76291",
+     "building": "NAUTICA TWO",
+     "date": "2026-09-02",
+     "sizeSqft": 614.94,
+     "registeredPsf": 2369.34,
+     "timeLn": 0.0125342,
+     "sizeLn": -0.0638151,
+     "vintageLn": 0.124711,
+     "adjustedPsf": 2549.86,
+     "weightShare": 0.00839641,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-74959",
+     "building": "Oceanz 3 By Danube",
+     "date": "2026-08-26",
+     "sizeSqft": 760.79,
+     "registeredPsf": 2975.85,
+     "timeLn": 0.0125342,
+     "sizeLn": 0.00459105,
+     "vintageLn": 0.114319,
+     "adjustedPsf": 3393.88,
+     "weightShare": 0.00815805,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-30214",
+     "building": "CORAL REEF",
+     "date": "2026-03-31",
+     "sizeSqft": 796.21,
+     "registeredPsf": 2514.41,
+     "timeLn": -0.00462898,
+     "sizeLn": 0.0192169,
+     "vintageLn": 0.127057,
+     "adjustedPsf": 2897.02,
+     "weightShare": 0.00779376,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-83937",
+     "building": "Aria By Beyond",
+     "date": "2026-10-05",
+     "sizeSqft": 936.67,
+     "registeredPsf": 2591.08,
+     "timeLn": 0.00789172,
+     "sizeLn": 0.0714355,
+     "vintageLn": 0.0816655,
+     "adjustedPsf": 3043.68,
+     "weightShare": 0.00706252,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-88345",
+     "building": "Harbour Lights",
+     "date": "2026-10-23",
+     "sizeSqft": 869.29,
+     "registeredPsf": 1650.77,
+     "timeLn": 0.0,
+     "sizeLn": 0.047441,
+     "vintageLn": 0.163597,
+     "adjustedPsf": 2038.64,
+     "weightShare": 0.00648029,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-3143",
+     "building": "NAUTICA TWO",
+     "date": "2026-01-12",
+     "sizeSqft": 733.88,
+     "registeredPsf": 2718.43,
+     "timeLn": -0.00050926,
+     "sizeLn": -0.00698345,
+     "vintageLn": 0.124711,
+     "adjustedPsf": 3056.5,
+     "weightShare": 0.00534105,
+     "inCommunity": true
+    }
+   ],
+   "topBuildings": [
+    {
+     "building": "Saria by Beyond",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "Breez by Danube",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "The Mural",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "Aria By Beyond",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-C",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "MAR CASA",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "NAUTICA ONE",
+     "weightShare": 0.0333333
+    },
+    {
+     "building": "Oceanz 2 By Danube",
+     "weightShare": 0.0333333
+    }
+   ]
+  }
+ },
+ {
+  "title": "SEVENTH HEAVEN, Al Barari (in the data), ready 1-bed 2,904 sq ft, AED 4,100,000",
+  "input": {
+   "bedrooms": 1,
+   "basis": 0,
+   "sizeSqft": 2904.0,
+   "building": [
+    "SEVENTH HEAVEN",
+    "Wadi Al Safa 3"
+   ],
+   "askingPsf": 1411.8457300275481
+  },
+  "output": {
+   "kind": "in",
+   "shown": false,
+   "reason": "too_few_buildings",
+   "scope": "community_and_area",
+   "group": "Rt",
+   "centrePsf": 1590.05,
+   "buildings": 0,
+   "weight": 0.0735494,
+   "comparables": 592,
+   "sizeDistance": 0.393213,
+   "lowPsf": 1427.75,
+   "highPsf": 1809.77,
+   "halfWidth": 0.12013,
+   "topComparables": [
+    {
+     "ref": "dld:1-11-2025-46365",
+     "building": "F2",
+     "date": "2025-11-05",
+     "sizeSqft": 2001.44,
+     "registeredPsf": 1898.63,
+     "timeLn": -0.0111418,
+     "sizeLn": -0.165446,
+     "vintageLn": 0.00174191,
+     "adjustedPsf": 1594.07,
+     "weightShare": 0.677114,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2025-22085",
+     "building": "G1",
+     "date": "2025-05-26",
+     "sizeSqft": 1896.06,
+     "registeredPsf": 1898.67,
+     "timeLn": 0.00162403,
+     "sizeLn": -0.189488,
+     "vintageLn": -0.000275038,
+     "adjustedPsf": 1573.05,
+     "weightShare": 0.232882,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2024-45390",
+     "building": "E3",
+     "date": "2024-11-25",
+     "sizeSqft": 1896.17,
+     "registeredPsf": 1845.83,
+     "timeLn": 0.0474049,
+     "sizeLn": -0.189462,
+     "vintageLn": 0.021728,
+     "adjustedPsf": 1636.56,
+     "weightShare": 0.074906,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2025-10135",
+     "building": "C3",
+     "date": "2025-03-11",
+     "sizeSqft": 1603.93,
+     "registeredPsf": 1445.82,
+     "timeLn": 0.0191509,
+     "sizeLn": -0.263859,
+     "vintageLn": -0.0489153,
+     "adjustedPsf": 1077.94,
+     "weightShare": 0.00593931,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-41-2026-12931",
+     "building": "TULIP OASIS 10",
+     "date": "2026-09-07",
+     "sizeSqft": 1681.75,
+     "registeredPsf": 773.004,
+     "timeLn": 0.00230469,
+     "sizeLn": -0.2428,
+     "vintageLn": -0.151317,
+     "adjustedPsf": 522.42,
+     "weightShare": 0.00211208,
+     "inCommunity": false
+    },
+    {
+     "ref": "dld:1-11-2025-44464",
+     "building": "C2",
+     "date": "2025-10-24",
+     "sizeSqft": 1339.14,
+     "registeredPsf": 2314.92,
+     "timeLn": -0.0111418,
+     "sizeLn": -0.344056,
+     "vintageLn": -0.0436508,
+     "adjustedPsf": 1553.52,
+     "weightShare": 0.00107409,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-6465",
+     "building": "C1",
+     "date": "2026-02-12",
+     "sizeSqft": 1511.47,
+     "registeredPsf": 1738.23,
+     "timeLn": -0.03049,
+     "sizeLn": -0.29025,
+     "vintageLn": -0.145437,
+     "adjustedPsf": 1090.56,
+     "weightShare": 0.00102544,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-6475",
+     "building": "C1",
+     "date": "2026-02-12",
+     "sizeSqft": 1464.86,
+     "registeredPsf": 1738.23,
+     "timeLn": -0.03049,
+     "sizeLn": -0.304172,
+     "vintageLn": -0.145437,
+     "adjustedPsf": 1075.48,
+     "weightShare": 0.000644394,
+     "inCommunity": true
+    }
+   ],
+   "topBuildings": [
+    {
+     "building": "F2",
+     "weightShare": 0.677114
+    },
+    {
+     "building": "G1",
+     "weightShare": 0.232882
+    },
+    {
+     "building": "E3",
+     "weightShare": 0.074906
+    },
+    {
+     "building": "C3",
+     "weightShare": 0.0065187
+    },
+    {
+     "building": "TULIP OASIS 10",
+     "weightShare": 0.00264904
+    },
+    {
+     "building": "C1",
+     "weightShare": 0.00211187
+    },
+    {
+     "building": "B2",
+     "weightShare": 0.00132895
+    },
+    {
+     "building": "C2",
+     "weightShare": 0.00116861
+    }
+   ]
+  }
+ },
+ {
+  "title": "E1 (Seventh Heaven - Ashjar), Al Barari (in the data, 2 sales in 36 months), ready 2-bed 1,600 sq ft, asking assumed AED 2,400,000",
+  "input": {
+   "bedrooms": 2,
+   "basis": 0,
+   "sizeSqft": 1600.0,
+   "building": [
+    "E1",
+    "Wadi Al Safa 3"
+   ],
+   "askingPsf": 1500.0
+  },
+  "output": {
+   "kind": "in",
+   "shown": false,
+   "reason": "too_few_buildings",
+   "scope": "community",
+   "group": "Rt",
+   "centrePsf": 2207.1,
+   "buildings": 3,
+   "weight": 0.395385,
+   "comparables": 73,
+   "sizeDistance": 0.319906,
+   "lowPsf": 1568.47,
+   "highPsf": 2885.0,
+   "halfWidth": 0.29825,
+   "topComparables": [
+    {
+     "ref": "dld:1-11-2026-21528",
+     "building": "E2",
+     "date": "2026-07-13",
+     "sizeSqft": 2488.4,
+     "registeredPsf": 2210.26,
+     "timeLn": 0.00276952,
+     "sizeLn": 0.179066,
+     "vintageLn": -0.00953465,
+     "adjustedPsf": 2625.86,
+     "weightShare": 0.147963,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2025-45788",
+     "building": "C2",
+     "date": "2025-11-03",
+     "sizeSqft": 1740.74,
+     "registeredPsf": 2331.77,
+     "timeLn": -0.0111418,
+     "sizeLn": 0.034183,
+     "vintageLn": -0.0780306,
+     "adjustedPsf": 2207.01,
+     "weightShare": 0.0723904,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2025-41518",
+     "building": "C2",
+     "date": "2025-10-07",
+     "sizeSqft": 1492.31,
+     "registeredPsf": 2010.31,
+     "timeLn": -0.00167358,
+     "sizeLn": -0.0282518,
+     "vintageLn": -0.0780306,
+     "adjustedPsf": 1804.59,
+     "weightShare": 0.0669923,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-29971",
+     "building": "SEVENTH HEAVEN",
+     "date": "2026-10-01",
+     "sizeSqft": 2662.67,
+     "registeredPsf": 2290.93,
+     "timeLn": 0.00805886,
+     "sizeLn": 0.206511,
+     "vintageLn": -0.0343797,
+     "adjustedPsf": 2743.27,
+     "weightShare": 0.0586994,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2025-42172",
+     "building": "C3",
+     "date": "2025-10-09",
+     "sizeSqft": 1487.25,
+     "registeredPsf": 2185.24,
+     "timeLn": -0.00167358,
+     "sizeLn": -0.029629,
+     "vintageLn": -0.083295,
+     "adjustedPsf": 1948.63,
+     "weightShare": 0.0569224,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-5022",
+     "building": "F2",
+     "date": "2026-02-04",
+     "sizeSqft": 2487.97,
+     "registeredPsf": 2411.6,
+     "timeLn": -0.03049,
+     "sizeLn": 0.178996,
+     "vintageLn": -0.0326378,
+     "adjustedPsf": 2707.87,
+     "weightShare": 0.0502469,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-14346",
+     "building": "SEVENTH HEAVEN",
+     "date": "2026-04-28",
+     "sizeSqft": 2676.23,
+     "registeredPsf": 1494.64,
+     "timeLn": -0.00868029,
+     "sizeLn": 0.208571,
+     "vintageLn": -0.0343797,
+     "adjustedPsf": 1763.67,
+     "weightShare": 0.030651,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-11-2026-7304",
+     "building": "SEVENTH HEAVEN",
+     "date": "2026-02-17",
+     "sizeSqft": 2628.87,
+     "registeredPsf": 1207.9,
+     "timeLn": -0.00960071,
+     "sizeLn": 0.201332,
+     "vintageLn": -0.0343797,
+     "adjustedPsf": 1413.73,
+     "weightShare": 0.0287078,
+     "inCommunity": true
+    }
+   ],
+   "topBuildings": [
+    {
+     "building": "SEVENTH HEAVEN",
+     "weightShare": 0.300952
+    },
+    {
+     "building": "C2",
+     "weightShare": 0.177237
+    },
+    {
+     "building": "E2",
+     "weightShare": 0.165541
+    },
+    {
+     "building": "C1",
+     "weightShare": 0.116692
+    },
+    {
+     "building": "B2",
+     "weightShare": 0.115929
+    },
+    {
+     "building": "C3",
+     "weightShare": 0.0569224
+    },
+    {
+     "building": "F2",
+     "weightShare": 0.0533789
+    },
+    {
+     "building": "G1",
+     "weightShare": 0.00907813
+    }
+   ]
+  }
+ },
+ {
+  "title": "Orise Podium, Dubai Maritime City (in the data, 8 off-plan sales), off-plan 2-bed 1,200 sq ft, asking assumed AED 3,300,000",
+  "input": {
+   "bedrooms": 2,
+   "basis": 1,
+   "sizeSqft": 1200.0,
+   "building": [
+    "Orise Podium",
+    "Madinat Dubai Almelaheyah"
+   ],
+   "askingPsf": 2750.0
+  },
+  "output": {
+   "kind": "in",
+   "shown": true,
+   "reason": null,
+   "scope": "community",
+   "group": "Oc1",
+   "centrePsf": 2923.16,
+   "buildings": 29,
+   "weight": 24.0878,
+   "comparables": 1562,
+   "sizeDistance": 0.123081,
+   "lowPsf": 2319.25,
+   "highPsf": 3671.5,
+   "halfWidth": 0.231299,
+   "rangeLowPsf": 2320,
+   "rangeHighPsf": 3670,
+   "verdict": "within",
+   "topComparables": [
+    {
+     "ref": "dld:1-102-2026-92280",
+     "building": "CHELSEA RESIDENCES BY DAMAC TOWER-C",
+     "date": "2026-11-12",
+     "sizeSqft": 1155.61,
+     "registeredPsf": 3059.58,
+     "timeLn": 0.0,
+     "sizeLn": -0.00978671,
+     "vintageLn": -0.0537014,
+     "adjustedPsf": 2871.37,
+     "weightShare": 0.0144448,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-50380",
+     "building": "IL VENTO",
+     "date": "2026-06-05",
+     "sizeSqft": 1238.39,
+     "registeredPsf": 3298.35,
+     "timeLn": 0.00678505,
+     "sizeLn": 0.00817626,
+     "vintageLn": -0.0564671,
+     "adjustedPsf": 3164.25,
+     "weightShare": 0.00936256,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-50453",
+     "building": "IL VENTO",
+     "date": "2026-06-08",
+     "sizeSqft": 1311.37,
+     "registeredPsf": 3416.27,
+     "timeLn": 0.00678505,
+     "sizeLn": 0.0230434,
+     "vintageLn": -0.0564671,
+     "adjustedPsf": 3326.47,
+     "weightShare": 0.0087736,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-42828",
+     "building": "CORAL REEF",
+     "date": "2026-06-11",
+     "sizeSqft": 1338.17,
+     "registeredPsf": 2350.22,
+     "timeLn": 0.00678505,
+     "sizeLn": 0.0282961,
+     "vintageLn": 0.0734537,
+     "adjustedPsf": 2619.66,
+     "weightShare": 0.00836108,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-70082",
+     "building": "Harbour Lights",
+     "date": "2026-08-10",
+     "sizeSqft": 1232.04,
+     "registeredPsf": 2035.65,
+     "timeLn": 0.0148035,
+     "sizeLn": 0.00684149,
+     "vintageLn": 0.109993,
+     "adjustedPsf": 2322.05,
+     "weightShare": 0.00785876,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-31891",
+     "building": "Oceanz 1 By Danube",
+     "date": "2026-04-02",
+     "sizeSqft": 1184.78,
+     "registeredPsf": 2292.41,
+     "timeLn": -0.00462898,
+     "sizeLn": -0.00331418,
+     "vintageLn": 0.0687605,
+     "adjustedPsf": 2436.15,
+     "weightShare": 0.00769795,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-63005",
+     "building": "IL VENTO",
+     "date": "2026-07-17",
+     "sizeSqft": 1495.0,
+     "registeredPsf": 2868.99,
+     "timeLn": 0.0105634,
+     "sizeLn": 0.0570703,
+     "vintageLn": -0.0564671,
+     "adjustedPsf": 2901.2,
+     "weightShare": 0.00649677,
+     "inCommunity": true
+    },
+    {
+     "ref": "dld:1-102-2026-89259",
+     "building": "Aria By Beyond",
+     "date": "2026-10-28",
+     "sizeSqft": 1484.66,
+     "registeredPsf": 2847.24,
+     "timeLn": 0.0,
+     "sizeLn": 0.0552683,
+     "vintageLn": 0.0280618,
+     "adjustedPsf": 3094.66,
+     "weightShare": 0.00637333,
+     "inCommunity": true
+    }
+   ],
+   "topBuildings": [
+    {
+     "building": "Saria by Beyond",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "Kanyon By Beyond",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "CHELSEA RESIDENCES 2 BY DAMAC TOWER-A",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "LIV MARITIME",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "Aria By Beyond",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "Breez by Danube",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "MAR CASA",
+     "weightShare": 0.0415148
+    },
+    {
+     "building": "RIVA RESIDENCE",
+     "weightShare": 0.0415148
+    }
+   ]
+  }
+ }
+]

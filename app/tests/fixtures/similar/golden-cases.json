@@ -1,0 +1,1359 @@
+{
+  "about": "Golden cases for the similar-buildings comparison. Build the artifact from the snapshot named here, apply golden/constants.json, and reproduce `expected` (numbers to 1e-9 relative).",
+  "snapshot": {
+    "salesSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+    "buildingsSha256": "722da73cd0da531f473e4541887697b602c22c57af2d0030128c0ac12f4c3f92",
+    "dataThrough": "2026-11-16",
+    "kept": 403867,
+    "commit": "rule 10a at 0.85x to 1.18x, constants version 3 (19 Nov 2026)"
+  },
+  "artifact": {
+    "buildings": 4348,
+    "cells": 13575,
+    "windowStart": "2025-11-16"
+  },
+  "cases": [
+    {
+      "id": "G01-own-1-ready",
+      "note": "known building, 1 own sale(s), ready",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 929,
+        "buildingKey": "ACES CHATEAU|Al Barsha South Fourth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 174,
+        "comparableSales": 2213,
+        "centrePsf": 784.1879441530236,
+        "lowPsf": 721.7939592335252,
+        "highPsf": 875.952133570519,
+        "halfWidth": 0.0967858621289332,
+        "rangeLowPsf": 720,
+        "rangeHighPsf": 880,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": {
+            "n": 1,
+            "medianPsf": 836.155577525821
+          },
+          "older12to24": {
+            "n": 7,
+            "medianPsf": 779.173648987608
+          },
+          "older24to36": {
+            "n": 6,
+            "medianPsf": 647.979853838551
+          },
+          "otherBedrooms": {
+            "n": 1,
+            "offset": -0.38312251034474
+          }
+        }
+      }
+    },
+    {
+      "id": "G02-own-2-ready",
+      "note": "known building, 2 own sale(s), ready",
+      "request": {
+        "bedrooms": 0,
+        "basis": "ready",
+        "askingPsf": 1923,
+        "buildingKey": "AL GHOZLAN 1|Al Thanyah Third"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 2,
+        "comparableSales": 10,
+        "centrePsf": 1894.8330598316516,
+        "lowPsf": 1734.4157498905886,
+        "highPsf": 2132.3034827319893,
+        "halfWidth": 0.10326611478070867,
+        "rangeLowPsf": 1730,
+        "rangeHighPsf": 2130,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 2,
+            "medianPsf": 1918.8602389725934
+          },
+          "older12to24": {
+            "n": 1,
+            "medianPsf": 1825.1922155552006
+          },
+          "older24to36": null,
+          "otherBedrooms": {
+            "n": 7,
+            "offset": -0.10680624403928433
+          }
+        }
+      }
+    },
+    {
+      "id": "G03-own-3-ready",
+      "note": "known building, 3 own sale(s), ready",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 2924,
+        "buildingKey": "ACACIA AT PARK HEIGHTS BUILDING B|Hadaeq Sheikh Mohammed Bin Rashid"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 17,
+        "comparableSales": 87,
+        "centrePsf": 2499.4662042328628,
+        "lowPsf": 2321.4960519923757,
+        "highPsf": 2758.4500380905624,
+        "halfWidth": 0.0862285568666205,
+        "rangeLowPsf": 2320,
+        "rangeHighPsf": 2760,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": {
+            "n": 3,
+            "medianPsf": 2329.473186758782
+          },
+          "older12to24": {
+            "n": 8,
+            "medianPsf": 2742.6966034980833
+          },
+          "older24to36": {
+            "n": 6,
+            "medianPsf": 2598.138942830622
+          },
+          "otherBedrooms": {
+            "n": 14,
+            "offset": -0.06844381272052993
+          }
+        }
+      }
+    },
+    {
+      "id": "G04-own-4-ready",
+      "note": "known building, 4 own sale(s), ready",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 1135,
+        "buildingKey": "AG TOWER|Business Bay"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 22,
+        "comparableSales": 108,
+        "centrePsf": 1121.0161964170331,
+        "lowPsf": 1039.2855209849893,
+        "highPsf": 1240.2077992952115,
+        "halfWidth": 0.08837273382267816,
+        "rangeLowPsf": 1040,
+        "rangeHighPsf": 1240,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 1096.2376161289078
+          },
+          "older12to24": {
+            "n": 3,
+            "medianPsf": 1000.0096372537681
+          },
+          "older24to36": null,
+          "otherBedrooms": {
+            "n": 37,
+            "offset": -0.2511717135321323
+          }
+        }
+      }
+    },
+    {
+      "id": "G05-own-project-ready",
+      "note": "known building, own sales, reference from project siblings, ready",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 2205,
+        "buildingKey": "15 Northside - Tower 1|Business Bay"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "project",
+        "comparableBuildings": 1,
+        "comparableSales": 8,
+        "centrePsf": 2502.488889691135,
+        "lowPsf": 2345.315462965978,
+        "highPsf": 2728.8096282157744,
+        "halfWidth": 0.07572278092522243,
+        "rangeLowPsf": 2350,
+        "rangeHighPsf": 2730,
+        "verdict": "below",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 2509.9245072691415
+          },
+          "older12to24": {
+            "n": 8,
+            "medianPsf": 2400.6046087369064
+          },
+          "older24to36": {
+            "n": 10,
+            "medianPsf": 2332.9575557716394
+          },
+          "otherBedrooms": {
+            "n": 14,
+            "offset": 0.24425972726407116
+          }
+        }
+      }
+    },
+    {
+      "id": "G06-own-area-ready",
+      "note": "known building, own sales, reference from the area (no master project), ready",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 1893,
+        "buildingKey": "AYKON CITY (2) -TOWER C|Business Bay"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "area",
+        "comparableBuildings": 26,
+        "comparableSales": 126,
+        "centrePsf": 1870.6555765011408,
+        "lowPsf": 1741.272927396597,
+        "highPsf": 2058.4511188060856,
+        "halfWidth": 0.0836687013447363,
+        "rangeLowPsf": 1740,
+        "rangeHighPsf": 2060,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 1796.9313940808772
+          },
+          "older12to24": {
+            "n": 5,
+            "medianPsf": 2010.9562854115804
+          },
+          "older24to36": {
+            "n": 5,
+            "medianPsf": 1919.1647794879666
+          },
+          "otherBedrooms": {
+            "n": 64,
+            "offset": 0.026999392908683043
+          }
+        }
+      }
+    },
+    {
+      "id": "G07-indirect-all-ready",
+      "note": "known building, no sale in 12 months, older sales and other bedrooms, ready",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 2973,
+        "buildingKey": "AEGEAN|Palm Jumeirah"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "indirect",
+        "level": "community",
+        "comparableBuildings": 15,
+        "comparableSales": 90,
+        "centrePsf": 2423.642970415047,
+        "lowPsf": 2184.6301377173627,
+        "highPsf": 2804.7134331984835,
+        "halfWidth": 0.12492741501989252,
+        "rangeLowPsf": 2180,
+        "rangeHighPsf": 2800,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": {
+            "n": 3,
+            "medianPsf": 2503.418848128414
+          },
+          "older24to36": {
+            "n": 1,
+            "medianPsf": 1593.5323832339147
+          },
+          "otherBedrooms": {
+            "n": 2,
+            "offset": 0.058157479600033035
+          }
+        }
+      }
+    },
+    {
+      "id": "G08-indirect-old2-ready",
+      "note": "known building, no sale in 12 months, only sales 24 to 36 months old, ready",
+      "request": {
+        "bedrooms": 2,
+        "basis": "ready",
+        "askingPsf": 887,
+        "buildingKey": "AL RAMTH 3|Al Hebiah Fifth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "indirect",
+        "level": "project",
+        "comparableBuildings": 2,
+        "comparableSales": 7,
+        "centrePsf": 870.6995905646107,
+        "lowPsf": 792.694249587578,
+        "highPsf": 993.575229243236,
+        "halfWidth": 0.11293609747554678,
+        "rangeLowPsf": 790,
+        "rangeHighPsf": 990,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": {
+            "n": 3,
+            "medianPsf": 697.4897045179979
+          },
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G09-indirect-broad-ready",
+      "note": "known building, no sale in 12 months, broad tier, ready",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 786,
+        "buildingKey": "AL BADIA RESIDENCES BUILDINGS 3|Al Kheeran"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "indirect",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 959.2531149606178,
+        "lowPsf": 836.017120989142,
+        "highPsf": 1163.9285408833946,
+        "halfWidth": 0.16545357144307557,
+        "rangeLowPsf": 840,
+        "rangeHighPsf": 1160,
+        "verdict": "below",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": {
+            "n": 1,
+            "medianPsf": 913.9208422694483
+          },
+          "older24to36": {
+            "n": 2,
+            "medianPsf": 1027.242532785114
+          },
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G10-own-noref-ready",
+      "note": "known building, own sales but no comparable building at any level, ready",
+      "request": {
+        "bedrooms": 2,
+        "basis": "ready",
+        "askingPsf": 1086,
+        "buildingKey": "7 Seasons|Warsan Fourth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "own",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 1069.8601775335217,
+        "lowPsf": 979.2314913505991,
+        "highPsf": 1204.0291289436573,
+        "halfWidth": 0.1033303737627301,
+        "rangeLowPsf": 980,
+        "rangeHighPsf": 1200,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 2,
+            "medianPsf": 1200
+          },
+          "older12to24": {
+            "n": 2,
+            "medianPsf": 1249.2501032696769
+          },
+          "older24to36": {
+            "n": 15,
+            "medianPsf": 681.999300943726
+          },
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G11-own-1-off_plan",
+      "note": "known building, 1 own sale(s), off_plan",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 2066,
+        "buildingKey": "105 Residences by Kamdar|Al Barsha South Fourth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 77,
+        "comparableSales": 749,
+        "centrePsf": 1773.7491258031655,
+        "lowPsf": 1652.7329334527785,
+        "highPsf": 1949.1937249139237,
+        "halfWidth": 0.08249278582094642,
+        "rangeLowPsf": 1650,
+        "rangeHighPsf": 1950,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": {
+            "n": 1,
+            "medianPsf": 2490.1739083616003
+          },
+          "older12to24": {
+            "n": 1,
+            "medianPsf": 1343.9853846269039
+          },
+          "older24to36": null,
+          "otherBedrooms": {
+            "n": 14,
+            "offset": -0.01137369337295206
+          }
+        }
+      }
+    },
+    {
+      "id": "G12-own-2-off_plan",
+      "note": "known building, 2 own sale(s), off_plan",
+      "request": {
+        "bedrooms": 3,
+        "basis": "off_plan",
+        "askingPsf": 1358,
+        "buildingKey": "48 PARKSIDE|Al Barshaa South Third"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 4,
+        "comparableSales": 25,
+        "centrePsf": 1344.7045755502568,
+        "lowPsf": 1266.9998515323293,
+        "highPsf": 1455.8967635656395,
+        "halfWidth": 0.06948512947884264,
+        "rangeLowPsf": 1270,
+        "rangeHighPsf": 1460,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 2,
+            "medianPsf": 1531.986793028299
+          },
+          "older12to24": {
+            "n": 20,
+            "medianPsf": 1296.4971228255836
+          },
+          "older24to36": {
+            "n": 10,
+            "medianPsf": 1208.0572077167665
+          },
+          "otherBedrooms": {
+            "n": 16,
+            "offset": -0.04904705373131253
+          }
+        }
+      }
+    },
+    {
+      "id": "G13-own-3-off_plan",
+      "note": "known building, 3 own sale(s), off_plan",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 1049,
+        "buildingKey": "AG AUM RESIDENCE|Wadi Al Safa 5"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 56,
+        "comparableSales": 700,
+        "centrePsf": 914.0686685296866,
+        "lowPsf": 861.2373147205278,
+        "highPsf": 989.6692664033329,
+        "halfWidth": 0.06950035983528327,
+        "rangeLowPsf": 860,
+        "rangeHighPsf": 990,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": {
+            "n": 3,
+            "medianPsf": 810.002638163838
+          },
+          "older12to24": {
+            "n": 23,
+            "medianPsf": 1080.003517551784
+          },
+          "older24to36": null,
+          "otherBedrooms": {
+            "n": 27,
+            "offset": -0.4320466571718027
+          }
+        }
+      }
+    },
+    {
+      "id": "G14-own-4-off_plan",
+      "note": "known building, 4 own sale(s), off_plan",
+      "request": {
+        "bedrooms": 0,
+        "basis": "off_plan",
+        "askingPsf": 1603,
+        "buildingKey": "99 PARK PLACE|Al Barsha South Fourth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 99,
+        "comparableSales": 2147,
+        "centrePsf": 1587.6484931367506,
+        "lowPsf": 1498.3545271146459,
+        "highPsf": 1715.1797897725369,
+        "halfWidth": 0.06757519237515432,
+        "rangeLowPsf": 1500,
+        "rangeHighPsf": 1720,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 1569.3712834525031
+          },
+          "older12to24": {
+            "n": 14,
+            "medianPsf": 1577.3617533486204
+          },
+          "older24to36": {
+            "n": 17,
+            "medianPsf": 1633.4790440734957
+          },
+          "otherBedrooms": {
+            "n": 8,
+            "offset": -0.04240686131290395
+          }
+        }
+      }
+    },
+    {
+      "id": "G15-own-project-off_plan",
+      "note": "known building, own sales, reference from project siblings, off_plan",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 2224,
+        "buildingKey": "AL WAHA 12|Madinat Al Mataar"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "project",
+        "comparableBuildings": 1,
+        "comparableSales": 5,
+        "centrePsf": 2513.1500069066387,
+        "lowPsf": 2365.643015061853,
+        "highPsf": 2724.464893282913,
+        "halfWidth": 0.07061108321513475,
+        "rangeLowPsf": 2370,
+        "rangeHighPsf": 2720,
+        "verdict": "below",
+        "evidence": {
+          "ownSales": {
+            "n": 1,
+            "medianPsf": 2515.26556186278
+          },
+          "older12to24": {
+            "n": 6,
+            "medianPsf": 2507.8723989295704
+          },
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G16-own-area-off_plan",
+      "note": "known building, own sales, reference from the area (no master project), off_plan",
+      "request": {
+        "bedrooms": 3,
+        "basis": "off_plan",
+        "askingPsf": 1788,
+        "buildingKey": "ART BAY WEST|Al Jadaf"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": "area",
+        "comparableBuildings": 3,
+        "comparableSales": 37,
+        "centrePsf": 1770.8205197838631,
+        "lowPsf": 1672.2589582900755,
+        "highPsf": 1911.4859862267379,
+        "halfWidth": 0.06685278040046129,
+        "rangeLowPsf": 1670,
+        "rangeHighPsf": 1910,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 1750.3973594178244
+          },
+          "older12to24": {
+            "n": 6,
+            "medianPsf": 1839.209472778959
+          },
+          "older24to36": {
+            "n": 26,
+            "medianPsf": 1800.004810056127
+          },
+          "otherBedrooms": {
+            "n": 3,
+            "offset": -0.2318761591731695
+          }
+        }
+      }
+    },
+    {
+      "id": "G17-indirect-all-off_plan",
+      "note": "known building, no sale in 12 months, older sales and other bedrooms, off_plan",
+      "request": {
+        "bedrooms": 0,
+        "basis": "off_plan",
+        "askingPsf": 2378,
+        "buildingKey": "161 Jumeirah Lane|Al Satwa"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "indirect",
+        "level": "community",
+        "comparableBuildings": 18,
+        "comparableSales": 505,
+        "centrePsf": 2022.5752894848056,
+        "lowPsf": 1878.730512309319,
+        "highPsf": 2243.7221290150005,
+        "halfWidth": 0.08876993111339479,
+        "rangeLowPsf": 1880,
+        "rangeHighPsf": 2240,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": {
+            "n": 6,
+            "medianPsf": 1961.7499083391044
+          },
+          "older24to36": {
+            "n": 2,
+            "medianPsf": 1758.4877989163645
+          },
+          "otherBedrooms": {
+            "n": 13,
+            "offset": -0.08509583762772334
+          }
+        }
+      }
+    },
+    {
+      "id": "G18-indirect-old2-off_plan",
+      "note": "known building, no sale in 12 months, only sales 24 to 36 months old, off_plan",
+      "request": {
+        "bedrooms": 0,
+        "basis": "off_plan",
+        "askingPsf": 1482,
+        "buildingKey": "AL JAWHARA TOWER|Al Barsha South Fifth"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "indirect",
+        "level": "community",
+        "comparableBuildings": 23,
+        "comparableSales": 941,
+        "centrePsf": 1436.148935545024,
+        "lowPsf": 1231.008438564504,
+        "highPsf": 1783.807716395118,
+        "halfWidth": 0.18545827191599926,
+        "rangeLowPsf": 1230,
+        "rangeHighPsf": 1780,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": {
+            "n": 1,
+            "medianPsf": 1155.2065906210394
+          },
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G19-indirect-broad-off_plan",
+      "note": "known building, no sale in 12 months, broad tier, off_plan",
+      "request": {
+        "bedrooms": 3,
+        "basis": "off_plan",
+        "askingPsf": 2472,
+        "buildingKey": "ADDRESS GRAND DOWNTOWN|Burj Khalifa"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "indirect",
+        "level": "area",
+        "comparableBuildings": 7,
+        "comparableSales": 66,
+        "centrePsf": 2869.221774019783,
+        "lowPsf": 2630.2278466187763,
+        "highPsf": 3242.5632958954866,
+        "halfWidth": 0.1046468407966646,
+        "rangeLowPsf": 2630,
+        "rangeHighPsf": 3240,
+        "verdict": "below",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": {
+            "n": 16,
+            "medianPsf": 2725.76211627684
+          },
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G20-own-noref-off_plan",
+      "note": "known building, own sales but no comparable building at any level, off_plan",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 1947,
+        "buildingKey": "API - Barsha Residential Tower|Al Barsha First"
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "close",
+        "evidenceClass": "own",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 1927.1492896269178,
+        "lowPsf": 1814.9206881214063,
+        "highPsf": 2087.8335408748044,
+        "halfWidth": 0.07004258814094615,
+        "rangeLowPsf": 1810,
+        "rangeHighPsf": 2090,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": {
+            "n": 4,
+            "medianPsf": 1980.534594660709
+          },
+          "older12to24": {
+            "n": 42,
+            "medianPsf": 1842.5627065914837
+          },
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G21-refuse-4bed",
+      "note": "known building, 4 bedrooms: not shown",
+      "request": {
+        "bedrooms": 4,
+        "basis": "off_plan",
+        "askingPsf": 1063,
+        "buildingKey": "15 CASCADE|Al Hebiah First"
+      },
+      "expected": {
+        "shown": false,
+        "reason": "bedrooms_not_validated",
+        "tier": null,
+        "evidenceClass": "own",
+        "level": "community",
+        "comparableBuildings": 2,
+        "comparableSales": 20,
+        "centrePsf": 1051.9025824866444,
+        "lowPsf": 989.2023277946828,
+        "highPsf": 1141.8275206766705,
+        "halfWidth": 0.07174322863655491,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": {
+            "n": 3,
+            "medianPsf": 999.7212811769036
+          },
+          "older12to24": {
+            "n": 4,
+            "medianPsf": 1156.1465792033505
+          },
+          "older24to36": null,
+          "otherBedrooms": {
+            "n": 100,
+            "offset": -0.11042850624884018
+          }
+        }
+      }
+    },
+    {
+      "id": "G22-refuse-5bed",
+      "note": "known building, 5 bedrooms: not shown",
+      "request": {
+        "bedrooms": 5,
+        "basis": "off_plan",
+        "askingPsf": 4600,
+        "buildingKey": "AETERNITAS TOWER|Marsa Dubai"
+      },
+      "expected": {
+        "shown": false,
+        "reason": "bedrooms_not_validated",
+        "tier": null,
+        "evidenceClass": "own",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 4528.802472277048,
+        "lowPsf": 4128.075391862228,
+        "highPsf": 5124.931143518685,
+        "halfWidth": 0.10815289898911294,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": {
+            "n": 1,
+            "medianPsf": 4528.802472277049
+          },
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G23-refuse-wide-ready",
+      "note": "known building, range too wide: not shown",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 751,
+        "buildingKey": "AJMAL SARAH|Wadi Al Safa 5"
+      },
+      "expected": {
+        "shown": false,
+        "reason": "range_too_wide",
+        "tier": null,
+        "evidenceClass": "indirect",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 724.7474201155268,
+        "lowPsf": 608.2914873578259,
+        "highPsf": 927.2261172623274,
+        "halfWidth": 0.21077163621779882,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": {
+            "n": 1,
+            "medianPsf": 724.7474201155269
+          },
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G24-refuse-wide-2",
+      "note": "known building, range too wide (second example): not shown",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 959,
+        "buildingKey": "DAMAC HILLS - GOLF PANORAMA - TOWER B|Al Hebiah Third"
+      },
+      "expected": {
+        "shown": false,
+        "reason": "range_too_wide",
+        "tier": null,
+        "evidenceClass": "indirect",
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": 921.7707610796458,
+        "lowPsf": 759.1183433464353,
+        "highPsf": 1211.1817389771836,
+        "halfWidth": 0.23359706021922447,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": {
+            "n": 4,
+            "medianPsf": 921.7707610796456
+          },
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G25-scope-project-offplan-1",
+      "note": "unknown building, project resolved, off-plan sibling buildings: shown, broad",
+      "request": {
+        "bedrooms": 1,
+        "basis": "off_plan",
+        "askingPsf": 1707,
+        "scope": {
+          "areaDld": "Palm Deira",
+          "masterProject": "Palm Deira",
+          "projectNumber": "4093"
+        }
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "project",
+        "level": "project",
+        "comparableBuildings": 1,
+        "comparableSales": 11,
+        "centrePsf": 1707.0033906231745,
+        "lowPsf": 1445.249411647792,
+        "highPsf": 2016.1645125852667,
+        "halfWidth": 0.16645752022900798,
+        "rangeLowPsf": 1450,
+        "rangeHighPsf": 2020,
+        "verdict": "within",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G26-scope-project-offplan-2",
+      "note": "unknown building, project resolved, off-plan: asking above the range",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 3695,
+        "scope": {
+          "areaDld": "Al Merkadh",
+          "masterProject": "Meydan One Community",
+          "projectNumber": "2434"
+        }
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "project",
+        "level": "project",
+        "comparableBuildings": 3,
+        "comparableSales": 16,
+        "centrePsf": 2950.9315127370146,
+        "lowPsf": 2498.4320804653703,
+        "highPsf": 3485.3846382097254,
+        "halfWidth": 0.16645752022900798,
+        "rangeLowPsf": 2500,
+        "rangeHighPsf": 3490,
+        "verdict": "above",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G27-scope-project-offplan-3",
+      "note": "unknown building, project resolved, off-plan: asking below the range",
+      "request": {
+        "bedrooms": 1,
+        "basis": "off_plan",
+        "askingPsf": 1700,
+        "scope": {
+          "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+          "masterProject": "Dubai Hills Estate",
+          "projectNumber": "2769"
+        }
+      },
+      "expected": {
+        "shown": true,
+        "reason": null,
+        "tier": "broad",
+        "evidenceClass": "project",
+        "level": "project",
+        "comparableBuildings": 2,
+        "comparableSales": 13,
+        "centrePsf": 2135.7379427982487,
+        "lowPsf": 1808.2412854119668,
+        "highPsf": 2522.5486206443347,
+        "halfWidth": 0.16645752022900798,
+        "rangeLowPsf": 1810,
+        "rangeHighPsf": 2520,
+        "verdict": "below",
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G28-scope-project-ready",
+      "note": "unknown building, project resolved, ready: range too wide, not shown",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 1232,
+        "scope": {
+          "areaDld": "Me'Aisem First",
+          "masterProject": "International Media Production Zone",
+          "projectNumber": "1672"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "range_too_wide",
+        "tier": null,
+        "evidenceClass": "project",
+        "level": "project",
+        "comparableBuildings": 4,
+        "comparableSales": 33,
+        "centrePsf": 1231.5723130685674,
+        "lowPsf": 970.4186597730042,
+        "highPsf": 1563.0061799016285,
+        "halfWidth": 0.23831934894528764,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G29-scope-community-1",
+      "note": "unknown building, community resolved only: never shown",
+      "request": {
+        "bedrooms": 1,
+        "basis": "off_plan",
+        "askingPsf": 1598,
+        "scope": {
+          "areaDld": "Al Barshaa South Third",
+          "masterProject": "Arjan"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_building_evidence",
+        "tier": null,
+        "evidenceClass": "community",
+        "level": "community",
+        "comparableBuildings": 33,
+        "comparableSales": 859,
+        "centrePsf": 1488.5882197401256,
+        "lowPsf": 1275.6315023787142,
+        "highPsf": 2002.0961050413232,
+        "halfWidth": 0.22537666614093452,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G30-scope-community-2",
+      "note": "unknown building, community resolved only, ready: never shown",
+      "request": {
+        "bedrooms": 2,
+        "basis": "ready",
+        "askingPsf": 1391,
+        "scope": {
+          "areaDld": "Al Barsha South Fourth",
+          "masterProject": "Jumeirah Village Circle"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_building_evidence",
+        "tier": null,
+        "evidenceClass": "community",
+        "level": "community",
+        "comparableBuildings": 80,
+        "comparableSales": 495,
+        "centrePsf": 1197.4318585520277,
+        "lowPsf": 864.6978778659479,
+        "highPsf": 2236.9758107721245,
+        "halfWidth": 0.4752499882045761,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G31-scope-area-1",
+      "note": "unknown building, area resolved only: never shown",
+      "request": {
+        "bedrooms": 0,
+        "basis": "ready",
+        "askingPsf": 1726,
+        "scope": {
+          "areaDld": "Al Barsha South Fourth"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_building_evidence",
+        "tier": null,
+        "evidenceClass": "area",
+        "level": "area",
+        "comparableBuildings": 105,
+        "comparableSales": 925,
+        "centrePsf": 1421.067323064431,
+        "lowPsf": 1053.59453536604,
+        "highPsf": 2826.6203279853835,
+        "halfWidth": 0.49343704139850464,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G32-scope-area-2",
+      "note": "unknown building, area resolved only, off-plan: never shown",
+      "request": {
+        "bedrooms": 2,
+        "basis": "off_plan",
+        "askingPsf": 2587,
+        "scope": {
+          "areaDld": "Palm Deira"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_building_evidence",
+        "tier": null,
+        "evidenceClass": "area",
+        "level": "area",
+        "comparableBuildings": 88,
+        "comparableSales": 1659,
+        "centrePsf": 2260.0807761835968,
+        "lowPsf": 1835.9526127749434,
+        "highPsf": 3644.018455492575,
+        "halfWidth": 0.342761781089926,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G33-scope-unresolved",
+      "note": "unknown building, area not resolved: no second tier",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 1500,
+        "scope": {
+          "areaDld": ""
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_evidence",
+        "tier": null,
+        "evidenceClass": null,
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": null,
+        "lowPsf": null,
+        "highPsf": null,
+        "halfWidth": null,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G34-scope-empty-area",
+      "note": "unknown building, a DLD area with no comparable building for these bedrooms: no evidence",
+      "request": {
+        "bedrooms": 3,
+        "basis": "ready",
+        "askingPsf": 1500,
+        "scope": {
+          "areaDld": "Dubai Investment Park First"
+        }
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_evidence",
+        "tier": null,
+        "evidenceClass": null,
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": null,
+        "lowPsf": null,
+        "highPsf": null,
+        "halfWidth": null,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    },
+    {
+      "id": "G35-unknown-key",
+      "note": "a building key that is not in the artifact: no evidence",
+      "request": {
+        "bedrooms": 1,
+        "basis": "ready",
+        "askingPsf": 1500,
+        "buildingKey": "NO SUCH BUILDING|Nowhere"
+      },
+      "expected": {
+        "shown": false,
+        "reason": "no_evidence",
+        "tier": null,
+        "evidenceClass": null,
+        "level": null,
+        "comparableBuildings": 0,
+        "comparableSales": 0,
+        "centrePsf": null,
+        "lowPsf": null,
+        "highPsf": null,
+        "halfWidth": null,
+        "rangeLowPsf": null,
+        "rangeHighPsf": null,
+        "verdict": null,
+        "evidence": {
+          "ownSales": null,
+          "older12to24": null,
+          "older24to36": null,
+          "otherBedrooms": null
+        }
+      }
+    }
+  ]
+}

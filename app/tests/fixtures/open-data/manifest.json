@@ -1,0 +1,571 @@
+{
+  "version": 1,
+  "source": "data.dubai",
+  "publisher": "Dubai Land Department",
+  "datasetTitle": "Test Transactions (synthetic)",
+  "datasetUrl": "https://example.test/data-dubai/transactions",
+  "licence": "Dubai Open Data Licence",
+  "licenceUrl": "https://data.dubai/en/terms-conditions",
+  "downloadedOn": "2026-11-18",
+  "sourceFiles": [
+    {
+      "name": "transactions-sample.csv",
+      "sha256": "043d5767a6c5c8abc0c5ce3f33d8446fda12b0aeb8732aa078d1bc49cfc7d32b",
+      "rows": 43
+    },
+    {
+      "name": "e2e-transactions.csv",
+      "sha256": "729d7ef2b2e6283344e94d43b50e94596cedb5568ea838993e60bf9543ea85f3",
+      "rows": 29
+    }
+  ],
+  "dataFrom": "2025-06-10",
+  "dataThrough": "2026-11-10",
+  "counts": {
+    "read": 72,
+    "kept": 40,
+    "excluded": {
+      "not_sales": 2,
+      "procedure_excluded": 3,
+      "not_flat": 2,
+      "not_residential": 1,
+      "rooms_excluded": 5,
+      "no_building_name": 1,
+      "no_area": 0,
+      "no_size_or_price": 2,
+      "size_out_of_range": 2,
+      "psf_out_of_range": 2,
+      "bad_date": 3,
+      "date_out_of_range": 0,
+      "no_transaction_id": 1,
+      "repeated_in_other_file": 0,
+      "multi_unit_deal": 2,
+      "portfolio_deal": 3,
+      "size_unlike_building": 0,
+      "outside_window": 3
+    }
+  },
+  "buildings": 9,
+  "snapshotSha256": "5681711759f1f27e8f2f2c882f58cfd9e10785423d0e95ab9b6ad68b3200d6d4",
+  "buildingsFile": {
+    "sha256": "dc249d879c149d8482910bce779ac50a84f643be4567d62f0da687c2a1077e42",
+    "rows": 9
+  },
+  "similar": {
+    "version": 1,
+    "builtOn": "2026-11-18",
+    "windowStart": "2025-11-10",
+    "cellsFile": {
+      "sha256": "de612e211e64653c2f95017966525270b191b3164f45b682b7186725a1db3ad1",
+      "rows": 14
+    },
+    "buildings": 9,
+    "constants": {
+      "version": 4,
+      "fittedOn": {
+        "dataThrough": "2026-11-16",
+        "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+        "note": "Refit by scripts/model/refit.py (seed 31337) on 2689 combinations with 10 or more sales; own and indirect multipliers times thinCellFactor 1.2."
+      },
+      "minComparableSales": 3,
+      "levelMinBuildings": {
+        "project": 1,
+        "community": 2,
+        "area": 3
+      },
+      "maxBedrooms": 3,
+      "countBuckets": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        20
+      ],
+      "spreadDivisor": 2.563,
+      "otherBedroomsWeightK": 3,
+      "referenceVariance": {
+        "project": {
+          "ready": [
+            0.003219734244994658,
+            0
+          ],
+          "off_plan": [
+            0.001570754310702415,
+            0
+          ]
+        },
+        "community": {
+          "ready": [
+            0.01150127979622892,
+            1.0710295417738644
+          ],
+          "off_plan": [
+            0.008279693157761878,
+            0.516134092588591
+          ]
+        },
+        "area": {
+          "ready": [
+            0.006161325977846924,
+            0.970744201481688
+          ],
+          "off_plan": [
+            0.008457138879145749,
+            0.4656706776615647
+          ]
+        }
+      },
+      "evidenceVariance": {
+        "own": {
+          "ready": {
+            "1": 0.008171989698324994,
+            "2": 0.0054546651907632655,
+            "3": 0.00401298453160139,
+            "4": 0.003076103075668668
+          },
+          "off_plan": {
+            "1": 0.002914716050418561,
+            "2": 0.0018717289791951594,
+            "3": 0.0014478696691588185,
+            "4": 0.00112609104391947
+          }
+        },
+        "older12to24": {
+          "ready": {
+            "1": 0.011373523670767643,
+            "2": 0.008550811026466997,
+            "3": 0.006097527895849774,
+            "4": 0.004965048106537377,
+            "5": 0.004965048106537377,
+            "6": 0.003969630080739846
+          },
+          "off_plan": {
+            "1": 0.0046018087375762585,
+            "2": 0.0033780025419061686,
+            "3": 0.0033780025419061686,
+            "4": 0.002515038175344568,
+            "5": 0.002354212956475417,
+            "6": 0.0018497387359743772
+          }
+        },
+        "older24to36": {
+          "ready": {
+            "1": 0.023565665170090077,
+            "2": 0.01608807997135249,
+            "3": 0.014175776018745603,
+            "4": 0.012923451513480452,
+            "5": 0.011493775867925096,
+            "6": 0.008909670247606428
+          },
+          "off_plan": {
+            "1": 0.016387690874610346,
+            "2": 0.006206917045265796,
+            "3": 0.005247798884139681,
+            "4": 0.005247798884139681,
+            "5": 0.005247798884139681,
+            "6": 0.0035441022458085987
+          }
+        },
+        "otherBedrooms": {
+          "ready": {
+            "1": 0.01947657056235189,
+            "2": 0.013955601530147176,
+            "3": 0.013955601530147176,
+            "4": 0.012815380537134068,
+            "5": 0.009358303518960567,
+            "6": 0.009358303518960567
+          },
+          "off_plan": {
+            "1": 0.01202748090899762,
+            "2": 0.009172481511486598,
+            "3": 0.00822458298092747,
+            "4": 0.007117796975152325,
+            "5": 0.006873820686227492,
+            "6": 0.0054597820379710385
+          }
+        }
+      },
+      "range80": {
+        "project": [
+          0,
+          4.2,
+          4.2
+        ],
+        "community": [
+          0.06,
+          1.1523016799514194,
+          2.212
+        ],
+        "area": [
+          0.06,
+          1.1129626709226514,
+          2.558
+        ],
+        "own": [
+          0.03,
+          1.5000190511706042,
+          2.00214956862147
+        ],
+        "indirect": [
+          0.03,
+          1.5811485370663971,
+          2.2238766015460447
+        ]
+      },
+      "maxHalfWidth": 0.2,
+      "closeHalfWidth": 0.1,
+      "neverShownClasses": [
+        "project",
+        "community",
+        "area"
+      ],
+      "displayRounding": 10,
+      "requireEvidenceBeyondOwnSales": true,
+      "maxOwnMedianRatio": 1.25,
+      "ownMedianInsideRange": true,
+      "projectRoute": {
+        "basis": "off_plan",
+        "maxBedrooms": 3,
+        "minBuildings": 1,
+        "minComparableSales": 3,
+        "lowLog": -0.028818742390796712,
+        "highLog": 0.19621610304734738,
+        "heldOf10": 7,
+        "note": "Version 4 (19 Nov 2026): a range for an off-plan listing of a building that is not in the data, from the other buildings of the project its words name (REAL_DATA.md section 15.8). Fitted by scripts/model/project_route.py: lowLog and highLog are the 10th and 90th points of ln(the new building's median of its first 183 days) - ln(the median of the project's other buildings' 12-month medians), on buildings that first appeared after four cutoffs.",
+        "fittedOn": {
+          "dataThrough": "2026-11-16",
+          "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421",
+          "cutoffs": [
+            "2024-11-17",
+            "2025-05-17",
+            "2025-11-16",
+            "2026-05-17"
+          ],
+          "cases": 145,
+          "projects": 41
+        },
+        "backtest": {
+          "cases": 119,
+          "buildings": 71,
+          "projectNumbers": 43,
+          "projects": 32,
+          "coveragePct": 89.9,
+          "coverageGroupsWeightedPct": 82,
+          "lowestCutoffCoveragePct": 76.9,
+          "meanHalfWidthPct": 15.9,
+          "typicalErrorPct": 4.9,
+          "p80ErrorPct": 12.3,
+          "biasMedianPct": 3.6,
+          "biasMeanPct": 4.8,
+          "byCutoff": [
+            {
+              "cutoff": "2025-05-17",
+              "train": 26,
+              "test": 65,
+              "rangePct": [
+                -9.8,
+                28.2
+              ],
+              "coveragePct": 86.2
+            },
+            {
+              "cutoff": "2025-11-16",
+              "train": 91,
+              "test": 41,
+              "rangePct": [
+                -8.4,
+                23.4
+              ],
+              "coveragePct": 100
+            },
+            {
+              "cutoff": "2026-05-17",
+              "train": 132,
+              "test": 13,
+              "rangePct": [
+                -3.1,
+                20.6
+              ],
+              "coveragePct": 76.9
+            }
+          ]
+        }
+      },
+      "thinCellFactor": 1.2,
+      "range80BeforeThinCellFactor": {
+        "project": [
+          0,
+          4.2,
+          4.2
+        ],
+        "community": [
+          0.06,
+          1.1523016799514194,
+          2.212
+        ],
+        "area": [
+          0.06,
+          1.1129626709226514,
+          2.558
+        ],
+        "own": [
+          0.03,
+          1.2500158759755036,
+          1.668457973851225
+        ],
+        "indirect": [
+          0.03,
+          1.3176237808886644,
+          1.8532305012883707
+        ]
+      },
+      "range80LeaveBuildingOutOnly": {
+        "project": [
+          0,
+          1.7280730237161628,
+          1.8923972118176773
+        ],
+        "community": [
+          0.06,
+          1.1523016799514194,
+          1.3392336726594718
+        ],
+        "area": [
+          0.06,
+          1.1129626709226514,
+          1.5195882543939496
+        ],
+        "own": [
+          0.03,
+          1.2533918959314054,
+          1.6704088359790787
+        ],
+        "indirect": [
+          0.03,
+          1.3505181116387683,
+          1.8819941302688004
+        ]
+      }
+    },
+    "backtest": {
+      "fittedOn": {
+        "dataThrough": "2026-11-16",
+        "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421"
+      },
+      "statement": {
+        "heldOf10": 8,
+        "heldLaterOf10": 7,
+        "about": "The two whole numbers the copy may state (similar.tested). heldOf10: the lower of the two leave-building-out shares (own, indirect), rounded down to tenths. heldLaterOf10: the lower of the two shares against the following 183 days (all shown real too-few combinations, two start dates), rounded down."
+      },
+      "about": "Summary of the backtest of the similar-buildings comparison, written by scripts/model/backtest-summary.mjs from the output of scripts/model/backtest.py and served.mjs (never by hand). data:build copies it into manifest.json. Every figure is of the ranges the rule SHOWS (studios to 3 bedrooms). Percentages are of the building's true median AED per sq ft. Run the three scripts again whenever the constants, the rule or the snapshot they were fitted on change.",
+      "constantsVersion": 4,
+      "seed": 31337,
+      "testCombinations": 2689,
+      "leaveBuildingOut": {
+        "own": {
+          "cases": 10716,
+          "shownPct": 85,
+          "typicalErrorPct": 2.8,
+          "p80ErrorPct": 6.1,
+          "p90ErrorPct": 8.8,
+          "coveragePct": 89.2,
+          "typicalRangePct": [
+            -6.5,
+            9.3
+          ]
+        },
+        "indirect": {
+          "cases": 2679,
+          "shownPct": 74.8,
+          "typicalErrorPct": 4.4,
+          "p80ErrorPct": 10.5,
+          "p90ErrorPct": 15.1,
+          "coveragePct": 85.9,
+          "typicalRangePct": [
+            -8.9,
+            14.1
+          ]
+        }
+      },
+      "leaveProjectOut": {
+        "own": {
+          "cases": 10716,
+          "shownPct": 86.9,
+          "typicalErrorPct": 3,
+          "p80ErrorPct": 6.6,
+          "coveragePct": 88.6
+        },
+        "indirect": {
+          "cases": 2679,
+          "shownPct": 71.5,
+          "typicalErrorPct": 5.3,
+          "p80ErrorPct": 11.8,
+          "coveragePct": 86.5
+        }
+      },
+      "next183Days": {
+        "note": "Real too-few combinations at the start date, scored against the median of the following 183 days (5 or more sales there). Prices moved 3% to 4% in each half-year.",
+        "all": [
+          {
+            "from": "2026-05-17",
+            "cases": 226,
+            "shownPct": 85,
+            "typicalErrorPct": 4.6,
+            "p80ErrorPct": 9.3,
+            "coveragePct": 78.1,
+            "shownCases": 192
+          },
+          {
+            "from": "2025-11-16",
+            "cases": 324,
+            "shownPct": 84.6,
+            "typicalErrorPct": 5.1,
+            "p80ErrorPct": 10.3,
+            "coveragePct": 77.4,
+            "shownCases": 274
+          }
+        ],
+        "own": [
+          {
+            "from": "2026-05-17",
+            "cases": 188,
+            "shownPct": 85.6,
+            "typicalErrorPct": 4.5,
+            "p80ErrorPct": 8.6,
+            "coveragePct": 79.5,
+            "shownCases": 161
+          },
+          {
+            "from": "2025-11-16",
+            "cases": 251,
+            "shownPct": 84.9,
+            "typicalErrorPct": 4.3,
+            "p80ErrorPct": 9.2,
+            "coveragePct": 77.5,
+            "shownCases": 213
+          }
+        ],
+        "bedroomTypeNeverSold": [
+          {
+            "from": "2026-05-17",
+            "cases": 34,
+            "shownPct": 85.3,
+            "typicalErrorPct": 6.6,
+            "p80ErrorPct": 17,
+            "coveragePct": 69,
+            "shownCases": 29
+          },
+          {
+            "from": "2025-11-16",
+            "cases": 65,
+            "shownPct": 81.5,
+            "typicalErrorPct": 8.5,
+            "p80ErrorPct": 14.7,
+            "coveragePct": 75.5,
+            "shownCases": 53
+          }
+        ]
+      },
+      "thinBuildings": {
+        "note": "Really thin combinations on a like-for-like noisy target, so both real and simulated sit below the level of the first table.",
+        "small5to9OwnCoveragePct": 77.9,
+        "small5to9NoOwnCoveragePct": 81.5,
+        "thin2to4HeldOutSaleCoveragePct": 62.3,
+        "thin2to4HeldOutSaleSimulatedCoveragePct": 68.1,
+        "oneSaleNoOwnCoveragePct": 63.4,
+        "oneSaleNoOwnSimulatedCoveragePct": 72.5
+      },
+      "consistencyRules": {
+        "note": "What the rules of constants version 2 refuse, and how often a range would have held the median had it been shown (leave building out, 1 to 4 own sales, thinned).",
+        "refusedCases": {
+          "evidence_disagrees": 1514,
+          "own_sales_only": 89
+        },
+        "wouldHaveHeldPct": {
+          "evidence_disagrees": 61.2,
+          "own_sales_only": 87.6
+        }
+      },
+      "notInTheData": {
+        "note": "Buildings first seen after the start date, next 183 days. Area and community references are never shown.",
+        "area": [
+          {
+            "cases": 175,
+            "typicalErrorPct": 10,
+            "biasPct": -5.1,
+            "coveragePct": 81.8
+          },
+          {
+            "cases": 444,
+            "typicalErrorPct": 13.2,
+            "biasPct": -7.4,
+            "coveragePct": 69.5
+          }
+        ],
+        "community": [
+          {
+            "cases": 140,
+            "typicalErrorPct": 10.8,
+            "biasPct": -7.3,
+            "coveragePct": 67.9
+          },
+          {
+            "cases": 357,
+            "typicalErrorPct": 13.1,
+            "biasPct": -9.9,
+            "coveragePct": 65.3
+          }
+        ]
+      },
+      "againstSameBuildingRule": {
+        "note": "Listings priced like single registered sales, on shown ranges. Of the results that say above: what the same-building rule says.",
+        "abovePct": 13.8,
+        "withinPct": 68.1,
+        "belowPct": 18.1,
+        "aboveAgreesPct": 71.2,
+        "aboveInLinePct": 27.5,
+        "aboveOppositePct": 1.3
+      },
+      "served": {
+        "tooFewCombinations": 8825,
+        "shownPct": 67,
+        "closePct": 39.4,
+        "broadPct": 27.5,
+        "shownWeightedBySalesPct": 65.2,
+        "studioTo3ShownPct": 73.3,
+        "notShown": {
+          "evidence_disagrees": 1944,
+          "bedrooms_not_validated": 759,
+          "range_too_wide": 147,
+          "own_sales_only": 66
+        },
+        "shownThatReadOtherBuildings": 5699,
+        "otherBuildingsMediansOver2x": 2211,
+        "otherBuildingsMediansOver3x": 720,
+        "bedroomTypeNeverSold": {
+          "requests": 22008,
+          "shown": 3257,
+          "shownPct": 14.8
+        }
+      }
+    }
+  },
+  "acs": {
+    "version": 2,
+    "modelFile": {
+      "sha256": "b90c260794031d40803d9c9b5790c5279a4df9b12a040b9f29ff9268a13fa0e1",
+      "bytes": 3400
+    },
+    "constantsVersion": 1,
+    "fittedOn": {
+      "dataThrough": "2026-11-16",
+      "snapshotSha256": "8f62f3cdc81a541c966b8169417ae400850dd89b03bc17eb43a15dca247a1421"
+    },
+    "buildings": 9,
+    "areaIndexes": 3,
+    "cellSlopes": 6,
+    "indexSales": 42,
+    "indexFrom": "2023-10-15"
+  }
+}

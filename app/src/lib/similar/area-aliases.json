@@ -1,0 +1,1523 @@
+{
+ "about": "Area names as listings write them, to the DLD area_name_en and master_project_en. Aliases are normalised (normaliseArea). areaDld null: the name spans several DLD areas and never resolves on its own.",
+ "aliases": [
+  {
+   "alias": "akoya oxygen",
+   "areaDld": "Madinat Hind 4",
+   "masterProject": "DAMAC HILLS 2",
+   "source": "common"
+  },
+  {
+   "alias": "al barari",
+   "areaDld": "Wadi Al Safa 3",
+   "masterProject": "Al Barari",
+   "source": "common"
+  },
+  {
+   "alias": "al barsha",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "al barsha 1",
+   "areaDld": "Al Barsha First",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "al barsha first",
+   "areaDld": "Al Barsha First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al barsha south fifth",
+   "areaDld": "Al Barsha South Fifth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al barsha south fourth",
+   "areaDld": "Al Barsha South Fourth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al barshaa south second",
+   "areaDld": "Al Barshaa South Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al barshaa south third",
+   "areaDld": "Al Barshaa South Third",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al furjan",
+   "areaDld": "Jabal Ali First",
+   "masterProject": "Al Furjan",
+   "source": "common"
+  },
+  {
+   "alias": "al goze fourth",
+   "areaDld": "Al Goze Fourth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "al hebiah fifth",
+   "areaDld": "Al Hebiah Fifth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah first",
+   "areaDld": "Al Hebiah First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah fourth",
+   "areaDld": "Al Hebiah Fourth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah second",
+   "areaDld": "Al Hebiah Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah sixth",
+   "areaDld": "Al Hebiah Sixth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al hebiah third",
+   "areaDld": "Al Hebiah Third",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al jadaf",
+   "areaDld": "Al Jadaf",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "al jaddaf",
+   "areaDld": "Al Jadaf",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "al khairan first",
+   "areaDld": "Al Khairan First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al kheeran",
+   "areaDld": "Al Kheeran",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al kifaf",
+   "areaDld": "Al Kifaf",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al merkadh",
+   "areaDld": "Al Merkadh",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al quoz",
+   "areaDld": "Al Goze Fourth",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "al qusais industrial fifth",
+   "areaDld": "Al Qusais Industrial Fifth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al qusais industrial fourth",
+   "areaDld": "Al Qusais Industrial Fourth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al safouh",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "al safouh first",
+   "areaDld": "Al Safouh First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al safouh second",
+   "areaDld": "Al Safouh Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al satwa",
+   "areaDld": "Al Satwa",
+   "masterProject": "Jumeirah Garden City",
+   "source": "common"
+  },
+  {
+   "alias": "al sufouh",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "al thanyah fifth",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al thanyah first",
+   "areaDld": "Al Thanyah First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al thanyah third",
+   "areaDld": "Al Thanyah Third",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al waha villas",
+   "areaDld": "Wadi Al Safa 7",
+   "masterProject": "Al Waha Villas",
+   "source": "dld_master"
+  },
+  {
+   "alias": "al warsan 4",
+   "areaDld": "Warsan Fourth",
+   "masterProject": "International City Phase 3",
+   "source": "common"
+  },
+  {
+   "alias": "al warsan first",
+   "areaDld": "Al Warsan First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al wasl",
+   "areaDld": "Al Wasl",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al yelayiss 2",
+   "areaDld": "Al Yelayiss 2",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "al yufrah 1",
+   "areaDld": "Al Yufrah 1",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "arjan",
+   "areaDld": "Al Barshaa South Third",
+   "masterProject": "Arjan",
+   "source": "common"
+  },
+  {
+   "alias": "badra",
+   "areaDld": "Hessyan First",
+   "masterProject": "Badra",
+   "source": "dld_master"
+  },
+  {
+   "alias": "barsha",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "barsha 1",
+   "areaDld": "Al Barsha First",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "barsha heights",
+   "areaDld": "Al Thanyah First",
+   "masterProject": "Barsha Heights",
+   "source": "common"
+  },
+  {
+   "alias": "bluewater island",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Bluewaters Island",
+   "source": "common"
+  },
+  {
+   "alias": "bluewaters",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Bluewaters Island",
+   "source": "common"
+  },
+  {
+   "alias": "bluewaters island",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Bluewaters Island",
+   "source": "common"
+  },
+  {
+   "alias": "bukadra",
+   "areaDld": "Bukadra",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "bur dubai",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "burj khalifa",
+   "areaDld": "Burj Khalifa",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "burj khalifa area",
+   "areaDld": "Burj Khalifa",
+   "masterProject": "DownTown Dubai",
+   "source": "common"
+  },
+  {
+   "alias": "burj khalifa district",
+   "areaDld": "Burj Khalifa",
+   "masterProject": "DownTown Dubai",
+   "source": "common"
+  },
+  {
+   "alias": "business bay",
+   "areaDld": "Business Bay",
+   "masterProject": "Business Bay",
+   "source": "common"
+  },
+  {
+   "alias": "business park",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Business Park",
+   "source": "dld_master"
+  },
+  {
+   "alias": "city of arabia",
+   "areaDld": "Wadi Al Safa 4",
+   "masterProject": "City Of Arabia",
+   "source": "common"
+  },
+  {
+   "alias": "city walk",
+   "areaDld": "Al Wasl",
+   "masterProject": "City Walk",
+   "source": "common"
+  },
+  {
+   "alias": "creek harbor",
+   "areaDld": "Al Khairan First",
+   "masterProject": "Dubai Creek Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "creek harbour",
+   "areaDld": "Al Khairan First",
+   "masterProject": "Dubai Creek Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "culture village",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Jaddaf Waterfront",
+   "source": "common"
+  },
+  {
+   "alias": "d3",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Business Park",
+   "source": "common"
+  },
+  {
+   "alias": "damac hills",
+   "areaDld": "Al Hebiah Third",
+   "masterProject": "DAMAC HILLS",
+   "source": "common"
+  },
+  {
+   "alias": "damac hills 2",
+   "areaDld": "Madinat Hind 4",
+   "masterProject": "DAMAC HILLS 2",
+   "source": "common"
+  },
+  {
+   "alias": "damac lagoons",
+   "areaDld": "Al Hebiah Fifth",
+   "masterProject": "DAMAC Lagoons",
+   "source": "common"
+  },
+  {
+   "alias": "deira",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "deira islands",
+   "areaDld": "Palm Deira",
+   "masterProject": "Palm Deira",
+   "source": "common"
+  },
+  {
+   "alias": "dhcc phase 2",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Dubai Health Care City Phase 2",
+   "source": "common"
+  },
+  {
+   "alias": "difc",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Dubai International Financial Center",
+   "source": "common"
+  },
+  {
+   "alias": "dip",
+   "areaDld": "Dubai Investment Park Second",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "discovery gardens",
+   "areaDld": "Jabal Ali First",
+   "masterProject": "Discovery Gardens",
+   "source": "common"
+  },
+  {
+   "alias": "district one",
+   "areaDld": "Al Merkadh",
+   "masterProject": "Mohammed Bin Rashid AL Maktoum City -District -1 Community",
+   "source": "common"
+  },
+  {
+   "alias": "dlrc",
+   "areaDld": "Wadi Al Safa 5",
+   "masterProject": "Dubai Land Residence Complex",
+   "source": "common"
+  },
+  {
+   "alias": "dmcc ez2",
+   "areaDld": "Jabal Ali First",
+   "masterProject": "DMCC-EZ2",
+   "source": "dld_master"
+  },
+  {
+   "alias": "dmcc master community",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": "DMCC Master Community",
+   "source": "dld_master"
+  },
+  {
+   "alias": "down town jabal ali",
+   "areaDld": "Jabal Ali Industrial Second",
+   "masterProject": "Down Town Jabal Ali",
+   "source": "dld_master"
+  },
+  {
+   "alias": "downtown",
+   "areaDld": "Burj Khalifa",
+   "masterProject": "DownTown Dubai",
+   "source": "common"
+  },
+  {
+   "alias": "downtown dubai",
+   "areaDld": "Burj Khalifa",
+   "masterProject": "DownTown Dubai",
+   "source": "common"
+  },
+  {
+   "alias": "downtown jabal ali",
+   "areaDld": "Jabal Ali Industrial Second",
+   "masterProject": "Down Town Jabal Ali",
+   "source": "common"
+  },
+  {
+   "alias": "downtown jebel ali",
+   "areaDld": "Jabal Ali Industrial Second",
+   "masterProject": "Down Town Jabal Ali",
+   "source": "common"
+  },
+  {
+   "alias": "dso",
+   "areaDld": "Nadd Hessa",
+   "masterProject": "Silicon Oasis",
+   "source": "common"
+  },
+  {
+   "alias": "dsp",
+   "areaDld": "Al Barshaa South Second",
+   "masterProject": "Dubai Science Park",
+   "source": "common"
+  },
+  {
+   "alias": "dubai canal",
+   "areaDld": "Al Wasl",
+   "masterProject": "Dubai Water Canal",
+   "source": "common"
+  },
+  {
+   "alias": "dubai creek harbor",
+   "areaDld": "Al Khairan First",
+   "masterProject": "Dubai Creek Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "dubai creek harbour",
+   "areaDld": "Al Khairan First",
+   "masterProject": "Dubai Creek Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "dubai design district",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Business Park",
+   "source": "common"
+  },
+  {
+   "alias": "dubai festival city",
+   "areaDld": "Al Kheeran",
+   "masterProject": "Festival City",
+   "source": "common"
+  },
+  {
+   "alias": "dubai harbor",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Dubai Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "dubai harbour",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Dubai Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "dubai health care city phase 1",
+   "areaDld": "Um Hurair Second",
+   "masterProject": "Dubai Health Care City Phase 1",
+   "source": "dld_master"
+  },
+  {
+   "alias": "dubai health care city phase 2",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Dubai Health Care City Phase 2",
+   "source": "dld_master"
+  },
+  {
+   "alias": "dubai healthcare city",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "dubai healthcare city phase 2",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Dubai Health Care City Phase 2",
+   "source": "common"
+  },
+  {
+   "alias": "dubai hills",
+   "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+   "masterProject": "Dubai Hills Estate",
+   "source": "common"
+  },
+  {
+   "alias": "dubai hills estate",
+   "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+   "masterProject": "Dubai Hills Estate",
+   "source": "common"
+  },
+  {
+   "alias": "dubai industrial city",
+   "areaDld": "Saih Shuaib 2",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "dubai international financial center",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Dubai International Financial Center",
+   "source": "dld_master"
+  },
+  {
+   "alias": "dubai international financial centre",
+   "areaDld": "Zaabeel Second",
+   "masterProject": "Dubai International Financial Center",
+   "source": "common"
+  },
+  {
+   "alias": "dubai investment park",
+   "areaDld": "Dubai Investment Park Second",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "dubai investment park first",
+   "areaDld": "Dubai Investment Park First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "dubai investment park second",
+   "areaDld": "Dubai Investment Park Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "dubai islands",
+   "areaDld": "Palm Deira",
+   "masterProject": "Palm Deira",
+   "source": "common"
+  },
+  {
+   "alias": "dubai land",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "dubai land residence complex",
+   "areaDld": "Wadi Al Safa 5",
+   "masterProject": "Dubai Land Residence Complex",
+   "source": "common"
+  },
+  {
+   "alias": "dubai life style city",
+   "areaDld": "Wadi Al Safa 7",
+   "masterProject": "Dubai Life Style City",
+   "source": "dld_master"
+  },
+  {
+   "alias": "dubai marina",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Dubai Marina",
+   "source": "common"
+  },
+  {
+   "alias": "dubai maritime city",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": "Dubai Maritime City",
+   "source": "common"
+  },
+  {
+   "alias": "dubai production city",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "International Media Production Zone",
+   "source": "common"
+  },
+  {
+   "alias": "dubai science park",
+   "areaDld": "Al Barshaa South Second",
+   "masterProject": "Dubai Science Park",
+   "source": "common"
+  },
+  {
+   "alias": "dubai silicon oasis",
+   "areaDld": "Nadd Hessa",
+   "masterProject": "Silicon Oasis",
+   "source": "common"
+  },
+  {
+   "alias": "dubai south",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "dubai south residential district",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "Dubai South Residential District",
+   "source": "common"
+  },
+  {
+   "alias": "dubai sports city",
+   "areaDld": "Al Hebiah Fourth",
+   "masterProject": "Dubai Sports City",
+   "source": "common"
+  },
+  {
+   "alias": "dubai studio city",
+   "areaDld": "Al Hebiah Second",
+   "masterProject": "Dubai Studio City",
+   "source": "common"
+  },
+  {
+   "alias": "dubai water canal",
+   "areaDld": "Al Wasl",
+   "masterProject": "Dubai Water Canal",
+   "source": "common"
+  },
+  {
+   "alias": "dubai world central",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "Dubai World Central",
+   "source": "common"
+  },
+  {
+   "alias": "dubailand",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "dubailand residence complex",
+   "areaDld": "Wadi Al Safa 5",
+   "masterProject": "Dubai Land Residence Complex",
+   "source": "common"
+  },
+  {
+   "alias": "dwc",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "Dubai World Central",
+   "source": "common"
+  },
+  {
+   "alias": "emaar beachfront",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Dubai Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "expo city",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "EXPO CITY",
+   "source": "common"
+  },
+  {
+   "alias": "expo city dubai",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "EXPO CITY",
+   "source": "common"
+  },
+  {
+   "alias": "falcon city",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": "Falcon City",
+   "source": "common"
+  },
+  {
+   "alias": "falcon city of wonders",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": "Falcon City",
+   "source": "common"
+  },
+  {
+   "alias": "festival city",
+   "areaDld": "Al Kheeran",
+   "masterProject": "Festival City",
+   "source": "common"
+  },
+  {
+   "alias": "furjan",
+   "areaDld": "Jabal Ali First",
+   "masterProject": "Al Furjan",
+   "source": "common"
+  },
+  {
+   "alias": "hadaeq sheikh mohammed bin rashid",
+   "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "hadaeq sheikh mohammed bin rashid disrict 7",
+   "areaDld": "Hadaeq Sheikh Mohammed Bin Rashid",
+   "masterProject": "HADAEQ SHEIKH MOHAMMED BIN RASHID - DISRICT 7",
+   "source": "dld_master"
+  },
+  {
+   "alias": "hessyan first",
+   "areaDld": "Hessyan First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "impz",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "International Media Production Zone",
+   "source": "common"
+  },
+  {
+   "alias": "international city",
+   "areaDld": "Al Warsan First",
+   "masterProject": "International City Phase 1",
+   "source": "common"
+  },
+  {
+   "alias": "international city phase 1",
+   "areaDld": "Al Warsan First",
+   "masterProject": "International City Phase 1",
+   "source": "dld_master"
+  },
+  {
+   "alias": "international city phase 2",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "international city phase 3",
+   "areaDld": "Warsan Fourth",
+   "masterProject": "International City Phase 3",
+   "source": "common"
+  },
+  {
+   "alias": "international media production zone",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "International Media Production Zone",
+   "source": "dld_master"
+  },
+  {
+   "alias": "island 2",
+   "areaDld": "Island 2",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "jabal ali",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "jabal ali first",
+   "areaDld": "Jabal Ali First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "jabal ali industrial second",
+   "areaDld": "Jabal Ali Industrial Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "jaddaf",
+   "areaDld": "Al Jadaf",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "jaddaf waterfront",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Jaddaf Waterfront",
+   "source": "common"
+  },
+  {
+   "alias": "jbr",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Jumeriah Beach Residence - JBR",
+   "source": "common"
+  },
+  {
+   "alias": "jebel ali",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "jge",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "Jumeirah Golf Estates",
+   "source": "common"
+  },
+  {
+   "alias": "jlt",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": "DMCC Master Community",
+   "source": "common"
+  },
+  {
+   "alias": "jumeira bay",
+   "areaDld": "Island 2",
+   "masterProject": "Jumeira Bay",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "jumeirah bay",
+   "areaDld": "Island 2",
+   "masterProject": "Jumeira Bay",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah bay island",
+   "areaDld": "Island 2",
+   "masterProject": "Jumeira Bay",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah beach residence",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Jumeriah Beach Residence - JBR",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah beach residences",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Jumeriah Beach Residence - JBR",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah first",
+   "areaDld": "Jumeirah First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "jumeirah garden city",
+   "areaDld": "Al Satwa",
+   "masterProject": "Jumeirah Garden City",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah golf estates",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "Jumeirah Golf Estates",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah islands",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": "Jumeirah Islands",
+   "source": "dld_master"
+  },
+  {
+   "alias": "jumeirah lake towers",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": "DMCC Master Community",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah lakes towers",
+   "areaDld": "Al Thanyah Fifth",
+   "masterProject": "DMCC Master Community",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah second",
+   "areaDld": "Jumeirah Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "jumeirah village circle",
+   "areaDld": "Al Barsha South Fourth",
+   "masterProject": "Jumeirah Village Circle",
+   "source": "common"
+  },
+  {
+   "alias": "jumeirah village triangle",
+   "areaDld": "Al Barsha South Fifth",
+   "masterProject": "Jumeirah Village Triangle",
+   "source": "common"
+  },
+  {
+   "alias": "jumeriah beach residence jbr",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Jumeriah Beach Residence - JBR",
+   "source": "dld_master"
+  },
+  {
+   "alias": "jvc",
+   "areaDld": "Al Barsha South Fourth",
+   "masterProject": "Jumeirah Village Circle",
+   "source": "common"
+  },
+  {
+   "alias": "jvt",
+   "areaDld": "Al Barsha South Fifth",
+   "masterProject": "Jumeirah Village Triangle",
+   "source": "common"
+  },
+  {
+   "alias": "la mer",
+   "areaDld": "Jumeirah First",
+   "masterProject": "LA MER",
+   "source": "common"
+  },
+  {
+   "alias": "living legends",
+   "areaDld": "Wadi Al Safa 3",
+   "masterProject": "Living Legends",
+   "source": "common"
+  },
+  {
+   "alias": "liwan",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": "Liwan1",
+   "source": "common"
+  },
+  {
+   "alias": "liwan1",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": "Liwan1",
+   "source": "dld_master"
+  },
+  {
+   "alias": "liwan2",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": "Liwan2",
+   "source": "dld_master"
+  },
+  {
+   "alias": "madinat al mataar",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "madinat badr",
+   "areaDld": "Muhaisanah First",
+   "masterProject": "Madinat Badr",
+   "source": "dld_master"
+  },
+  {
+   "alias": "madinat dubai almelaheyah",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "madinat hind 4",
+   "areaDld": "Madinat Hind 4",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "madinat jumeirah living",
+   "areaDld": "Um Suqaim Third",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "majan",
+   "areaDld": "Wadi Al Safa 3",
+   "masterProject": "Majan",
+   "source": "common"
+  },
+  {
+   "alias": "marina",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "Dubai Marina",
+   "source": "common"
+  },
+  {
+   "alias": "maritime city",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": "Dubai Maritime City",
+   "source": "common"
+  },
+  {
+   "alias": "marsa dubai",
+   "areaDld": "Marsa Dubai",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "mbr city",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "me aisem first",
+   "areaDld": "Me'Aisem First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "meydan",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "meydan one",
+   "areaDld": "Al Merkadh",
+   "masterProject": "Meydan One Community",
+   "source": "common"
+  },
+  {
+   "alias": "meydan one community",
+   "areaDld": "Al Merkadh",
+   "masterProject": "Meydan One Community",
+   "source": "dld_master"
+  },
+  {
+   "alias": "meydan racecourse community",
+   "areaDld": "Nad Al Shiba First",
+   "masterProject": "Meydan Racecourse Community",
+   "source": "dld_master"
+  },
+  {
+   "alias": "mina rashid",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": "Mina Rashid",
+   "source": "common"
+  },
+  {
+   "alias": "mirdif",
+   "areaDld": "Mirdif",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "mirdif hills",
+   "areaDld": "Mirdif",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "mjl",
+   "areaDld": "Um Suqaim Third",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "mohammed bin rashid al maktoum city district 1 community",
+   "areaDld": "Al Merkadh",
+   "masterProject": "Mohammed Bin Rashid AL Maktoum City -District -1 Community",
+   "source": "dld_master"
+  },
+  {
+   "alias": "mohammed bin rashid al maktoum district 11",
+   "areaDld": "Wadi Al Safa 3",
+   "masterProject": "Mohammed Bin Rashid AL Maktoum District 11",
+   "source": "dld_master"
+  },
+  {
+   "alias": "mohammed bin rashid city",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "motor city",
+   "areaDld": "Al Hebiah First",
+   "masterProject": "Motor City",
+   "source": "common"
+  },
+  {
+   "alias": "mudon",
+   "areaDld": "Al Hebiah Sixth",
+   "masterProject": "Mudon",
+   "source": "common"
+  },
+  {
+   "alias": "muhaisanah first",
+   "areaDld": "Muhaisanah First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "nad al hamar",
+   "areaDld": "Nad Al Hamar",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "nad al sheba",
+   "areaDld": "Nad Al Shiba First",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "nad al sheba gardens",
+   "areaDld": "Nad Al Shiba First",
+   "masterProject": "Nad Al Sheba Gardens",
+   "source": "dld_master"
+  },
+  {
+   "alias": "nad al shiba first",
+   "areaDld": "Nad Al Shiba First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "nadd hessa",
+   "areaDld": "Nadd Hessa",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "palm deira",
+   "areaDld": "Palm Deira",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "palm jabal ali",
+   "areaDld": "Palm Jabal Ali",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "palm jebel ali",
+   "areaDld": "Palm Jabal Ali",
+   "masterProject": "Palm Jabal Ali",
+   "source": "common"
+  },
+  {
+   "alias": "palm jumeirah",
+   "areaDld": "Palm Jumeirah",
+   "masterProject": "Palm Jumeirah",
+   "source": "common"
+  },
+  {
+   "alias": "pearl jumeira",
+   "areaDld": "Jumeirah First",
+   "masterProject": "Pearl Jumeira",
+   "source": "dld_master"
+  },
+  {
+   "alias": "port de la mer",
+   "areaDld": "Jumeirah First",
+   "masterProject": "LA MER",
+   "source": "common"
+  },
+  {
+   "alias": "port rashid",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": "Mina Rashid",
+   "source": "common"
+  },
+  {
+   "alias": "production city",
+   "areaDld": "Me'Aisem First",
+   "masterProject": "International Media Production Zone",
+   "source": "common"
+  },
+  {
+   "alias": "ras al khor",
+   "areaDld": "Ras Al Khor Industrial First",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "ras al khor industrial first",
+   "areaDld": "Ras Al Khor Industrial First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "rashid yachts and marina",
+   "areaDld": "Madinat Dubai Almelaheyah",
+   "masterProject": "Mina Rashid",
+   "source": "common"
+  },
+  {
+   "alias": "rega al buteen",
+   "areaDld": "Rega Al Buteen",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "remraam",
+   "areaDld": "Al Hebiah Fifth",
+   "masterProject": "Remraam",
+   "source": "common"
+  },
+  {
+   "alias": "rukan",
+   "areaDld": "Wadi Al Safa 7",
+   "masterProject": "Rukan",
+   "source": "common"
+  },
+  {
+   "alias": "saih shuaib 1",
+   "areaDld": "Saih Shuaib 1",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "saih shuaib 2",
+   "areaDld": "Saih Shuaib 2",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "sama al jadaf",
+   "areaDld": "Al Jadaf",
+   "masterProject": "Sama Al Jadaf",
+   "source": "dld_master"
+  },
+  {
+   "alias": "satwa",
+   "areaDld": "Al Satwa",
+   "masterProject": "Jumeirah Garden City",
+   "source": "common"
+  },
+  {
+   "alias": "sheikh zayed road",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "silicon oasis",
+   "areaDld": "Nadd Hessa",
+   "masterProject": "Silicon Oasis",
+   "source": "common"
+  },
+  {
+   "alias": "site a",
+   "areaDld": "Al Safouh Second",
+   "masterProject": "Site A",
+   "source": "dld_master"
+  },
+  {
+   "alias": "sobha hartland",
+   "areaDld": "Al Merkadh",
+   "masterProject": "SOBHA HARTLAND",
+   "source": "common"
+  },
+  {
+   "alias": "sobha hartland 2",
+   "areaDld": "Bukadra",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "sobha hartland ii",
+   "areaDld": "Bukadra",
+   "masterProject": null,
+   "source": "common"
+  },
+  {
+   "alias": "sports city",
+   "areaDld": "Al Hebiah Fourth",
+   "masterProject": "Dubai Sports City",
+   "source": "common"
+  },
+  {
+   "alias": "studio city",
+   "areaDld": "Al Hebiah Second",
+   "masterProject": "Dubai Studio City",
+   "source": "common"
+  },
+  {
+   "alias": "sufouh gardens",
+   "areaDld": "Al Safouh First",
+   "masterProject": "Sufouh Gardens",
+   "source": "dld_master"
+  },
+  {
+   "alias": "tecom",
+   "areaDld": "Al Thanyah First",
+   "masterProject": "Barsha Heights",
+   "source": "common"
+  },
+  {
+   "alias": "tecom site d",
+   "areaDld": "Marsa Dubai",
+   "masterProject": "TECOM Site D",
+   "source": "dld_master"
+  },
+  {
+   "alias": "the greens",
+   "areaDld": "Al Thanyah Third",
+   "masterProject": "The Greens",
+   "source": "common"
+  },
+  {
+   "alias": "the lagoons",
+   "areaDld": "Al Khairan First",
+   "masterProject": "Dubai Creek Harbour",
+   "source": "common"
+  },
+  {
+   "alias": "the palm",
+   "areaDld": "Palm Jumeirah",
+   "masterProject": "Palm Jumeirah",
+   "source": "common"
+  },
+  {
+   "alias": "the pulse",
+   "areaDld": "Madinat Al Mataar",
+   "masterProject": "Dubai South Residential District",
+   "source": "common"
+  },
+  {
+   "alias": "town square",
+   "areaDld": "Al Yelayiss 2",
+   "masterProject": "TOWN SQUARE",
+   "source": "common"
+  },
+  {
+   "alias": "trade center first",
+   "areaDld": "Trade Center First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "trade center second",
+   "areaDld": "Trade Center Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "um hurair second",
+   "areaDld": "Um Hurair Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "um suqaim third",
+   "areaDld": "Um Suqaim Third",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "uptown mirdif",
+   "areaDld": "Mirdif",
+   "masterProject": "Uptown Mirdif",
+   "source": "dld_master"
+  },
+  {
+   "alias": "wadi al safa",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "wadi al safa 2",
+   "areaDld": "Wadi Al Safa 2",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "wadi al safa 3",
+   "areaDld": "Wadi Al Safa 3",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "wadi al safa 4",
+   "areaDld": "Wadi Al Safa 4",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "wadi al safa 5",
+   "areaDld": "Wadi Al Safa 5",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "wadi al safa 7",
+   "areaDld": "Wadi Al Safa 7",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "warsan 4",
+   "areaDld": "Warsan Fourth",
+   "masterProject": "International City Phase 3",
+   "source": "common"
+  },
+  {
+   "alias": "warsan first development",
+   "areaDld": "Al Warsan First",
+   "masterProject": "WARSAN FIRST DEVELOPMENT",
+   "source": "dld_master"
+  },
+  {
+   "alias": "warsan fourth",
+   "areaDld": "Warsan Fourth",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "wasl 1",
+   "areaDld": "Al Kifaf",
+   "masterProject": "Wasl 1",
+   "source": "common"
+  },
+  {
+   "alias": "wasl gate",
+   "areaDld": "Jabal Ali First",
+   "masterProject": "Wasl Gate",
+   "source": "common"
+  },
+  {
+   "alias": "wasl1",
+   "areaDld": "Al Kifaf",
+   "masterProject": "Wasl 1",
+   "source": "common"
+  },
+  {
+   "alias": "zaabeel",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  },
+  {
+   "alias": "zaabeel first",
+   "areaDld": "Zaabeel First",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "zaabeel second",
+   "areaDld": "Zaabeel Second",
+   "masterProject": null,
+   "source": "dld_area"
+  },
+  {
+   "alias": "zabeel",
+   "areaDld": null,
+   "masterProject": null,
+   "source": "ambiguous"
+  }
+ ]
+}
